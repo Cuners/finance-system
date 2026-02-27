@@ -1,0 +1,75 @@
+.budgetPage-budget-bar {
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.bar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: #4a6cf7;
+  font-size: 16px;
+}
+
+.bar-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.budget-amount {
+  font-size: 14px;
+
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #f97316;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.used-percent {
+  font-weight: 500;
+}
+
+.remaining-amount {
+  font-weight: 500;
+}

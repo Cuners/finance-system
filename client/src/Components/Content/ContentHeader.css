@@ -1,0 +1,69 @@
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.transactions-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.transactions-header p {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border: none;
+  color: white;
+  background: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #e0f7fa;
+  color: #00838f;
+  font-weight: 600;
+}
+
+.period-select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: none;
+  color:white;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.export-btn,
+.add-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.export-btn {
+  background: none;
+  color: white;
+  border: 1px solid #ddd;
+}
+
+.add-btn {
+  background: #00a884;
+  color: white;
+  font-weight: 600;
+}

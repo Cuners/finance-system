@@ -1,0 +1,87 @@
+.transaction-row {
+  border-bottom: 1px solid #e9ecef18;
+}
+
+.transaction-row:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  padding: 16px 12px;
+  font-size: 14px;
+}
+
+.icon {
+  width: 40px;
+  text-align: center;
+}
+
+.icon-bg {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.category,
+.date {
+  color: #777;
+}
+
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.transaction-row.income .amount {
+  color: #2ecc71;
+}
+
+.transaction-row.expense .amount {
+  color: #e74c3c;
+}
+
+.actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: #222;
+}

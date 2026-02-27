@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BudgetServer/BudgetServer.csproj" />
+  <Project Path="Finance.Application/Finance.Application.csproj" Id="d70bdaff-0038-4eef-8fa3-1ebe590fe930" />
+  <Project Path="Finance.Domain/Finance.Domain.csproj" Id="75dd30d6-1469-4c8b-a5b7-9637d7ee2701" />
+  <Project Path="Finance.Infrastructure/Finance.Infrastructure.csproj" Id="929a34b2-ea02-4abc-9ba5-6c60d0b89aee" />
+</Solution>

@@ -1,0 +1,21 @@
+.budget-dashboard-grid {
+  display:flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.budget-dashboard-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.budget-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top:10px;
+}
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}

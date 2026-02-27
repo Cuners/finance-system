@@ -1,0 +1,28 @@
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+}
+
+.transactions-table th {
+  color: #666;
+  font-weight: 500;
+  text-align: left;
+  padding: 16px 12px;
+  border-bottom: 2px solid #e9ecef18;
+}
+
+.transactions-table th:first-child,
+.transactions-table td:first-child {
+  width: 40px;
+}
+
+.transactions-table th.actions,
+.transactions-table td.actions {
+  width: 80px;
+  text-align: right;
+}
