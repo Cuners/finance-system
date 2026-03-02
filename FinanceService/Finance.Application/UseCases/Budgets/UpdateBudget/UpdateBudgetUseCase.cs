@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases.Budgets.UpdateBudget.Request;
+﻿using Finance.Application.Services;
+using Finance.Application.UseCases.Budgets.UpdateBudget.Request;
 using Finance.Application.UseCases.Budgets.UpdateBudget.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -13,11 +14,16 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
         private readonly IBudgetRepository _Budget;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<UpdateBudgetUseCase> _logger;
-        public UpdateBudgetUseCase(IBudgetRepository Budget, IUnitOfWork unitOfWork, ILogger<UpdateBudgetUseCase> logger)
+        private readonly IBudgetCacheInvalidator _cache;
+        public UpdateBudgetUseCase(IBudgetRepository Budget, 
+                                   IUnitOfWork unitOfWork, 
+                                   ILogger<UpdateBudgetUseCase> logger,
+                                   IBudgetCacheInvalidator cache)
         {
             _Budget = Budget;
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _cache = cache;
         }
         public async Task<UpdateBudgetResponse> ExecuteAsync(UpdateBudgetRequest request, CancellationToken ct)
         {
@@ -27,6 +33,7 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
                 Budget.Name = request.Name;
                 await _Budget.UpdateBudget(Budget);
                 await _unitOfWork.SaveChangesAsync(ct);
+                await _cache.InvalidateAsync(1, request.BudgetId, ct);
                 return new UpdateBudgetSuccessResponse(Budget.BudgetId);
             }
             catch (Exception ex)

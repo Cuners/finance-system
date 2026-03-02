@@ -4,19 +4,21 @@ import BudgetOverview from "../MainPage/BudgetOverview";
 import "./MainPage.css";
 import {useDashboardData} from '../../../Hooks/useDashboardData';
 import TransactionsHeader from "../ContentHeader";
+import TransactionTopExpenses from "./TransactionTopExpenses";
+import TransactionUpcomingBills from "./TransactionUpcomingBill";
 const MainPage = () => {
     const now = new Date();
     const { data, loading, error } = useDashboardData(now.getFullYear(), now.getMonth()+1);
-  const formatCurrency = (value: number) => 
-    new Intl.NumberFormat('ru-RU', {style: 'currency',currency: 'RUB'}).format(value);
-
+    const formatCurrency = (value: number) => 
+      new Intl.NumberFormat('ru-RU', {style: 'currency',currency: 'RUB'}).format(value);
+    const formatter=new Intl.DateTimeFormat('ru-RU', { month: 'long' });
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     return(
       <div className="main-page">
         <TransactionsHeader
             title='Добро пожаловать обратно'
-            description='Ваши финансовые данные на Февраль 2026'/>
+            description={`Ваши финансовые данные на ${formatter.format()} 2026`}/>
         <div className="dashboard-grid">
           <StatCard
             title="Общий баланс"
@@ -43,11 +45,13 @@ const MainPage = () => {
             variant="saving"
           />
         </div>
-    <div className="dashboard-layout">
-         {/* <RecentTransactions /> */}
-         <RecentTransactions />
-          <BudgetOverview />
-    </div>
+        <div className="dashboard-layout">
+            {/* <RecentTransactions /> */}
+            <RecentTransactions />
+              <BudgetOverview />
+              <TransactionTopExpenses/>
+              <TransactionUpcomingBills/>
+        </div>
       </div>
     );
 };

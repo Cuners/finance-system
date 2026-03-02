@@ -1,4 +1,5 @@
 ﻿
+using Finance.Application.Services;
 using Finance.Application.UseCases.Transactions.DeleteTransaction.Request;
 using Finance.Application.UseCases.Transactions.DeleteTransaction.Response;
 using Finance.Domain;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Transactions;
 
 namespace Finance.Application.UseCases.Transactions.DeleteTransaction
 {
@@ -15,14 +17,16 @@ namespace Finance.Application.UseCases.Transactions.DeleteTransaction
         private readonly ITransactionRepository _transaction;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<DeleteTransactionUseCase> _logger;
-
+        private readonly ITransactionCacheInvalidator _cache;
         public DeleteTransactionUseCase(ITransactionRepository transaction,
                                         IUnitOfWork unitOfWork,
-                                        ILogger<DeleteTransactionUseCase> logger)
+                                        ILogger<DeleteTransactionUseCase> logger,
+                                        ITransactionCacheInvalidator cache)
         {
             _transaction = transaction;
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _cache = cache;
         }
         public async Task<DeleteTransactionResponse> ExecuteAsync(DeleteTransactionRequest request, CancellationToken ct)
         {
@@ -31,6 +35,7 @@ namespace Finance.Application.UseCases.Transactions.DeleteTransaction
                 var Transaction = await _transaction.GetTransactionByTransactionId(request.TransactionId,ct);
                 await _transaction.DeleteTransaction(request.TransactionId);
                 await _unitOfWork.SaveChangesAsync(ct);
+                await _cache.InvalidateAsync(1, request.TransactionId, ct);
                 return new DeleteTransactionSuccessRepsonse(request.TransactionId);
             }
             catch (Exception ex)

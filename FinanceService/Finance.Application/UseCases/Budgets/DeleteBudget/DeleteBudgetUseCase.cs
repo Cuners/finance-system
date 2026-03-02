@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases.Budgets.DeleteBudget.Request;
+﻿using Finance.Application.Services;
+using Finance.Application.UseCases.Budgets.DeleteBudget.Request;
 using Finance.Application.UseCases.Budgets.DeleteBudget.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -13,11 +14,16 @@ namespace Finance.Application.UseCases.Budgets.DeleteBudget
         private readonly IBudgetRepository _Budget;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<DeleteBudgetUseCase> _logger;
-        public DeleteBudgetUseCase(IBudgetRepository Budget, IUnitOfWork unitOfWork, ILogger<DeleteBudgetUseCase> logger)
+        private readonly IBudgetCacheInvalidator _cache;
+        public DeleteBudgetUseCase(IBudgetRepository Budget, 
+                                   IUnitOfWork unitOfWork, 
+                                   ILogger<DeleteBudgetUseCase> logger,
+                                   IBudgetCacheInvalidator cache)
         {
             _Budget = Budget;
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _cache = cache;
         }
         public async Task<DeleteBudgetResponse> ExecuteAsync(DeleteBudgetRequest request, CancellationToken ct)
         {
@@ -26,6 +32,7 @@ namespace Finance.Application.UseCases.Budgets.DeleteBudget
                 var Budget = await _Budget.GetBudgetById(request.BudgetId, ct);
                 await _Budget.DeleteBudget(request.BudgetId);
                 await _unitOfWork.SaveChangesAsync(ct);
+                await _cache.InvalidateAsync(1, request.BudgetId, ct);
                 return new DeleteBudgetSuccessResponse(request.BudgetId);
             }
             catch (Exception ex)

@@ -27,6 +27,11 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionsSummary
         //Получать через request userid а в контроллере как раз и расшифровывать токен
         public async Task<GetTransactionSummaryResponse> ExecuteAsync(GetTransactionsSummaryRequest request, CancellationToken ct)
         {
+            if (request.UserId <= 0)
+            {
+                _logger.LogWarning("GetBudgetRequest is null");
+                return new GetTransactionSummaryErrorResponse("Invalid User id", "INVALID_USER_ID");
+            }
             var cacheKey = $"dashboard:user:{request.UserId}:" +
                            "transactionsSummary:" +
                            $"from:{request.Year}-{request.Month:D2}";

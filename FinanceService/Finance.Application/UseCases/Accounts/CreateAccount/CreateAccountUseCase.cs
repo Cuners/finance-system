@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases.Accounts.CreateAccount.Request;
+﻿using Finance.Application.Services;
+using Finance.Application.UseCases.Accounts.CreateAccount.Request;
 using Finance.Application.UseCases.Accounts.CreateAccount.Response;
 using Finance.Application.UseCases.Accounts.UpdateAccount;
 using Finance.Domain.Interfaces;
@@ -14,14 +15,16 @@ namespace Finance.Application.UseCases.Accounts.CreateAccount
         private readonly IAccountRepository _accounts;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<CreateAccountUseCase> _logger;
-       
+        private readonly IAccountCacheInvalidator _cache;
         public CreateAccountUseCase(IAccountRepository accounts, 
                                     IUnitOfWork unitOfWork,
-                                    ILogger<CreateAccountUseCase> logger)
+                                    ILogger<CreateAccountUseCase> logger,
+                                    IAccountCacheInvalidator cache)
         {
             _accounts = accounts;
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _cache = cache;
         }
 
         public async Task<CreateAccountResponse> ExecuteAsync(CreateAccountRequest request, CancellationToken ct)
@@ -36,6 +39,7 @@ namespace Finance.Application.UseCases.Accounts.CreateAccount
                 };
                 await _accounts.CreateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);
+                await _cache.InvalidateAsync(1,account.AccountId, ct);
                 return new CreateAccountSuccessResponse(account.AccountId);
             }
             catch(Exception ex)

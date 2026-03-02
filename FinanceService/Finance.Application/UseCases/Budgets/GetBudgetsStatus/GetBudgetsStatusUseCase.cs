@@ -25,14 +25,14 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
         }
         public async Task<GetBudgetsStatusResponse> ExecuteAsync(GetBudgetsStatusRequest request, CancellationToken ct)
         {
+            if (request.UserId <= 0)
+            {
+                _logger.LogWarning("GetBudgetRequest is null");
+                return new GetBudgetsStatusErrorResponse("Invalid User id", "INVALID_USER_ID");
+            }
             var cacheKey = $"dashboard:user:{request.UserId}:" + "budgetsStatus";
             try
             {
-                if (request.UserId <= 0)
-                {
-                    _logger.LogWarning("GetBudgetRequest is null");
-                    return new GetBudgetsStatusErrorResponse("Invalid User id", "INVALID_USER_ID");
-                }
                 var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
                     var summary = await _BudgetRepository.GetBudgetStatusAsync(request.UserId,ct);
@@ -42,7 +42,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
 
                 if (budgets is null)
                 {
-                    _logger.LogWarning("GetBudgetRequest is null");
+                    _logger.LogWarning("Status of budgets is null");
                     return new GetBudgetsStatusErrorResponse("No Budget found", "Budget_NOT_FOUND");
                 }
                 return new GetBudgetsStatusSuccessResponse(budgets);

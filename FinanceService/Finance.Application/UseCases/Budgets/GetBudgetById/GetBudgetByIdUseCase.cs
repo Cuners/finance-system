@@ -21,16 +21,16 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetById
         }
         public async Task<GetBudgetByIdResponse> ExecuteAsync(GetBudgetByIdRequest request, CancellationToken ct)
         {
+            if (request.BudgetId <= 0)
+            {
+                _logger.LogWarning("GetBudgetRequest is null");
+                return new GetBudgetByIdErrorResponse("Invalid Budget id", "INVALID_USER_ID");
+            }
             try
             {
-                if (request.BudgetId <= 0)
-                {
-                    _logger.LogWarning("GetBudgetRequest is null");
-                    return new GetBudgetByIdErrorResponse("Invalid Budget id", "INVALID_USER_ID");
-                }
                 var budgets = await _BudgetRepository.GetBudgetById(request.BudgetId, ct);
 
-                if (budgets == null)
+                if (budgets is null)
                 {
                     _logger.LogWarning("GetBudgetRequest is null");
                     return new GetBudgetByIdErrorResponse("No Budget found", "Budget_NOT_FOUND");

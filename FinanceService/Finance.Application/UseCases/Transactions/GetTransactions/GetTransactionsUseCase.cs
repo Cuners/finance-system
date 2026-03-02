@@ -25,6 +25,11 @@ namespace Finance.Application.UseCases.Transactions.GetTransactions
         //Получать через request userid а в контроллере как раз и расшифровывать токен
         public async Task<GetTransactionsResponse> ExecuteAsync(GetTransactionsRequest request, CancellationToken ct)
         {
+            if (request.UserId <= 0)
+            {
+                _logger.LogWarning("GetBudgetRequest is null");
+                return new GetTransactionsErrorResponse("Invalid User id", "INVALID_USER_ID");
+            }
             var filter = new TransactionFilter
             (
                 UserId: request.UserId,

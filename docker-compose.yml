@@ -1,17 +1,36 @@
 version: '3.8'
 
 services:
+  redis:
+    image: redis
+    container_name: budget-redis
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis:/data  
+    networks:
+      - app
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+      start_period: 10s
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
   auth.api:
     build:
       context: ./AuthService
       dockerfile: Auth.API/Dockerfile
-    ports:
+    ports:  
       - "8081:8080" 
     expose:
       - "8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__Redis=redis:6379,abortConnect=false,connectTimeout=5000,syncTimeout=5000
     networks:
       - app
 
@@ -44,3 +63,6 @@ services:
 networks:
   app:
     driver: bridge
+
+volumes:
+  redis: 

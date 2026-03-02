@@ -16,13 +16,13 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<CreateTransactionUseCase> _logger;
-        private readonly ICacheService _cache;
+        private readonly ITransactionCacheInvalidator _cache;
         public CreateTransactionUseCase(ITransactionRepository transactionRepository,
                                         IAccountRepository accountRepository,
                                         ICategoryRepository categoryRepository,
                                         IUnitOfWork unitOfWork,
                                         ILogger<CreateTransactionUseCase> logger,
-                                        ICacheService cache)
+                                        ITransactionCacheInvalidator cache)
         {
             _transactionRepository = transactionRepository;
             _accountRepository = accountRepository;
@@ -58,7 +58,7 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
 
                 await _transactionRepository.CreateTransaction(transaction);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await InvalidateTransactionCacheAsync(1, transaction.TransactionId, ct);
+                await _cache.InvalidateAsync(1,transaction.TransactionId, ct);
                 return new CreateTransactionSuccessRepsonse(transaction.TransactionId);
             }
             catch (Exception ex)
@@ -66,13 +66,6 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
                 _logger.LogWarning(ex, "Error creating transaction for user");
                 return new CreateTransactionErrorResponse("Unable to create transaction", "INTERNAL_ERROR");
             }
-        }
-        private async Task InvalidateTransactionCacheAsync(int userId, int transactionId, CancellationToken ct)
-        {
-            await _cache.RemoveAsync($"transaction:{transactionId}", ct);
-            await _cache.RemoveByPatternAsync($"transactions:user:{userId}:", ct);
-            await _cache.RemoveByPatternAsync($"dashboard:user:{userId}:", ct);
-            await _cache.RemoveByPatternAsync($"budgets:user:{userId}:", ct);
         }
     }
 }

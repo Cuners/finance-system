@@ -1,11 +1,11 @@
 import TransactionItem from './TransactionItem';
-import { getCategoryIcon, getCategoryColor } from '../../../Utils/CategoryIcons';
+import { getCategoryIcon } from '../../../Utils/CategoryIcons';
 import { useRecentTransactions } from '../../../Hooks/useTransactions';
 const TransactionTopExpenses = () => {
   const { data: transactions, loading, error } = useRecentTransactions({ 
-    type: 'expense',
-    sortBy: 'amount',
-    sortOrder: 'desc'
+    type: "expense",
+    sortBy: "amount",
+    sortOrder: "desc"
   });
   const topExpenses = transactions.slice(0, 5);
   if (loading) {
@@ -24,9 +24,10 @@ const TransactionTopExpenses = () => {
             key={transaction.transactionId}
             category={transaction.categoryName}
             amount={transaction.amount}
-            date={new Date(transaction.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+            date={new Date(transaction.date).toLocaleDateString('ru-RU', { month: 'long', day: 'numeric' })}
             icon={getCategoryIcon(transaction.categoryName)}
             variant="expense-overview"
+            type="expense"
           />
         ))}
       </div>

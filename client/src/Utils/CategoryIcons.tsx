@@ -7,6 +7,7 @@ import UtilitiesIcon from '../assets/SvgIcons/UtilitiesIcon';
 import ShoppingIcon from '../assets/SvgIcons/ShoppingIcon';
 import TravelIcon from '../assets/SvgIcons/TravelIcon';
 import EducationIcon from '../assets/SvgIcons/EducationIcon';
+import BalanceIcon from '../assets/SvgIcons/BalanceIcon';
 
 export const getCategoryIcon = (categoryName: string) => {
   const name = categoryName.toLowerCase().trim();
@@ -14,6 +15,9 @@ export const getCategoryIcon = (categoryName: string) => {
   switch (name) {
 
     case 'продукты':
+      return <FoodIcon />;
+
+    case 'питание':
       return <FoodIcon />;
 
     case 'транспорт':
@@ -34,6 +38,9 @@ export const getCategoryIcon = (categoryName: string) => {
     case 'образование':
       return <EducationIcon />;
 
+    case 'доходы':
+      return <BalanceIcon/>
+
     default:
       return <UtilitiesIcon />;
   }
@@ -45,7 +52,10 @@ export const getCategoryColor = (categoryName: string) => {
   switch (name) {
     case 'продукты':
       return '#f59e0b'; 
-    
+
+    case 'питание':
+      return '#f59e0b'; 
+      
     case 'транспорт':
       return '#3b82f6'; 
     
@@ -66,6 +76,9 @@ export const getCategoryColor = (categoryName: string) => {
     
     case 'образование':
       return '#0ea5e9';
+
+    case 'доходы':
+      return '#00eaff';
     
     default:
       return '#6b7280'; 

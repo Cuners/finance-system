@@ -4,7 +4,12 @@
   padding: 12px 0;
   gap: 16px;
 }
-
+.top-expenses{
+  background: #282929;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
 .transaction-icon {
   width: 36px;
   height: 36px;

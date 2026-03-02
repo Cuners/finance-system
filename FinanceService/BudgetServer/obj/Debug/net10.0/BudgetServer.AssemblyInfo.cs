@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BudgetServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5ff05fc743829b41ffa3bbce40b9a6192ba76e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef383a68e69e5bfd088cecfe7ca7fe7083546cc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BudgetServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BudgetServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 ﻿
+using Finance.Application.Services;
 using Finance.Application.UseCases.Accounts.CreateAccount.Response;
 using Finance.Application.UseCases.Budgets.СreateBudget.Request;
 using Finance.Application.UseCases.Budgets.СreateBudget.Response;
@@ -13,19 +14,22 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
 {
     public class CreateBudgetUseCase
     {
-        public readonly IBudgetRepository _budgetRepository;
-        public readonly ICategoryRepository _categoryRepository;
-        public readonly IUnitOfWork _unitOfWork;
-        public readonly ILogger<CreateBudgetUseCase> _logger;
+        private readonly IBudgetRepository _budgetRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly ILogger<CreateBudgetUseCase> _logger;
+        private readonly IBudgetCacheInvalidator _cache;
         public CreateBudgetUseCase(IBudgetRepository budgetRepository, 
                                    ICategoryRepository categoryRepository, 
                                    IUnitOfWork unitOfWork, 
-                                   ILogger<CreateBudgetUseCase> logger)
+                                   ILogger<CreateBudgetUseCase> logger,
+                                   IBudgetCacheInvalidator cache)
         {
             _budgetRepository = budgetRepository;
             _categoryRepository = categoryRepository;
             _unitOfWork=unitOfWork;
             _logger = logger;
+            _cache = cache; 
         }
         public async Task<CreateBudgetResponse> ExecuteAsync(CreateBudgetRequest request, CancellationToken ct)
         {
@@ -41,6 +45,7 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
                 };
                 await _budgetRepository.CreateBudget(budget);
                 await _unitOfWork.SaveChangesAsync(ct);
+                await _cache.InvalidateAsync(1,request.UserId,ct);
                 return new CreateBudgetSuccessResponse(budget.BudgetId);
             }
             catch (Exception ex) 

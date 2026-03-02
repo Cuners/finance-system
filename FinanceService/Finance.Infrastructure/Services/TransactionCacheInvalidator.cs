@@ -23,7 +23,7 @@ namespace Finance.Infrastructure.Services
         {
             try
             {
-                _logger.LogDebug($"Invalidating cache for user {userId}, transaction {transactionId}");
+                _logger.LogDebug($"Invalidating cache for user {userId}");
                 await Task.WhenAll(
                     _cache.RemoveAsync($"transaction:{transactionId}", ct),
                     _cache.RemoveByPatternAsync($"transactions:user:{userId}:", ct),
