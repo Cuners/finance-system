@@ -6,6 +6,5 @@ namespace Finance.Application.UseCases.Categories.GetCategories.Request
 {
     public class GetCategoriesRequest
     {
-        public int CategoryId { get; set; } 
     }
 }

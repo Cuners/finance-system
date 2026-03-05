@@ -1,10 +1,6 @@
 ﻿using Finance.Application.Services;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
 using Finance.Application.UseCases.Categories.GetCategories.Request;
 using Finance.Application.UseCases.Categories.GetCategories.Response;
-using Finance.Application.UseCases.Transactions.GetTransactions.Response;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,7 +10,7 @@ using System.Transactions;
 
 namespace Finance.Application.UseCases.Categories.GetCategories
 {
-    public class GetCategoriesUseCase
+    public class GetCategoriesUseCase : IUseCase<GetCategoriesRequest, GetCategoriesResponse>
     {
         private readonly ICategoryRepository _categories;
         private readonly ILogger<GetCategoriesUseCase> _logger;
@@ -25,7 +21,7 @@ namespace Finance.Application.UseCases.Categories.GetCategories
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetCategoriesResponse> ExecuteAsync(CancellationToken ct)
+        public async Task<GetCategoriesResponse> ExecuteAsync(GetCategoriesRequest request,CancellationToken ct)
         {
             var cacheKey = $"categories";
             try
@@ -41,6 +37,7 @@ namespace Finance.Application.UseCases.Categories.GetCategories
                     var categories = await _categories.GetAllCategories(ct);
                     var result = categories.Select(x => new CategoryDto
                     {
+                        CategoryId = x.CategoryId,
                         Name = x.Name
                     });
                     return result;
@@ -62,6 +59,7 @@ namespace Finance.Application.UseCases.Categories.GetCategories
                 }
                 var result = categories.Select(x => new CategoryDto
                 {
+                    CategoryId = x.CategoryId,
                     Name = x.Name
                 });
                 return new GetCategoriesSuccessResponse(result);

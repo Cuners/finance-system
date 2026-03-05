@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Accounts.GetAccountsByUserId
 {
-    public class GetAccountsByUserIdUseCase
+    public class GetAccountsByUserIdUseCase : IUseCase<GetAccountsByUserIdRequest, GetAccountsByUserIdResponse>
     {
         private readonly IAccountRepository _accounts;
         private readonly ILogger<GetAccountsByUserIdUseCase> _logger;

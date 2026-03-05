@@ -2,7 +2,6 @@
 using Finance.Application.Services;
 using Finance.Application.UseCases.Transactions.DeleteTransaction.Request;
 using Finance.Application.UseCases.Transactions.DeleteTransaction.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,7 +11,7 @@ using System.Transactions;
 
 namespace Finance.Application.UseCases.Transactions.DeleteTransaction
 {
-    public class DeleteTransactionUseCase
+    public class DeleteTransactionUseCase : IUseCase<DeleteTransactionRequest, DeleteTransactionResponse>
     {
         private readonly ITransactionRepository _transaction;
         private readonly IUnitOfWork _unitOfWork;

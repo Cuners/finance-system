@@ -1,7 +1,6 @@
 ﻿using Finance.Application.Services;
 using Finance.Application.UseCases.Accounts.DeleteAccount.Request;
 using Finance.Application.UseCases.Accounts.DeleteAccount.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,7 +10,7 @@ using System.Text;
 namespace Finance.Application.UseCases.Accounts.DeleteAccount
 {
     
-    public class DeleteAccountUseCase
+    public class DeleteAccountUseCase : IUseCase<DeleteAccountRequest, DeleteAccountResponse>
     {
         private readonly IAccountRepository _account;
         private readonly IUnitOfWork _unitOfWork;

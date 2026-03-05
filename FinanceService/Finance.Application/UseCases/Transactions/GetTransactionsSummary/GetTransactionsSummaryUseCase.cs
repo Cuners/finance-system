@@ -1,6 +1,5 @@
 ﻿
 using Finance.Application.Services;
-using Finance.Application.UseCases.Transactions.GetTransactions.Response;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
 using Finance.Domain.Interfaces;
@@ -12,7 +11,7 @@ using static System.Net.WebRequestMethods;
 
 namespace Finance.Application.UseCases.Transactions.GetTransactionsSummary
 {
-    public class GetTransactionsSummaryUseCase
+    public class GetTransactionsSummaryUseCase : IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse>
     {
         private readonly ITransactionRepository _Transaction;
         private readonly ILogger<GetTransactionsSummaryUseCase> _logger;

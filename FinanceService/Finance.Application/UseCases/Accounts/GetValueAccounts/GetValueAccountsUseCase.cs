@@ -1,10 +1,7 @@
 ﻿
 using Finance.Application.Services;
-using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Response;
 using Finance.Application.UseCases.Accounts.GetValueAccounts.Request;
 using Finance.Application.UseCases.Accounts.GetValueAccounts.Response;
-using Finance.Application.UseCases.Transactions;
-using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,7 +10,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Accounts.GetValueAccounts
 {
-    public class GetValueAccountsUseCase
+    public class GetValueAccountsUseCase : IUseCase<GetValueAccountsRequest, GetValueAccountsResponse>
     {
         private readonly IAccountRepository _accounts;
         private readonly ILogger<GetValueAccountsUseCase> _logger;

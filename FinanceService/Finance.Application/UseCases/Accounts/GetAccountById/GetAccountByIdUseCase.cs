@@ -1,6 +1,6 @@
-﻿using Finance.Application.UseCases.Accounts.GetAccountById.Request;
+﻿
+using Finance.Application.UseCases.Accounts.GetAccountById.Request;
 using Finance.Application.UseCases.Accounts.GetAccountById.Response;
-using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Accounts.GetAccountById
 {
-    public class GetAccountByIdUseCase
+    public class GetAccountByIdUseCase : IUseCase<GetAccountByIdRequest, GetAccountByIdResponse>
     {
         private readonly IAccountRepository _accountRepository;
         private readonly ILogger<GetAccountByIdUseCase> _logger;

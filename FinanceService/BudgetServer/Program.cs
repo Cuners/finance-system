@@ -2,7 +2,6 @@ using Finance.Application.DependencyInjection;
 using Finance.Application.UseCases;
 using Finance.Infrastructure.DependencyInjection;
 using Finance.Infrastructure.Persistence;
-using Microsoft.Extensions.Caching.Distributed;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,24 +13,21 @@ builder.Services.AddControllersWithViews()
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
 builder.Services.AddScoped<IUnitOfWork>(provider => (IUnitOfWork)provider.GetRequiredService<BudgetDbContext>());
+
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 {
     var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
-
     if (string.IsNullOrWhiteSpace(redisConnectionString))
     {
         throw new InvalidOperationException("Redis connection string is not configured");
     }
     var config = ConfigurationOptions.Parse(redisConnectionString);
-    config.AbortOnConnectFail = false;
-    config.ConnectTimeout = 5000;
-    config.SyncTimeout = 5000;
     return ConnectionMultiplexer.Connect(config);
 });
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
-    options.InstanceName = "Budget_";
+
 });
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();

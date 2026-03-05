@@ -17,13 +17,9 @@ namespace Finance.Application.Validators
             RuleFor(x => x.LimitAmount)
                 .GreaterThan(0).WithMessage("Budget limit must be greater than zero.");
 
-            RuleFor(x => x.Date)
-                .NotEmpty()
-                .GreaterThanOrEqualTo(DateOnly.FromDateTime(DateTime.UtcNow)).WithMessage("Budget date must be for current or future month.");
 
             RuleFor(x => x.CategoryId)
-                .NotNull().WithMessage("At least one category is required.")
-                .Must(list => list >= 1).WithMessage("At least one category is required.");
+                .GreaterThan(0).WithMessage("Category is required.");
         }
 
     }

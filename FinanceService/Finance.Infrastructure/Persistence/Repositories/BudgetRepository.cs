@@ -1,6 +1,7 @@
 ﻿using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { categoryService } from '../Services/FinanceService/categoryService';
 import { type CategoryDto } from '../Types';
 
-export const useRecentCategories = () => {
+export const useCategories = () => {
   const [categories, setCategories] = useState<CategoryDto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

@@ -19,3 +19,35 @@
     grid-template-columns: 1fr;
   }
 }
+.filter-btn {
+  padding: 6px 16px;
+  border: none;
+  color: white;
+  background: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #e0f7fa;
+  color: #00838f;
+  font-weight: 600;
+}
+
+.add-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #00a884;
+  color: white;
+  font-weight: 600;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

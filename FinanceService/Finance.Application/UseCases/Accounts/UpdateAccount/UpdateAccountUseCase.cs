@@ -1,15 +1,14 @@
-﻿using Finance.Application.UseCases.Accounts.DeleteAccount.Response;
+﻿using Finance.Application.Services;
 using Finance.Application.UseCases.Accounts.UpdateAccount.Request;
 using Finance.Application.UseCases.Accounts.UpdateAccount.Response;
 using Finance.Domain.Interfaces;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.Extensions.Logging;
-using Finance.Application.Services;
 namespace Finance.Application.UseCases.Accounts.UpdateAccount
 {
-    public class UpdateAccountUseCase
+    public class UpdateAccountUseCase : IUseCase<UpdateAccountRequest, UpdateAccountResponse>
     {
         private readonly IAccountRepository _account;
         private readonly IUnitOfWork _unitOfWork;
@@ -44,4 +43,5 @@ namespace Finance.Application.UseCases.Accounts.UpdateAccount
             }
         }
     }
+
 }

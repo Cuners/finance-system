@@ -1,9 +1,6 @@
 ﻿using Finance.Application.Services;
 using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Request;
 using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
-using Finance.Application.UseCases.Transactions;
-using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
 {
-    public class GetBudgetsStatusUseCase
+    public class GetBudgetsStatusUseCase : IUseCase<GetBudgetsStatusRequest, GetBudgetsStatusResponse>
     {
         private readonly IBudgetRepository _BudgetRepository;
         private readonly ILogger<GetBudgetsStatusUseCase> _logger;
@@ -55,7 +52,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
+                _logger.LogError(ex, $"Ошибка при получении статуса бюджетов для пользователя {request.UserId}");
                 return new GetBudgetsStatusErrorResponse("Unable to get Budget at this time", "INVALID_GET");
             }
         }

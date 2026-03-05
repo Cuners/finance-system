@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.DeleteBudget
 {
-    public class DeleteBudgetUseCase
+    public class DeleteBudgetUseCase : IUseCase<DeleteBudgetRequest, DeleteBudgetResponse>
     {
         private readonly IBudgetRepository _Budget;
         private readonly IUnitOfWork _unitOfWork;

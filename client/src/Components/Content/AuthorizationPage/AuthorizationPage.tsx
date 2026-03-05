@@ -8,7 +8,6 @@ const AuthorizationPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Здесь логика авторизации
     console.log('Email:', email, 'Password:', password);
   };
     return(

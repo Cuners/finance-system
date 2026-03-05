@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Finance.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5ff05fc743829b41ffa3bbce40b9a6192ba76e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fa3fbc2e94e2ec2d5c02b584b616554c09783b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Finance.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Finance.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

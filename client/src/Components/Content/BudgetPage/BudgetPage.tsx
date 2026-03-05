@@ -1,20 +1,36 @@
+import { useState } from 'react';
 import StatCardBudget from "./StatCardBudget";
 import "./BudgetPage.css";
 import {useBudgetsSummary} from '../../../Hooks/useBudgetsSummary';
 import BudgetCategories from "./BudgetCategories";
 import TransactionsHeader from "../ContentHeader.tsx";
+import AddBudgetModal from "./BudgetAddUpdate";
+
 const BudgetPage = () => {
     const { budgets, loading, error } = useBudgetsSummary();
-    const formatCurrency = (value: number) => 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const formatCurrency = (value: number) =>
     new Intl.NumberFormat('ru-RU', {style: 'currency',currency: 'RUB'}).format(value);
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     return(
       <div className="budget-page">
-        <TransactionsHeader
-          title="Бюджеты"
-          description="Планируйте и отслеживайте ваши месячные бюджеты"/>
+        <div className="header-controls">
+          <TransactionsHeader
+            title="Бюджеты"
+            description="Планируйте и отслеживайте ваши месячные бюджеты"/>
+          <button className="add-btn" onClick={handleOpenModal}>+ Add Budget</button>
+        </div>
         <div className="dashboard-grid">
           <StatCardBudget
             title="Общий бюджет"
@@ -35,6 +51,15 @@ const BudgetPage = () => {
     <div className="budget-dashboard-layout">
           <BudgetCategories />
     </div>
+      {isModalOpen && (
+        <AddBudgetModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          mode="create"
+          onSuccess={() => {
+          }}
+        />
+      )}
       </div>
     );
 };

@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.AccountDto",
+        "Type": "Finance.Application.UseCases.Accounts.CreateAccount.Response.CreateAccountResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.AccountDto",
+        "Type": "Finance.Application.UseCases.Accounts.GetAccountById.Response.GetAccountByIdResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +92,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.AccountDto",
+        "Type": "Finance.Application.UseCases.Accounts.UpdateAccount.Response.UpdateAccountResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -116,7 +116,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Finance.Application.UseCases.Accounts.DeleteAccount.Response.DeleteAccountResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BudgetServer.Controllers.AccountController",
@@ -128,7 +138,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Decimal",
+        "Type": "Finance.Application.UseCases.Accounts.GetValueAccounts.Response.GetValueAccountsResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -148,7 +158,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Domain.Budget, Finance.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Response.GetBudgetsByUserIdResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -174,7 +184,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.BudgetDto",
+        "Type": "Finance.Application.UseCases.Budgets.\u0421reateBudget.Response.CreateBudgetResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -200,7 +210,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.BudgetDto",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetById.Response.GetBudgetByIdResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -231,7 +241,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.BudgetDto",
+        "Type": "Finance.Application.UseCases.Budgets.UpdateBudget.Response.UpdateBudgetResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -255,7 +265,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Finance.Application.UseCases.Budgets.DeleteBudget.Response.DeleteBudgetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BudgetServer.Controllers.BudgetController",
@@ -267,7 +287,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Domain.BudgetStatus, Finance.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response.GetBudgetsStatusResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -287,7 +307,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.BudgetSummaryDto",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response.GetBudgetsSummaryResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -307,7 +327,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.UseCases.Categories.CategoryDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Finance.Application.UseCases.Categories.GetCategories.Response.GetCategoriesResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -353,7 +373,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.UseCases.Transactions.TransactionDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactions.Response.GetTransactionsResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -379,7 +399,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.TransactionDto",
+        "Type": "Finance.Application.UseCases.Transactions.CreateTransaction.Response.CreateTransactionResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -405,7 +425,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.TransactionDto",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionById.Response.GetTransactionByIdResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -429,7 +449,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Finance.Application.UseCases.Transactions.DeleteTransaction.Response.DeleteTransactionResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "TransactionServer.Controllers.TransactionController",
@@ -447,7 +477,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.UseCases.Transactions.TransactionDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response.GetTransactionsByAccountIdResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -478,7 +508,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.TransactionSummaryDto",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response.GetTransactionSummaryResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
