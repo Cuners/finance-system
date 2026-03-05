@@ -1,97 +1,45 @@
 // AddBudgetModal.tsx
 import React, { useState, useEffect } from 'react';
-import './AddBudgetModal.css';
-import { getCategoryIcon } from '../../../Utils/CategoryIcons';
-
-interface BudgetCategory {
-  id: string;
-  name: string; 
-  icon: React.ReactNode;
-}
+import { useCategories } from '../../../Hooks/useCategories';
+import { useBudgetAddUpdate } from '../../../Hooks/useBudgetAddUpdate';
+import { getCategoryIcon, getCategoryColor } from '../../../Utils/CategoryIcons';
+import './BudgetAddUpdate.css';
 
 interface AddBudgetModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: {
-    categoryId: string;
-    categoryName: string;
-    amount: number;
-  }) => void;
   mode: 'create' | 'edit';
   budgetData?: {
-    categoryId: string;
+    budgetId: number;
+    categoryId: number;
     categoryName: string;
     amount: number;
   };
+  onSuccess?: () => void;
 }
 
 const AddBudgetModal = ({
   isOpen,
   onClose,
-  onSubmit,
   mode,
-  budgetData
+  budgetData,
+  onSuccess
 }: AddBudgetModalProps) => {
   const [amount, setAmount] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<BudgetCategory | null>(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { categories, loading, error} = useCategories();
+  const { createBudget, updateBudget, loading: budgetMutationLoading } = useBudgetAddUpdate();
 
-  const budgetCategories: BudgetCategory[] = [
-    { 
-      id: 'food', 
-      name: 'Продукты', 
-      icon: getCategoryIcon('Продукты')
-    },
-    { 
-      id: 'transport', 
-      name: 'Транспорт', 
-      icon: getCategoryIcon('Транспорт')
-    },
-    { 
-      id: 'entertainment', 
-      name: 'Развлечения', 
-      icon: getCategoryIcon('Развлечения')
-    },
-    { 
-      id: 'health', 
-      name: 'Здоровье', 
-      icon: getCategoryIcon('Здоровье')
-    },
-    { 
-      id: 'utilities', 
-      name: 'Коммунальные услуги', 
-      icon: getCategoryIcon('Коммунальные услуги')
-    },
-    { 
-      id: 'shopping', 
-      name: 'Покупки', 
-      icon: getCategoryIcon('Покупки')
-    },
-    { 
-      id: 'travel', 
-      name: 'Путешествия', 
-      icon: getCategoryIcon('Путешествия')
-    },
-    { 
-      id: 'education', 
-      name: 'Образование', 
-      icon: getCategoryIcon('Образование')
-    }
-  ];
-
-  // Инициализация при редактировании
   useEffect(() => {
     if (mode === 'edit' && budgetData) {
       setAmount(budgetData.amount.toString());
-      
-      // Найти категорию по имени
-      const category = budgetCategories.find(c => 
-        c.name.toLowerCase() === budgetData.categoryName.toLowerCase() ||
-        budgetData.categoryName.toLowerCase().includes(c.name.toLowerCase())
-      );
-      
-      setSelectedCategory(category || null);
+      setSelectedCategoryId(budgetData.categoryId);
+    } else if (mode === 'create') {
+      setAmount('');
+      setSelectedCategoryId(null);
+      setErrors({});
     }
   }, [mode, budgetData]);
 
@@ -103,7 +51,7 @@ const AddBudgetModal = ({
       newErrors.amount = 'Введите корректную сумму';
     }
     
-    if (!selectedCategory) {
+    if (!selectedCategoryId) {
       newErrors.category = 'Выберите категорию';
     }
     
@@ -111,27 +59,44 @@ const AddBudgetModal = ({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
     setIsSubmitting(true);
     
-    onSubmit({
-      categoryId: selectedCategory!.id,
-      categoryName: selectedCategory!.name,
-      amount: parseFloat(amount)
-    });
-    
-    // Сброс состояния после успешной отправки
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      if (mode === 'create') {
+        await createBudget({
+          categoryId: selectedCategoryId!,
+          categoryName: categories.find((cat: any) => cat.categoryId === selectedCategoryId)?.name || '',
+          amount: parseFloat(amount)
+        });
+      } else if (mode === 'edit' && budgetData) {
+        await updateBudget({
+          budgetId: budgetData.budgetId,
+          categoryId: selectedCategoryId!,
+          categoryName: categories.find((cat: any) => cat.categoryId === selectedCategoryId)?.name || '',
+          amount: parseFloat(amount)
+        });
+      }
+      
       setAmount('');
-      setSelectedCategory(null);
+      setSelectedCategoryId(null);
       setErrors({});
-      onClose();
-    }, 500);
+      
+      if (onSuccess) {
+        onSuccess(); 
+      }
+      
+      onClose(); 
+    } catch (error) {
+      console.error('Error saving budget:', error);
+      setErrors({ submit: 'Ошибка при сохранении бюджета' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -147,9 +112,14 @@ const AddBudgetModal = ({
         </div>
         
         <form onSubmit={handleSubmit} className="modal-body">
-          {/* Monthly Budget Field */}
+
+          {loading && <div className="loading">Загрузка категорий...</div>}
+          {error && <div className="error-message">Ошибка загрузки категорий: {error}</div>}
+          
           <div className="form-group">
-            <label htmlFor="amount">Ежемесячный бюджет</label>
+            <div>
+              <span>Ежемесячный бюджет</span>
+            </div>
             <input
               id="amount"
               type="number"
@@ -159,25 +129,25 @@ const AddBudgetModal = ({
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               className={errors.amount ? 'input-error' : ''}
+              disabled={isSubmitting || loading}
             />
             {errors.amount && <p className="error-message">{errors.amount}</p>}
           </div>
           
-          {/* Category Selection */}
           <div className="form-group">
-            <label>Выберите категорию</label>
+            <span>Выберите категорию</span>
             <div className="category-grid">
-              {budgetCategories.map(category => {
-                const isSelected = selectedCategory?.id === category.id;
+              {categories.map((category: any) => {
+                const isSelected = selectedCategoryId === category.categoryId;
                 return (
-                  <div 
-                    key={category.id} 
+                  <div
+                    key={category.categoryId}
                     className={`category-item ${isSelected ? 'selected' : ''}`}
                     title={category.name}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => !isSubmitting && !loading && setSelectedCategoryId(category.categoryId)}
                   >
-                    <div className="category-icon">
-                      {category.icon}
+                    <div className="category-icon" style={{ backgroundColor: `${getCategoryColor(category.name)}15`, color: getCategoryColor(category.name) }}>
+                      {getCategoryIcon(category.name)}
                     </div>
                     <div className="category-name">{category.name}</div>
                   </div>
@@ -186,11 +156,10 @@ const AddBudgetModal = ({
             </div>
             {errors.category && <p className="error-message">{errors.category}</p>}
           </div>
-          
-          {/* Action Buttons */}
+          {errors.submit && <p className="error-message">{errors.submit}</p>}
           <div className="modal-actions">
             <button
-              type="button"
+            type="button"
               className="cancel-button"
               onClick={onClose}
               disabled={isSubmitting}
@@ -200,9 +169,9 @@ const AddBudgetModal = ({
             <button
               type="submit"
               className="add-button"
-              disabled={isSubmitting}
+              disabled={isSubmitting || loading || !selectedCategoryId || !amount}
             >
-              {isSubmitting ? 'Сохранение...' : mode === 'create' ? 'Добавить бюджет' : 'Сохранить изменения'}
+              {isSubmitting || budgetMutationLoading ? 'Сохранение...' : mode === 'create' ? 'Добавить бюджет' : 'Сохранить изменения'}
             </button>
           </div>
         </form>

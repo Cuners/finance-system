@@ -1,9 +1,6 @@
 ﻿using Finance.Application.Services;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
 using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Request;
 using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,7 +10,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetsSummary
 {
-    public class GetBudgetsSummaryUseCase
+    public class GetBudgetsSummaryUseCase : IUseCase<GetBudgetsSummaryRequest, GetBudgetsSummaryResponse>
     {
         private readonly IBudgetRepository _BudgetRepository;
         private readonly ILogger<GetBudgetsSummaryUseCase> _logger;

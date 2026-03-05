@@ -1,7 +1,6 @@
 ﻿using Finance.Application.Services;
 using Finance.Application.UseCases.Transactions.GetTransactions.Request;
 using Finance.Application.UseCases.Transactions.GetTransactions.Response;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
 using Finance.Domain.Interfaces;
 using Finance.Domain.Queries;
 using Microsoft.Extensions.Logging;
@@ -11,7 +10,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Transactions.GetTransactions
 {
-    public class GetTransactionsUseCase
+    public class GetTransactionsUseCase : IUseCase<GetTransactionsRequest, GetTransactionsResponse>
     {
         private readonly ITransactionRepository _transaction;
         private readonly ILogger<GetTransactionsUseCase> _logger;

@@ -13,7 +13,7 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget.Request
 
         public decimal LimitAmount { get; set; }
 
-        public DateOnly Date { get; set; }
+        
 
         public int CategoryId { get; set; }
     }

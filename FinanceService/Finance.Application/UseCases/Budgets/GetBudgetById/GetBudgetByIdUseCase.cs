@@ -1,7 +1,6 @@
-﻿using Finance.Application.UseCases.Accounts;
+﻿
 using Finance.Application.UseCases.Budgets.GetBudgetById.Request;
 using Finance.Application.UseCases.Budgets.GetBudgetById.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetById
 {
-    public class GetBudgetByIdUseCase
+    public class GetBudgetByIdUseCase : IUseCase<GetBudgetByIdRequest, GetBudgetByIdResponse>
     {
         private readonly IBudgetRepository _BudgetRepository;
         private readonly ILogger<GetBudgetByIdUseCase> _logger;

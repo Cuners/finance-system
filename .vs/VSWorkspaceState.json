@@ -7,6 +7,6 @@
     "\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories",
     "\\nginx"
   ],
-  "SelectedNode": "\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
+  "SelectedNode": "\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -9,7 +9,6 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Здесь логика регистрации
     console.log('Login:',login,'Email:', email, 'Password:', password);
   };
     return(

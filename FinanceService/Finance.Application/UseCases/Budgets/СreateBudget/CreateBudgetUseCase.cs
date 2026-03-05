@@ -1,9 +1,7 @@
 ﻿
 using Finance.Application.Services;
-using Finance.Application.UseCases.Accounts.CreateAccount.Response;
 using Finance.Application.UseCases.Budgets.СreateBudget.Request;
 using Finance.Application.UseCases.Budgets.СreateBudget.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,7 +10,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.СreateBudget
 {
-    public class CreateBudgetUseCase
+    public class CreateBudgetUseCase : IUseCase<CreateBudgetRequest, CreateBudgetResponse>
     {
         private readonly IBudgetRepository _budgetRepository;
         private readonly ICategoryRepository _categoryRepository;
@@ -40,7 +38,7 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
                     UserId = request.UserId,
                     Name = request.Name,
                     LimitAmount = request.LimitAmount,
-                    Date=request.Date,
+                    Date=DateOnly.FromDateTime(DateTime.UtcNow),
                     CategoryId = request.CategoryId
                 };
                 await _budgetRepository.CreateBudget(budget);

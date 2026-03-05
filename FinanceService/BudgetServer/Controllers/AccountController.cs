@@ -1,16 +1,17 @@
-﻿using Finance.Application.UseCases.Accounts;
-using Finance.Application.UseCases.Accounts.CreateAccount;
+﻿using Finance.Application.UseCases;
+using Finance.Application.UseCases.Accounts;
 using Finance.Application.UseCases.Accounts.CreateAccount.Request;
-using Finance.Application.UseCases.Accounts.DeleteAccount;
+using Finance.Application.UseCases.Accounts.CreateAccount.Response;
 using Finance.Application.UseCases.Accounts.DeleteAccount.Request;
-using Finance.Application.UseCases.Accounts.GetAccountById;
+using Finance.Application.UseCases.Accounts.DeleteAccount.Response;
 using Finance.Application.UseCases.Accounts.GetAccountById.Request;
-using Finance.Application.UseCases.Accounts.GetAccountsByUserId;
+using Finance.Application.UseCases.Accounts.GetAccountById.Response;
 using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Request;
-using Finance.Application.UseCases.Accounts.GetValueAccounts;
+using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Response;
 using Finance.Application.UseCases.Accounts.GetValueAccounts.Request;
-using Finance.Application.UseCases.Accounts.UpdateAccount;
+using Finance.Application.UseCases.Accounts.GetValueAccounts.Response;
 using Finance.Application.UseCases.Accounts.UpdateAccount.Request;
+using Finance.Application.UseCases.Accounts.UpdateAccount.Response;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,25 +22,26 @@ namespace BudgetServer.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly CreateAccountUseCase _createAccount;   
-        private readonly GetAccountsByUserIdUseCase _getAccounts;
-        private readonly GetValueAccountsUseCase _getAccountsValue;
-        private readonly DeleteAccountUseCase _deleteAccount;
-        private readonly GetAccountByIdUseCase _getAccountById;
-        private readonly UpdateAccountUseCase _updateAccount;
-        public AccountController(CreateAccountUseCase createAccount, 
-                                 GetAccountsByUserIdUseCase getAccounts, 
-                                 DeleteAccountUseCase deleteAccount, 
-                                 GetAccountByIdUseCase getAccountById, 
-                                 UpdateAccountUseCase updateAccount,
-                                 GetValueAccountsUseCase getAccountsValue)
+        private readonly IUseCase<CreateAccountRequest, CreateAccountResponse> _createAccount;
+        private readonly IUseCase<GetAccountsByUserIdRequest, GetAccountsByUserIdResponse> _getAccounts;
+        private readonly IUseCase<GetValueAccountsRequest, GetValueAccountsResponse> _getAccountsValue;
+        private readonly IUseCase<DeleteAccountRequest, DeleteAccountResponse> _deleteAccount;
+        private readonly IUseCase<GetAccountByIdRequest, GetAccountByIdResponse> _getAccountById;
+        private readonly IUseCase<UpdateAccountRequest, UpdateAccountResponse> _updateAccount;
+
+        public AccountController(IUseCase<CreateAccountRequest, CreateAccountResponse> createAccount,
+                                 IUseCase<GetAccountsByUserIdRequest, GetAccountsByUserIdResponse> getAccounts,
+                                 IUseCase<DeleteAccountRequest, DeleteAccountResponse> deleteAccount,
+                                 IUseCase<GetAccountByIdRequest, GetAccountByIdResponse> getAccountById,
+                                 IUseCase<UpdateAccountRequest, UpdateAccountResponse> updateAccount,
+                                 IUseCase<GetValueAccountsRequest, GetValueAccountsResponse> getAccountsValue)
         {
             _createAccount = createAccount;
             _getAccounts = getAccounts;
             _getAccountById = getAccountById;
             _updateAccount = updateAccount;
             _deleteAccount = deleteAccount;
-            _getAccountsValue=getAccountsValue;
+            _getAccountsValue = getAccountsValue;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AccountDto>>> GetUserAccounts(CancellationToken ct)
@@ -55,14 +57,14 @@ namespace BudgetServer.Controllers
             return Ok(response);
         }
         [HttpGet("balance")]
-        public async Task<ActionResult<decimal>> GetValueAccounts(CancellationToken ct)
+        public async Task<ActionResult<GetValueAccountsResponse>> GetValueAccounts(CancellationToken ct)
         {
             int userId = 1;
             var response = await _getAccountsValue.ExecuteAsync(new GetValueAccountsRequest { UserId = userId }, ct);
             return Ok(response);
         }
         [HttpGet("{accountid}")]
-        public async Task<ActionResult<AccountDto>> GetAccountById(int accountid, CancellationToken ct)
+        public async Task<ActionResult<GetAccountByIdResponse>> GetAccountById(int accountid, CancellationToken ct)
         {
             
             var request = new GetAccountByIdRequest { AccountId = accountid };
@@ -71,20 +73,20 @@ namespace BudgetServer.Controllers
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<AccountDto>> Create(CreateAccountRequest request, CancellationToken ct)
+        public async Task<ActionResult<CreateAccountResponse>> Create(CreateAccountRequest request, CancellationToken ct)
         {
             var response = await _createAccount.ExecuteAsync(request,ct);
             return Ok(response);
         }
         [HttpPut("{accountid}")]
-        public async Task<ActionResult<AccountDto>> Update(UpdateAccountRequest request, CancellationToken ct)
+        public async Task<ActionResult<UpdateAccountResponse>> Update(UpdateAccountRequest request, CancellationToken ct)
         {
             var response = await _updateAccount.ExecuteAsync(request, ct);
 
             return Ok(response);
         }
         [HttpDelete("{accountid}")]
-        public async Task<ActionResult> Delete(int accountid, CancellationToken ct)
+        public async Task<ActionResult<DeleteAccountResponse>> Delete(int accountid, CancellationToken ct)
         {
             var request = new DeleteAccountRequest{ AccountId = accountid };
             var response = await _deleteAccount.ExecuteAsync(request, ct);

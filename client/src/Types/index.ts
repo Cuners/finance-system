@@ -32,11 +32,11 @@ export interface AccountDto{
 
 export interface BudgetDto{
   budgetId:number;
-  budgetName: string;
-  budgetLimitAmount:number;
-  budgetDate: Date
-  budgetCategoryName: string,
-  budgetCategoryId: number 
+  categoryId:number;
+  categoryName: string,
+  name: string;
+  limitAmount:number;
+  date: Date
 }
 export interface BudgetStatus{
   budgetId:number;
@@ -57,5 +57,5 @@ export interface BudgetSummary{
 }
 export interface CategoryDto{
   categoryId:number;
-  categoryName:string;
+  name:string;
 }

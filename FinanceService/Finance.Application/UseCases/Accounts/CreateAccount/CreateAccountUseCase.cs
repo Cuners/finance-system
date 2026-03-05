@@ -1,7 +1,6 @@
 ﻿using Finance.Application.Services;
 using Finance.Application.UseCases.Accounts.CreateAccount.Request;
 using Finance.Application.UseCases.Accounts.CreateAccount.Response;
-using Finance.Application.UseCases.Accounts.UpdateAccount;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions;
 using Microsoft.Extensions.Logging;
@@ -10,7 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 namespace Finance.Application.UseCases.Accounts.CreateAccount
 {
-    public class CreateAccountUseCase
+    public class CreateAccountUseCase : IUseCase<CreateAccountRequest, CreateAccountResponse>
     {
         private readonly IAccountRepository _accounts;
         private readonly IUnitOfWork _unitOfWork;

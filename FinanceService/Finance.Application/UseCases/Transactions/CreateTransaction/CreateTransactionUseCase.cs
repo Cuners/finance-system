@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Transactions.CreateTransaction
 {
-    public class CreateTransactionUseCase
+    public class CreateTransactionUseCase : IUseCase<CreateTransactionRequest, CreateTransactionResponse>
     {
         private readonly ITransactionRepository _transactionRepository;
         private readonly IAccountRepository _accountRepository;

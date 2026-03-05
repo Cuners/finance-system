@@ -17,7 +17,6 @@ namespace Finance.Infrastructure.Services
         private readonly ILogger<CacheAsideService> _logger;
         private readonly ConcurrentDictionary<string, SemaphoreSlim> _locks
             = new ConcurrentDictionary<string, SemaphoreSlim>();
-
         private readonly DistributedCacheEntryOptions _defaultOptions = new()
         {
             AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(2)
@@ -34,25 +33,33 @@ namespace Finance.Infrastructure.Services
         }
         public async Task<T?> GetAsync<T>(string key, CancellationToken ct = default)
         {
-            var cachedValue = await _cache.GetStringAsync(key, ct);
-
-            if (string.IsNullOrEmpty(cachedValue))
-            {
-                return default;
-            }
             try
             {
-                var value = JsonSerializer.Deserialize<T>(cachedValue);
-                if (value is not null)
+                var cachedValue = await _cache.GetStringAsync(key, ct);
+
+                if (string.IsNullOrEmpty(cachedValue))
                 {
-                    return value;
+                    return default;
                 }
-                return default;
+                try
+                {
+                    var value = JsonSerializer.Deserialize<T>(cachedValue);
+                    if (value is not null)
+                    {
+                        return value;
+                    }
+                    return default;
+                }
+                catch (JsonException)
+                {
+                    await _cache.RemoveAsync(key, ct);
+                    return default;
+                }
             }
-            catch (JsonException)
+            catch(RedisConnectionException ex)
             {
-                await _cache.RemoveAsync(key, ct);
-                return default;
+                _logger?.LogError(ex, $"Redis connection failed for key '{key}'");
+                throw new TimeoutException($"Redis connection error for key '{key}'", ex);
             }
         }
         public async Task<T?> GetOrCreateAsync<T>(string key,
@@ -76,8 +83,7 @@ namespace Finance.Infrastructure.Services
                 {
                     return cachedValue;
                 }
-                throw new TimeoutException(
-                    $"Failed to acquire cache lock for key '{key}' within {timeout}");
+                throw new TimeoutException($"Failed to acquire cache lock for key '{key}' within {timeout}");
             }
 
             try
@@ -92,11 +98,7 @@ namespace Finance.Infrastructure.Services
                 {
                     return default;
                 }
-                await _cache.SetStringAsync(
-                    key,
-                    JsonSerializer.Serialize(value),
-                    options ?? _defaultOptions,
-                    cancellationToken);
+                await _cache.SetStringAsync(key, JsonSerializer.Serialize(value), options ?? _defaultOptions, cancellationToken);
 
                 return value;
             }
@@ -119,19 +121,26 @@ namespace Finance.Infrastructure.Services
         {
             try
             {
-                var server = _redis.GetServer(_redis.GetEndPoints().First());
-                var keys = server.Keys(pattern: $"*{pattern}*", pageSize: 1000);
+                if (!_redis.IsConnected)
+                {
+                    _logger?.LogWarning("Redis Multiplexer is not connected. Skipping invalidation.");
+                    return;
+                }
+
+                var endpoint = _redis.GetEndPoints().First();
+                var server = _redis.GetServer(endpoint);
+                var keys = server.Keys(pattern: $"{pattern}*", pageSize: 1000).ToArray();
 
                 foreach (var key in keys)
                 {
-                    await _cache.RemoveAsync(key.ToString(), ct);
+                    var keyStr = key.ToString();
+                    await _cache.RemoveAsync(keyStr, ct);
 
-                    if (_locks.TryRemove(key.ToString(), out var semaphore))
+                    if (_locks.TryRemove(keyStr, out var semaphore))
                     {
                         semaphore.Dispose();
                     }
                 }
-
                 _logger?.LogInformation($"Invalidated {keys.Count()} cache keys for pattern {pattern}");
             }
             catch (Exception ex)

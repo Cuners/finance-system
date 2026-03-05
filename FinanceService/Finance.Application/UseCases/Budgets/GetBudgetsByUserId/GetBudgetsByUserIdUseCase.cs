@@ -1,13 +1,6 @@
 ﻿using Finance.Application.Services;
-using Finance.Application.UseCases.Accounts;
-using Finance.Application.UseCases.Budgets.GetBudgetById;
 using Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Request;
 using Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Response;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
-using Finance.Application.UseCases.Budgets.UpdateBudget;
-using Finance.Application.UseCases.Budgets.UpdateBudget.Request;
-using Finance.Application.UseCases.Budgets.UpdateBudget.Response;
-using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -17,7 +10,7 @@ using System.Text;
 namespace Finance.Application.UseCases.Budgets.GetBudgetsByUserId
 {
 
-    public class GetBudgetsByUserIdUseCase
+    public class GetBudgetsByUserIdUseCase : IUseCase<GetBudgetsByUserIdRequest, GetBudgetsByUserIdResponse>
     {
         private readonly IBudgetRepository _budget;
         private readonly ILogger<GetBudgetsByUserIdUseCase> _logger;
@@ -37,7 +30,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsByUserId
                 _logger.LogWarning("GetBudgetRequest is null");
                 return new GetBudgetsByUserIdErrorResponse("Invalid User id", "INVALID_USER_ID");
             }
-            var cacheKey = $"budgets:user:{request.UserId}:";
+            var cacheKey = $"budgets:user:{request.UserId}:" + "byId";
             try
             {
                 var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>

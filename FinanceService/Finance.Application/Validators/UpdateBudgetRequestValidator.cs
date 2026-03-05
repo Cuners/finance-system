@@ -23,9 +23,8 @@ namespace Finance.Application.Validators
                 .NotEmpty()
                 .GreaterThanOrEqualTo(DateOnly.FromDateTime(DateTime.UtcNow)).WithMessage("Budget date must be for current or future month.");
 
-            RuleFor(x => x.Categories)
-                .NotNull().WithMessage("At least one category is required.")
-                .Must(list => list.Count >= 1).WithMessage("At least one category is required.");
+            RuleFor(x => x.CategoryId)
+                  .GreaterThan(0).WithMessage("Account ID is required.");
         }
 
     }

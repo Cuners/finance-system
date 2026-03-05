@@ -13,7 +13,6 @@ const TransactionsHeader = ({
         <h1>{title}</h1>
         <p>{description}</p>
       </div>
-      <button className="add-btn">+ Add Transaction</button>
     </div>
   );
 };

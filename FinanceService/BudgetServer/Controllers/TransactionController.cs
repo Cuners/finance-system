@@ -1,17 +1,16 @@
-﻿
-using Finance.Application.UseCases.Transactions;
-using Finance.Application.UseCases.Transactions.CreateTransaction;
+﻿using Finance.Application.UseCases;
 using Finance.Application.UseCases.Transactions.CreateTransaction.Request;
-using Finance.Application.UseCases.Transactions.DeleteTransaction;
+using Finance.Application.UseCases.Transactions.CreateTransaction.Response;
 using Finance.Application.UseCases.Transactions.DeleteTransaction.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionById;
+using Finance.Application.UseCases.Transactions.DeleteTransaction.Response;
 using Finance.Application.UseCases.Transactions.GetTransactionById.Request;
-using Finance.Application.UseCases.Transactions.GetTransactions;
+using Finance.Application.UseCases.Transactions.GetTransactionById.Response;
 using Finance.Application.UseCases.Transactions.GetTransactions.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId;
+using Finance.Application.UseCases.Transactions.GetTransactions.Response;
 using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionsSummary;
+using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
+using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TransactionServer.Controllers
@@ -20,19 +19,19 @@ namespace TransactionServer.Controllers
     [ApiController]
     public class TransactionController : Controller
     {
-        private readonly CreateTransactionUseCase _createTransaction;
-       // private readonly GetTransactionsByUserIdUseCase _getTransactions;
-        private readonly DeleteTransactionUseCase _deleteTransaction;
-        private readonly GetTransactionsByAccountIdUseCase _getTransactionByAccountId;
-        private readonly GetTransactionByIdUseCase _getTransactionById;
-        private readonly GetTransactionsUseCase _getTransactions;
-        private readonly GetTransactionsSummaryUseCase _getTransactionsSummary;
-        public TransactionController(CreateTransactionUseCase createTransaction, 
-                                     DeleteTransactionUseCase deleteTransaction, 
-                                     GetTransactionsByAccountIdUseCase getTransactionByAccountId, 
-                                     GetTransactionByIdUseCase getTransactionById,
-                                     GetTransactionsUseCase getTransactions, 
-                                     GetTransactionsSummaryUseCase getTransactionsSummary)
+        private readonly IUseCase<CreateTransactionRequest, CreateTransactionResponse> _createTransaction;
+        private readonly IUseCase<DeleteTransactionRequest, DeleteTransactionResponse> _deleteTransaction;
+        private readonly IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse> _getTransactionByAccountId;
+        private readonly IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> _getTransactionById;
+        private readonly IUseCase<GetTransactionsRequest, GetTransactionsResponse> _getTransactions;
+        private readonly IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> _getTransactionsSummary;
+
+        public TransactionController(IUseCase<CreateTransactionRequest, CreateTransactionResponse> createTransaction,
+                                     IUseCase<DeleteTransactionRequest, DeleteTransactionResponse> deleteTransaction,
+                                     IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse> getTransactionByAccountId,
+                                     IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> getTransactionById,
+                                     IUseCase<GetTransactionsRequest, GetTransactionsResponse> getTransactions,
+                                     IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> getTransactionsSummary)
         {
             _createTransaction = createTransaction;
             _getTransactionByAccountId = getTransactionByAccountId;
@@ -42,21 +41,21 @@ namespace TransactionServer.Controllers
             _getTransactionsSummary = getTransactionsSummary;
         }
         [HttpGet("Accounts/{accountId}/Transactions")]
-        public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTransactionByAccountId(int accountId, CancellationToken ct)
+        public async Task<ActionResult<GetTransactionsByAccountIdResponse>> GetTransactionByAccountId(int accountId, CancellationToken ct)
         {
             var request = new GetTransactionsByAccountIdRequest { AccountId = accountId };
             var response = await _getTransactionByAccountId.ExecuteAsync(request,ct);
             return Ok(response);
         }
         [HttpGet("{transactionid}")]
-        public async Task<ActionResult<TransactionDto>> GetTransactionById(int transactionid, CancellationToken ct)
+        public async Task<ActionResult<GetTransactionByIdResponse>> GetTransactionById(int transactionid, CancellationToken ct)
         {
             var request = new GetTransactionByIdRequest { TransactionId = transactionid };
             var response = await _getTransactionById.ExecuteAsync(request,ct);
             return Ok(response);
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTransactions(string? type=null, 
+        public async Task<ActionResult<GetTransactionsResponse>> GetTransactions(string? type=null, 
                                                                                      string? sortOrder=null, 
                                                                                      string? sortBy=null, 
                                                                                      DateOnly? startDate=null, 
@@ -75,7 +74,7 @@ namespace TransactionServer.Controllers
             return Ok(response);
         }
         [HttpGet("values")]
-        public async Task<ActionResult<TransactionSummaryDto>> GetTransactionsSummary(int year,int month,CancellationToken ct)
+        public async Task<ActionResult<GetTransactionSummaryResponse>> GetTransactionsSummary(int year,int month,CancellationToken ct)
         {
             var request = new  GetTransactionsSummaryRequest { UserId = 1, Year=year, Month=month };
             var response = await _getTransactionsSummary.ExecuteAsync(request, ct);
@@ -83,14 +82,14 @@ namespace TransactionServer.Controllers
         }
 
         [HttpDelete("{transactionid}")]
-        public async Task<ActionResult> Delete(int transactionid, CancellationToken ct)
+        public async Task<ActionResult<DeleteTransactionResponse>> Delete(int transactionid, CancellationToken ct)
         {
             var request = new DeleteTransactionRequest { TransactionId = transactionid };
             var response = await _deleteTransaction.ExecuteAsync(request,ct);
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<TransactionDto>> Create(CreateTransactionRequest request, CancellationToken ct)
+        public async Task<ActionResult<CreateTransactionResponse>> Create(CreateTransactionRequest request, CancellationToken ct)
         {
             var response = await _createTransaction.ExecuteAsync(request,ct);
             return Ok(response);

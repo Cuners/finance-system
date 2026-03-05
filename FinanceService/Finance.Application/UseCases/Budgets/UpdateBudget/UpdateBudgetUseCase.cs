@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.UpdateBudget
 {
-    public class UpdateBudgetUseCase
+    public class UpdateBudgetUseCase : IUseCase<UpdateBudgetRequest, UpdateBudgetResponse>
     {
         private readonly IBudgetRepository _Budget;
         private readonly IUnitOfWork _unitOfWork;
@@ -31,6 +31,7 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
             {
                 var Budget = await _Budget.GetBudgetById(request.BudgetId,ct);
                 Budget.Name = request.Name;
+                Budget.CategoryId = request.CategoryId;
                 await _Budget.UpdateBudget(Budget);
                 await _unitOfWork.SaveChangesAsync(ct);
                 await _cache.InvalidateAsync(1, request.BudgetId, ct);
