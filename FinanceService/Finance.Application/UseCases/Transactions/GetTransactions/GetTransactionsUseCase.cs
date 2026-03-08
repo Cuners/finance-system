@@ -32,6 +32,7 @@ namespace Finance.Application.UseCases.Transactions.GetTransactions
             var filter = new TransactionFilter
             (
                 UserId: request.UserId,
+                AccountId: request.AccountId,
                 Type: request.Type,
                 SortBy: request.SortBy,
                 SortOrder: request.SortOrder,

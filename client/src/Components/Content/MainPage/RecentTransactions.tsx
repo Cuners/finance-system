@@ -14,7 +14,6 @@ interface DisplayTransaction {
 
 const RecentTransactions = () => {
   const { data, loading, error } = useRecentTransactions();
-  // Преобразуем TransactionDto → DisplayTransaction
   const displayTransactions: DisplayTransaction[] = data.map(t => ({
     id: t.transactionId.toString(),
     title: t.note || 'Без описания',

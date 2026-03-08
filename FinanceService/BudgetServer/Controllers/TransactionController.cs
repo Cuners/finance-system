@@ -43,7 +43,7 @@ namespace TransactionServer.Controllers
         [HttpGet("Accounts/{accountId}/Transactions")]
         public async Task<ActionResult<GetTransactionsByAccountIdResponse>> GetTransactionByAccountId(int accountId, CancellationToken ct)
         {
-            var request = new GetTransactionsByAccountIdRequest { AccountId = accountId };
+            var request = new GetTransactionsByAccountIdRequest { AccountId = accountId, UserId = 1 };
             var response = await _getTransactionByAccountId.ExecuteAsync(request,ct);
             return Ok(response);
         }
@@ -56,6 +56,7 @@ namespace TransactionServer.Controllers
         }
         [HttpGet]
         public async Task<ActionResult<GetTransactionsResponse>> GetTransactions(string? type=null, 
+                                                                                 int? accountId=null,
                                                                                      string? sortOrder=null, 
                                                                                      string? sortBy=null, 
                                                                                      DateOnly? startDate=null, 
@@ -64,6 +65,7 @@ namespace TransactionServer.Controllers
         {
             var request = new GetTransactionsRequest(
                             UserId: 1,
+                            AccountId:accountId,
                             Type: type,
                             SortOrder: sortOrder,
                             SortBy:sortBy,

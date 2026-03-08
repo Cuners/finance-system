@@ -12,12 +12,15 @@ namespace Finance.Application.UseCases.Accounts.GetAccountById
     public class GetAccountByIdUseCase : IUseCase<GetAccountByIdRequest, GetAccountByIdResponse>
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly ITransactionRepository _transaction;
         private readonly ILogger<GetAccountByIdUseCase> _logger;
         public GetAccountByIdUseCase(IAccountRepository accountRepository, 
-                                     ILogger<GetAccountByIdUseCase> logger)
+                                     ILogger<GetAccountByIdUseCase> logger,
+                                     ITransactionRepository transaction)
         {
             _accountRepository = accountRepository;
             _logger = logger;
+            _transaction = transaction;
         }
         public async Task<GetAccountByIdResponse> ExecuteAsync(GetAccountByIdRequest request, CancellationToken ct)
         {
@@ -38,7 +41,8 @@ namespace Finance.Application.UseCases.Accounts.GetAccountById
                 {
                     AccountId = accounts.AccountId,
                     Name = accounts.Name,
-                    Balance = accounts.Balance
+                    Balance = accounts.Balance,
+                    Note=accounts.Note
                 };
                 return new GetAccountByIdSuccessResponse(result);
             }

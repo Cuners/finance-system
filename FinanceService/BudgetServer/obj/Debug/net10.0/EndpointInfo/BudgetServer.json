@@ -700,6 +700,14 @@
             }
           },
           {
+            "name": "accountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "name": "sortOrder",
             "in": "query",
             "schema": {
@@ -869,6 +877,10 @@
           "balance": {
             "type": "number",
             "format": "double"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -887,6 +899,10 @@
           "balance": {
             "type": "number",
             "format": "double"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1025,6 +1041,10 @@
           "balance": {
             "type": "number",
             "format": "double"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTransactionDelete } from '../../../Hooks/useTransactionDelete';
 import './TransactionRow.css';
 
 interface Transaction {
@@ -12,6 +13,7 @@ interface Transaction {
 }
 
 const TransactionRow: React.FC<Transaction> = ({
+  id,
   title,
   category,
   date,
@@ -19,6 +21,22 @@ const TransactionRow: React.FC<Transaction> = ({
   amount,
   type,
 }) => {
+  const { deleteTransaction, loading } = useTransactionDelete();
+  
+  const handleDelete = async () => {
+    if (!window.confirm('Are you sure you want to delete this transaction?')) {
+      return;
+    }
+    
+    try {
+      await deleteTransaction(Number(id));
+      window.location.reload(); 
+    } catch (error) {
+      console.error('Failed to delete transaction:', error);
+      alert('Failed to delete transaction. Please try again.');
+    }
+  };
+  
   const formattedAmount = new Intl.NumberFormat('ru-RU', {
     style: 'currency',
     currency: 'RUB',
@@ -44,7 +62,9 @@ const TransactionRow: React.FC<Transaction> = ({
       </td>
       <td className="cell actions">
         <button className="action-btn">✏️</button>
-        <button className="action-btn">🗑️</button>
+        <button className="action-btn" onClick={handleDelete} disabled={loading}>
+          {loading ? '⏳' : '🗑️'}
+        </button>
       </td>
     </tr>
   );

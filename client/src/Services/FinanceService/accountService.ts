@@ -9,7 +9,12 @@ export const accountService = {
       .then(res => res.value);
   },
   getAccounts(): Promise<AccountDto[]>{
-    return httpService.get(`${API_BASE}`);
+    return httpService.get<{accounts:AccountDto[]}>(`${API_BASE}`)
+    .then(response=>response.accounts);
+  },
+  getAccountById(id:number): Promise<AccountDto>{
+    return httpService.get<{account:AccountDto}>(`${API_BASE}/${id}`)
+    .then(response=>response.account);
   },
   create(data: any): Promise<AccountDto> {
     return httpService.post(API_BASE, data);

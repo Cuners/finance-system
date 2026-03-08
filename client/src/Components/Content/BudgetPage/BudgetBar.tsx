@@ -16,7 +16,6 @@ interface BudgetBarProps {
   onDelete?: (id: number) => void;
 }
 
-
 const BudgetBar = ({
   id,
   categoryName,

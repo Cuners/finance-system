@@ -24,6 +24,7 @@ export const useRecentTransactions = (params: GetTransactionsParams = {}) => {
 
     loadTransactions();
   }, [
+    params.accountId,
     params.type,
     params.startDate?.toISOString(),
     params.endDate?.toISOString(),

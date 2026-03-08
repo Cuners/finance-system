@@ -31,6 +31,7 @@ namespace Finance.Application.UseCases.Accounts.UpdateAccount
                 var account = await _account.GetAccountByAccountId(request.AccountId,ct);
                 account.Balance = request.Balance;
                 account.Name = request.Name;
+                account.Note = request.Note;
                 await _account.UpdateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);
                 await _cache.InvalidateAsync(1, request.AccountId, ct);

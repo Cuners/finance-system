@@ -3,6 +3,7 @@ import { type TransactionSummaryDto, type TransactionDto } from '../../Types';
 
 const API_BASE = 'http://localhost:5000/api/budget/Transaction';
 export interface GetTransactionsParams {
+  accountId?:number,
   type?: 'income' | 'expense';
   startDate?: Date;
   endDate?: Date;
@@ -23,6 +24,9 @@ export const transactionService = {
   // GET /api/transactions
   getTransactions(params: GetTransactionsParams = {}): Promise<TransactionDto[]> {
     const searchParams = new URLSearchParams();
+        if(params.accountId){
+          searchParams.append('accountId',params.accountId.toString());
+        }
         if (params.type) {
           searchParams.append('type', params.type);
         }

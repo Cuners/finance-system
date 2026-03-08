@@ -33,12 +33,25 @@ namespace Finance.Infrastructure.Persistence.Repositories
         {
             return await _context.Transactions
                 .AsNoTracking()
-                .Include(x => x.Account)
-                .Include(x => x.Category)
-                .Where(x=>x.AccountId == id)
+                .Where(x=>x.Account.UserId==id)
+                .Where(x=>x.AccountId==id)
                 .ToListAsync(ct);
         }
-        //реализовать
+        public async Task<IEnumerable<AccountTransactions>> GetSummaryTransactionsByAccounts(int userId, CancellationToken ct)
+        {
+            return await _context.Transactions
+                .AsNoTracking()
+                .Where(x => x.Account.UserId == userId)
+                .GroupBy(x => x.AccountId)
+                .Select(x => new AccountTransactions(
+                    AccountId: x.Key,
+                    Income: x.Where(t => t.Amount > 0).Sum(t => t.Amount),
+                    Expense: x.Where(t => t.Amount < 0).Sum(t => -t.Amount),
+                    Count:x.Count()
+                    ))
+                .ToListAsync(ct);
+        }
+
         public async Task<IEnumerable<Transaction>> GetTransactions(TransactionFilter filter, CancellationToken ct)
         {
             var query = _context.Transactions
@@ -46,7 +59,10 @@ namespace Finance.Infrastructure.Persistence.Repositories
                 .Include(x => x.Account)
                 .Include(x => x.Category)
                 .Where(x => x.Account.UserId == filter.UserId);
-
+            if (filter.AccountId.HasValue)
+            {
+                query = query.Where(x => x.AccountId == filter.AccountId);
+            }
             if (!string.IsNullOrEmpty(filter.Type))
             {
                 if (filter.Type == "income")
@@ -67,6 +83,7 @@ namespace Finance.Infrastructure.Persistence.Repositories
             {
                 query = query.Where(x => x.Date <= filter.EndDate.Value);
             }
+            
             query = ApplySorting(query, filter.SortBy, filter.SortOrder);
             return await query
                 //.Skip((filter.Page - 1) * filter.PageSize)

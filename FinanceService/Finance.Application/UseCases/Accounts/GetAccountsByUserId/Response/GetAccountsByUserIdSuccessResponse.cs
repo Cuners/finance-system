@@ -6,9 +6,9 @@ namespace Finance.Application.UseCases.Accounts.GetAccountsByUserId.Response
 {
     public class GetAccountsByUserIdSuccessResponse : GetAccountsByUserIdResponse
     {
-        public IEnumerable<AccountDto> Accounts { get; }
+        public IEnumerable<AccountSummaryDto> Accounts { get; }
 
-        public GetAccountsByUserIdSuccessResponse(IEnumerable<AccountDto> accounts)
+        public GetAccountsByUserIdSuccessResponse(IEnumerable<AccountSummaryDto> accounts)
         {
             Accounts = accounts;
         }

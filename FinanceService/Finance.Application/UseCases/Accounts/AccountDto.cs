@@ -9,5 +9,6 @@ namespace Finance.Application.UseCases.Accounts
         public int AccountId { get; init; }
         public string Name { get; init; } = "";
         public decimal Balance { get; init; }
+        public string? Note {  get; init; } 
     }
 }

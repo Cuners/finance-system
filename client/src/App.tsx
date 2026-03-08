@@ -12,8 +12,6 @@ import Header from './Components/Header/Header';
 import TransactionPage from './Components/Content/TransactionPage/TransactionPage';
 import MainPage from './Components/Content/MainPage/MainPage';
 function App() {
-  //const [count, setCount] = useState(0)
-
   return (
     <>
     <div className="app-layout">

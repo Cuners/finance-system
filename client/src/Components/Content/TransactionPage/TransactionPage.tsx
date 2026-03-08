@@ -41,7 +41,6 @@ const TransactionPage = () => {
         sortOrder
   });
 
-  // Преобразуем TransactionDto → DisplayTransaction
   const displayTransactions: Transaction[] = useMemo(() => {
     return data.map(t => ({
       id: t.transactionId.toString(),

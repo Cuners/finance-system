@@ -67,7 +67,7 @@ namespace BudgetServer.Controllers
         public async Task<ActionResult<GetAccountByIdResponse>> GetAccountById(int accountid, CancellationToken ct)
         {
             
-            var request = new GetAccountByIdRequest { AccountId = accountid };
+            var request = new GetAccountByIdRequest { AccountId = accountid, UserId=1 };
             var response = await _getAccountById.ExecuteAsync(request,ct);
 
             return Ok(response);
@@ -82,7 +82,6 @@ namespace BudgetServer.Controllers
         public async Task<ActionResult<UpdateAccountResponse>> Update(UpdateAccountRequest request, CancellationToken ct)
         {
             var response = await _updateAccount.ExecuteAsync(request, ct);
-
             return Ok(response);
         }
         [HttpDelete("{accountid}")]

@@ -26,8 +26,12 @@ export interface TransactionDto{
 
 export interface AccountDto{
   accountId:number;
-  accountName:string;
-  accountBalance:number;
+  name:string;
+  balance:number;
+  note:string;
+  income:number;
+  expense:number;
+  count:number;
 }
 
 export interface BudgetDto{
@@ -36,7 +40,7 @@ export interface BudgetDto{
   categoryName: string,
   name: string;
   limitAmount:number;
-  date: Date
+  date: Date;
 }
 export interface BudgetStatus{
   budgetId:number;
@@ -45,7 +49,7 @@ export interface BudgetStatus{
   totalSpent:number;
   procentSpent:number;
   remaining:number;
-  period: Date
+  period: Date;
 }
 export interface BudgetSummary{
   budgetSummaryDto: {

@@ -6,6 +6,7 @@ namespace Finance.Domain.Queries
 {
     public record TransactionFilter(
         int UserId,
+        int? AccountId,
         string? Type = null,       
         DateOnly? StartDate = null,
         DateOnly? EndDate = null,

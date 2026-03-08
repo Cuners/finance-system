@@ -9,6 +9,7 @@ namespace Finance.Domain.Interfaces
     {
         Task<Transaction?> GetTransactionByTransactionId(int id, CancellationToken ct);
         Task<IEnumerable<Transaction>> GetTransactionsByAccountId(int id, CancellationToken ct);
+        Task<IEnumerable<AccountTransactions>> GetSummaryTransactionsByAccounts(int userId, CancellationToken ct);
         Task<IEnumerable<Transaction>> GetTransactions(TransactionFilter transactionFilter,CancellationToken ct);
         Task<FinancialSummary> GetTransactionsSummaryAsync(int userId, int year, int month, CancellationToken ct);
         Task CreateTransaction(Transaction Transaction);

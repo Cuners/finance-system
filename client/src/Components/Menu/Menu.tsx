@@ -21,6 +21,7 @@ const Menu = () => {
     };
 const topItems: NavItem[] = [
   { icon: walletlogo, label: "Главная", to: "/main" },
+  { icon: walletlogo, label: "Кошельки", to: "/wallets" },
   { icon: transactlogo, label: "Обзор", to: "/expenses" },
   { icon: baglogo, label: "Транзакции", to: "/transactions" },
   { icon: transactlogo, label: "Бюджет", to: "/budget" },

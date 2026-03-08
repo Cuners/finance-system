@@ -34,7 +34,8 @@ namespace Finance.Application.UseCases.Accounts.CreateAccount
                 {
                     UserId = request.UserId,
                     Name = request.Name,
-                    Balance = request.Balance
+                    Balance = request.Balance,
+                    Note= request.Note
                 };
                 await _accounts.CreateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);

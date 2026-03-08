@@ -1,0 +1,215 @@
+.wallet-card {
+  background: #282929;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-top: 5px solid transparent;
+}
+
+.wallet-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Colors */
+.wallet-card.theme-teal { border-top-color: #14b8a6; }
+.wallet-card.theme-blue { border-top-color: #3b82f6; }
+.wallet-card.theme-green { border-top-color: #22c55e; }
+.wallet-card.theme-purple { border-top-color: #a855f7; }
+.wallet-card.theme-orange { border-top-color: #f97316; }
+.wallet-card.theme-yellow { border-top-color: #eab308; }
+
+/* Header */
+.wallet-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wallet-card__icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.wallet-card.theme-teal .wallet-card__icon-wrapper {
+  background-color: #ccfbf1;
+  color: #14b8a6;
+}
+
+.wallet-card.theme-blue .wallet-card__icon-wrapper {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.wallet-card.theme-green .wallet-card__icon-wrapper {
+  background-color: #dcfce7;
+  color: #22c55e;
+}
+
+.wallet-card.theme-purple .wallet-card__icon-wrapper {
+  background-color: #f3e8ff;
+  color: #a855f7;
+}
+
+.wallet-card.theme-orange .wallet-card__icon-wrapper {
+  background-color: #ffedd5;
+  color: #f97316;
+}
+
+.wallet-card.theme-yellow .wallet-card__icon-wrapper {
+  background-color: #fef9c3;
+  color: #eab308;
+}
+
+.wallet-card__title-group {
+  flex-grow: 1;
+}
+
+.wallet-card__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wallet-card__badge {
+  font-size: 0.75rem;
+  background-color: #ccfbf1;
+  color: #14b8a6;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.wallet-card__type {
+  font-size: 0.85rem;
+}
+
+.wallet-card__balance {
+  margin-bottom: 16px;
+}
+
+.wallet-card__currency {
+  display: block;
+  color:#6b7280;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.wallet-card__amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.wallet-card__amount--negative {
+  color: #ef4444;
+}
+.wallet-card__details {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 16px;
+}
+
+.wallet-card__account {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.wallet-card__description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Stats */
+.wallet-card__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.wallet-card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wallet-card__stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.wallet-card__stat-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.wallet-card__stat-value--income {
+  color: #16a34a;
+}
+
+.wallet-card__stat-value--expense {
+  color: #ea580c;
+}
+
+/* Footer */
+.wallet-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.wallet-card__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.wallet-card__btn:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.wallet-card__btn--history {
+  color: #14b8a6;
+}
+
+.wallet-card__btn--history:hover {
+  background-color: #ccfbf1;
+}
+
+.wallet-card__btn--delete {
+  color: #ef4444;
+  padding: 4px;
+}
+
+.wallet-card__btn--delete:hover {
+  background-color: #fee2e2;
+}

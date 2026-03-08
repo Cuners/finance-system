@@ -10,6 +10,8 @@
 
         public decimal Balance { get; set; }
 
+        public string? Note {  get; set; }
+
         public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
     }
 }
