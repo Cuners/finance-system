@@ -1,8 +1,12 @@
+using Azure.Core;
 using Finance.Application.DependencyInjection;
 using Finance.Application.UseCases;
 using Finance.Infrastructure.DependencyInjection;
 using Finance.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using StackExchange.Redis;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +16,40 @@ builder.Services.AddControllersWithViews()
     .AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+
+.AddJwtBearer(options =>
+{
+    var jwtSettings = builder.Configuration.GetSection("jwtSettings");
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtSettings["Issuer"],
+        ValidAudience = jwtSettings["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]))
+    };
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            var accessToken = context.Request.Cookies["access_token"];
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                context.Token = accessToken;
+            }
+            return Task.CompletedTask;
+        }
+    };
+});
+
+builder.Services.AddAuthorization();
 builder.Services.AddScoped<IUnitOfWork>(provider => (IUnitOfWork)provider.GetRequiredService<BudgetDbContext>());
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
@@ -29,6 +67,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
 
 });
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddControllers();
@@ -41,7 +80,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CORSPolicy",
         builder =>
         {
-            builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5173");
+            builder.AllowCredentials().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5173", "http://localhost");
         });
 }
 );
@@ -56,6 +95,7 @@ if (app.Environment.IsDevelopment())
 app.UseDeveloperExceptionPage();
 app.UseHttpsRedirection();
 app.UseCors("CORSPolicy");
+app.UseAuthentication();
 app.UseAuthorization();
 //app.MapGet("get", () =>
 //{

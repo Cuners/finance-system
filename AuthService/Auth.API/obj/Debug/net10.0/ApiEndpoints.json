@@ -1,8 +1,28 @@
 [
   {
     "ContainingType": "Auth.API.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/auth/Auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Auth.Application.UseCases.GetUsers.Response.UsersResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Auth.API.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Auth/login",
+    "RelativePath": "api/auth/Auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -13,22 +33,42 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Auth.Application.UseCases.LoginUser.Response.LoginRepsonse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Auth.API.Controllers.AuthController",
     "Method": "Logout",
-    "RelativePath": "api/Auth/logout",
+    "RelativePath": "api/auth/Auth/logout",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Auth.Application.UseCases.LogoutUser.Response.LogoutResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Auth.API.Controllers.AuthController",
     "Method": "Registration",
-    "RelativePath": "api/Auth/registration",
+    "RelativePath": "api/auth/Auth/registration",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -39,6 +79,16 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Auth.Application.UseCases.RegistrateUser.Response.RegistrationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

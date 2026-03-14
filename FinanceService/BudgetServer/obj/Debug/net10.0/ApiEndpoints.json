@@ -338,6 +338,16 @@
     ]
   },
   {
+    "ContainingType": "BudgetServer.Controllers.DebugAuthController",
+    "Method": "CheckAuth",
+    "RelativePath": "api/budget/DebugAuth/check",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TransactionServer.Controllers.TransactionController",
     "Method": "GetTransactions",
     "RelativePath": "api/budget/Transaction",

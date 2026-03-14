@@ -21,7 +21,7 @@ namespace Finance.Application.UseCases.Categories.GetCategories
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetCategoriesResponse> ExecuteAsync(GetCategoriesRequest request,CancellationToken ct)
+        public async Task<GetCategoriesResponse> ExecuteAsync(GetCategoriesRequest request,int userId,CancellationToken ct)
         {
             var cacheKey = $"categories";
             try

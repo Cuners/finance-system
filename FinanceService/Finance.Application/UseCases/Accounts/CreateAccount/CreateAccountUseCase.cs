@@ -26,27 +26,27 @@ namespace Finance.Application.UseCases.Accounts.CreateAccount
             _cache = cache;
         }
 
-        public async Task<CreateAccountResponse> ExecuteAsync(CreateAccountRequest request, CancellationToken ct)
-        {
-            try
-            {
-                var account = new Domain.Account
-                {
-                    UserId = request.UserId,
-                    Name = request.Name,
-                    Balance = request.Balance,
-                    Note= request.Note
-                };
-                await _accounts.CreateAccount(account);
-                await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1,account.AccountId, ct);
-                return new CreateAccountSuccessResponse(account.AccountId);
-            }
-            catch(Exception ex)
-            {
-                _logger.LogWarning(ex, ex.Message);
-                return new CreateAccountErrorResponse("Unable to create account at this time", "INVALID_CREATE");
-            }
-        }
+        public async Task<CreateAccountResponse> ExecuteAsync(CreateAccountRequest request, int userId, CancellationToken ct)
+         {
+             try
+             {
+                 var account = new Domain.Account
+                 {
+                     UserId = userId,
+                     Name = request.Name,
+                     Balance = request.Balance,
+                     Note= request.Note
+                 };
+                 await _accounts.CreateAccount(account);
+                 await _unitOfWork.SaveChangesAsync(ct);
+                 await _cache.InvalidateAsync(userId,account.AccountId, ct);
+                 return new CreateAccountSuccessResponse(account.AccountId);
+             }
+             catch(Exception ex)
+             {
+                 _logger.LogWarning(ex, ex.Message);
+                 return new CreateAccountErrorResponse("Unable to create account at this time", "INVALID_CREATE");
+             }
+         }
     }
 }

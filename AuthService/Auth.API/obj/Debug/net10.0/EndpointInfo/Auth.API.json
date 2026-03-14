@@ -5,7 +5,36 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Auth/login": {
+    "/api/auth/Auth": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/Auth/login": {
       "post": {
         "tags": [
           "Auth"
@@ -36,12 +65,29 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginRepsonse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginRepsonse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginRepsonse"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Auth/registration": {
+    "/api/auth/Auth/registration": {
       "post": {
         "tags": [
           "Auth"
@@ -72,19 +118,53 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrationResponse"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Auth/logout": {
+    "/api/auth/Auth/logout": {
       "post": {
         "tags": [
           "Auth"
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogoutResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -92,6 +172,10 @@
   },
   "components": {
     "schemas": {
+      "LoginRepsonse": {
+        "type": "object",
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -104,6 +188,10 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "LogoutResponse": {
+        "type": "object",
         "additionalProperties": false
       },
       "RegistrationRequest": {
@@ -122,6 +210,14 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "RegistrationResponse": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "UsersResponse": {
+        "type": "object",
         "additionalProperties": false
       }
     }

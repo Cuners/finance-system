@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases;
+﻿using Finance.Application.Services;
+using Finance.Application.UseCases;
 using Finance.Application.UseCases.Categories.GetCategories.Request;
 using Finance.Application.UseCases.Categories.GetCategories.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -10,20 +11,19 @@ namespace BudgetServer.Controllers
     public class CategoryController: Controller
     {
         private readonly IUseCase<GetCategoriesRequest,GetCategoriesResponse> _getCategories;
-        public CategoryController(IUseCase<GetCategoriesRequest, GetCategoriesResponse> getCategories)
+        private readonly ICurrentUserService _currentUser;
+        public CategoryController(IUseCase<GetCategoriesRequest, GetCategoriesResponse> getCategories,
+                                  ICurrentUserService currentUser)
         {
             _getCategories = getCategories;
+            _currentUser = currentUser;
         }
         [HttpGet]
         public async Task<ActionResult<GetCategoriesResponse>> GetUserCategories(CancellationToken ct)
         {
-            //if (!Request.Cookies.TryGetValue("UserId", out var userIdString))
-            //    return Unauthorized("User is not authenticated.");
-
-            //if (!int.TryParse(userIdString, out var userId))
-            //    return Unauthorized("Invalid user ID in cookies.");
+            int userId = _currentUser.UserId;
             GetCategoriesRequest getCategoriesRequest=new GetCategoriesRequest();
-            var response = await _getCategories.ExecuteAsync(getCategoriesRequest,ct);
+            var response = await _getCategories.ExecuteAsync(getCategoriesRequest,userId,ct);
             return Ok(response);
         }
     }

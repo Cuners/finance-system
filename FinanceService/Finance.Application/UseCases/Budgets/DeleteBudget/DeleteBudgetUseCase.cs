@@ -25,14 +25,19 @@ namespace Finance.Application.UseCases.Budgets.DeleteBudget
             _logger = logger;
             _cache = cache;
         }
-        public async Task<DeleteBudgetResponse> ExecuteAsync(DeleteBudgetRequest request, CancellationToken ct)
+        public async Task<DeleteBudgetResponse> ExecuteAsync(DeleteBudgetRequest request, int userId, CancellationToken ct)
         {
             try
             {
-                var Budget = await _Budget.GetBudgetById(request.BudgetId, ct);
+                var budget = await _Budget.GetBudgetById(request.BudgetId, ct);
+                if (budget == null || budget.UserId != userId)
+                {
+                    return new DeleteBudgetErrorResponse("Budget not found or access denied", "BUDGET_ACCESS_DENIED");
+                }
+                
                 await _Budget.DeleteBudget(request.BudgetId);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1, request.BudgetId, ct);
+                await _cache.InvalidateAsync(userId, request.BudgetId, ct);
                 return new DeleteBudgetSuccessResponse(request.BudgetId);
             }
             catch (Exception ex)

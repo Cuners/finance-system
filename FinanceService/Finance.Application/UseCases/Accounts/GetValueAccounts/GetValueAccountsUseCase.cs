@@ -24,27 +24,22 @@ namespace Finance.Application.UseCases.Accounts.GetValueAccounts
             _cache = cache;
         }
 
-        public async Task<GetValueAccountsResponse> ExecuteAsync(GetValueAccountsRequest request, CancellationToken ct)
-        {
-            if (request.UserId <= 0)
-            {
-                _logger.LogWarning("GetAccountsValue is invalid");
-                return new GetValueAccountsErrorResponse("Invalid user id", "INVALID_USER_ID");
-            }
-            var cacheKey = $"accounts:user:{request.UserId}:" + "accountValue";
+        public async Task<GetValueAccountsResponse> ExecuteAsync(GetValueAccountsRequest request, int userId, CancellationToken ct)
+        {  
+            var cacheKey = $"accounts:user:{userId}:" + "accountValue";
             try
             {
-                var accountValue = await _cache.GetOrCreateAsync(cacheKey, async token =>
+                var accountValue = await _cache.GetOrCreateAsync<decimal?>(cacheKey, async token =>
                 {
-                    var accounts = await _accounts.GetTotalValue(request.UserId, ct);
+                    var accounts = await _accounts.GetTotalValue(userId, ct);
                     return accounts;
                 });
-                return new GetValueAccountsSuccessResponse(accountValue);
+                return new GetValueAccountsSuccessResponse(accountValue.Value);
             }
             catch (TimeoutException ex)
             {
                 _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var accountValue = await _accounts.GetTotalValue(request.UserId, ct);
+                var accountValue = await _accounts.GetTotalValue(userId, ct);
                 return new GetValueAccountsSuccessResponse(accountValue);
             }
             catch (Exception ex)

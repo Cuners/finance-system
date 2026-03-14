@@ -27,14 +27,14 @@ namespace Finance.Application.UseCases.Transactions.DeleteTransaction
             _logger = logger;
             _cache = cache;
         }
-        public async Task<DeleteTransactionResponse> ExecuteAsync(DeleteTransactionRequest request, CancellationToken ct)
+        public async Task<DeleteTransactionResponse> ExecuteAsync(DeleteTransactionRequest request,int userId, CancellationToken ct)
         {
             try
             {
                 var Transaction = await _transaction.GetTransactionByTransactionId(request.TransactionId,ct);
                 await _transaction.DeleteTransaction(request.TransactionId);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1, request.TransactionId, ct);
+                await _cache.InvalidateAsync(userId, request.TransactionId, ct);
                 return new DeleteTransactionSuccessRepsonse(request.TransactionId);
             }
             catch (Exception ex)

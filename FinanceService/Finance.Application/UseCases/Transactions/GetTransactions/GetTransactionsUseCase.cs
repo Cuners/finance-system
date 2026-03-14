@@ -22,16 +22,16 @@ namespace Finance.Application.UseCases.Transactions.GetTransactions
             _cache = cache;
         }
         //Получать через request userid а в контроллере как раз и расшифровывать токен
-        public async Task<GetTransactionsResponse> ExecuteAsync(GetTransactionsRequest request, CancellationToken ct)
+        public async Task<GetTransactionsResponse> ExecuteAsync(GetTransactionsRequest request, int userId, CancellationToken ct)
         {
-            if (request.UserId <= 0)
-            {
-                _logger.LogWarning("GetBudgetRequest is null");
-                return new GetTransactionsErrorResponse("Invalid User id", "INVALID_USER_ID");
-            }
+            //if (request.UserId <= 0)
+            //{
+            //    _logger.LogWarning("GetBudgetRequest is null");
+            //    return new GetTransactionsErrorResponse("Invalid User id", "INVALID_USER_ID");
+            //}
             var filter = new TransactionFilter
             (
-                UserId: request.UserId,
+                UserId: userId,
                 AccountId: request.AccountId,
                 Type: request.Type,
                 SortBy: request.SortBy,
@@ -39,7 +39,7 @@ namespace Finance.Application.UseCases.Transactions.GetTransactions
                 StartDate: request.StartDate,
                 EndDate: request.EndDate
             );
-            var cacheKey = $"transactions:user:{request.UserId}:" +
+            var cacheKey = $"transactions:user:{userId}:" +
               $"from:{request.StartDate:yyyy-MM-dd}:" +
               $"to:{request.EndDate:yyyy-MM-dd}:" +
               $"type:{request.Type ?? "all"}:" +

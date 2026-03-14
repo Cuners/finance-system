@@ -1,15 +1,15 @@
-import type { AccountDto } from '../../Types';
+import type { AccountDto, AccountSummaryDto } from '../../Types';
 import { httpService } from '../httpService';
 
-const API_BASE = 'http://localhost:5000/api/budget/Account';
+const API_BASE = '/api/budget/Account';
 
 export const accountService = {
   getBalance(): Promise<number> {
     return httpService.get<{ value: number }>(`${API_BASE}/balance`)
       .then(res => res.value);
   },
-  getAccounts(): Promise<AccountDto[]>{
-    return httpService.get<{accounts:AccountDto[]}>(`${API_BASE}`)
+  getAccounts(): Promise<AccountSummaryDto[]>{
+    return httpService.get<{accounts:AccountSummaryDto[]}>(`${API_BASE}`)
     .then(response=>response.accounts);
   },
   getAccountById(id:number): Promise<AccountDto>{

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Auth.Application.UseCases.LoginUser
 {
-    public class LoginUseCase
+    public class LoginUseCase : IUseCase<LoginRequest,LoginRepsonse>
     {
         private readonly IUserRepository _userRepository;
         private readonly IPasswordService _passwordService;

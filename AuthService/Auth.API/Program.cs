@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CORSPolicy",
         builder =>
         {
-            builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5173");
+            builder.AllowCredentials().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5173");
         });
 }
 );
@@ -52,11 +52,16 @@ builder.Services.AddAuthentication(options =>
     {
         OnMessageReceived = context =>
         {
-            context.Token = context.Request.Cookies["access_token"];
+            var accessToken = context.Request.Cookies["access_token"];
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                context.Token = accessToken;
+            }
             return Task.CompletedTask;
         }
     };
 });
+builder.Services.AddAuthorization();
 builder.Services.Configure<JwtSettings>(
     builder.Configuration.GetSection("JwtSettings")
 );
@@ -79,6 +84,7 @@ if (app.Environment.IsDevelopment())
 app.UseDeveloperExceptionPage();
 app.UseHttpsRedirection();
 app.UseCors("CORSPolicy");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

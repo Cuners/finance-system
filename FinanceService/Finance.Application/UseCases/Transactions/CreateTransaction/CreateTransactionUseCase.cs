@@ -32,7 +32,7 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
             _cache = cache;
         }
 
-        public async Task<CreateTransactionResponse> ExecuteAsync(CreateTransactionRequest request, CancellationToken ct)
+        public async Task<CreateTransactionResponse> ExecuteAsync(CreateTransactionRequest request,int userId, CancellationToken ct)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
 
                 await _transactionRepository.CreateTransaction(transaction);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1,transaction.TransactionId, ct);
+                await _cache.InvalidateAsync(userId,transaction.TransactionId, ct);
                 return new CreateTransactionSuccessRepsonse(transaction.TransactionId);
             }
             catch (Exception ex)

@@ -27,7 +27,7 @@ namespace Finance.Infrastructure.DependencyInjection
             services.AddSingleton<ITransactionCacheInvalidator, TransactionCacheInvalidator>();
             services.AddSingleton<IAccountCacheInvalidator, AccountCacheInvalidator>();
             services.AddSingleton<IBudgetCacheInvalidator, BudgetCacheInvalidator>();
-
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
             return services;
         }
     }

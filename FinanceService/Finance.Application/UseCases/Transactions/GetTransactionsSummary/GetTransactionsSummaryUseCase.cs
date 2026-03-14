@@ -24,21 +24,21 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionsSummary
             _cache = cache;
         }
         //Получать через request userid а в контроллере как раз и расшифровывать токен
-        public async Task<GetTransactionSummaryResponse> ExecuteAsync(GetTransactionsSummaryRequest request, CancellationToken ct)
+        public async Task<GetTransactionSummaryResponse> ExecuteAsync(GetTransactionsSummaryRequest request,int userId, CancellationToken ct)
         {
-            if (request.UserId <= 0)
+            if (userId <= 0)
             {
                 _logger.LogWarning("GetBudgetRequest is null");
                 return new GetTransactionSummaryErrorResponse("Invalid User id", "INVALID_USER_ID");
             }
-            var cacheKey = $"dashboard:user:{request.UserId}:" +
+            var cacheKey = $"dashboard:user:{userId}:" +
                            "transactionsSummary:" +
                            $"from:{request.Year}-{request.Month:D2}";
             try
             {
                 var transactions = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var summary = await _Transaction.GetTransactionsSummaryAsync(request.UserId, request.Year, request.Month, ct);
+                    var summary = await _Transaction.GetTransactionsSummaryAsync(userId, request.Year, request.Month, ct);
                     var sumTrans = new TransactionSummaryDto(TotalIncome: summary.TotalIncome,
                                                              TotalExpenses: summary.TotalExpenses,
                                                              NetBalance: summary.NetChange);
@@ -54,7 +54,7 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionsSummary
             catch (TimeoutException ex)
             {
                 _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var summary = await _Transaction.GetTransactionsSummaryAsync(request.UserId, request.Year, request.Month, ct);
+                var summary = await _Transaction.GetTransactionsSummaryAsync(userId, request.Year, request.Month, ct);
                 var sumTrans = new TransactionSummaryDto(TotalIncome: summary.TotalIncome,
                                                          TotalExpenses: summary.TotalExpenses,
                                                          NetBalance: summary.NetChange);

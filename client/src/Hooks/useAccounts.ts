@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { type AccountDto } from '../Types';
+import { type AccountSummaryDto } from '../Types';
 import { accountService } from '../Services/FinanceService/accountService';
 
 export const useRecentAccounts = () => {
-  const [accounts, setAccounts] = useState<AccountDto[]>([]);
+  const [accounts, setAccounts] = useState<AccountSummaryDto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

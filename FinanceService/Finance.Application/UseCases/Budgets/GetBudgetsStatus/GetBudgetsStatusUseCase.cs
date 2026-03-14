@@ -20,19 +20,19 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetBudgetsStatusResponse> ExecuteAsync(GetBudgetsStatusRequest request, CancellationToken ct)
+        public async Task<GetBudgetsStatusResponse> ExecuteAsync(GetBudgetsStatusRequest request, int userId, CancellationToken ct)
         {
-            if (request.UserId <= 0)
+            if (userId <= 0)
             {
                 _logger.LogWarning("GetBudgetRequest is null");
                 return new GetBudgetsStatusErrorResponse("Invalid User id", "INVALID_USER_ID");
             }
-            var cacheKey = $"dashboard:user:{request.UserId}:" + "budgetsStatus";
+            var cacheKey = $"dashboard:user:{userId}:" + "budgetsStatus";
             try
             {
                 var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var summary = await _BudgetRepository.GetBudgetStatusAsync(request.UserId,ct);
+                    var summary = await _BudgetRepository.GetBudgetStatusAsync(userId,ct);
                     return summary;
                 });
                
@@ -47,12 +47,12 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
             catch (TimeoutException ex)
             {
                 _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var summary = await _BudgetRepository.GetBudgetStatusAsync(request.UserId, ct);
+                var summary = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
                 return new GetBudgetsStatusSuccessResponse(summary);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Ошибка при получении статуса бюджетов для пользователя {request.UserId}");
+                _logger.LogError(ex, $"Ошибка при получении статуса бюджетов для пользователя {userId}");
                 return new GetBudgetsStatusErrorResponse("Unable to get Budget at this time", "INVALID_GET");
             }
         }

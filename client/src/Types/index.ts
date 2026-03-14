@@ -24,7 +24,7 @@ export interface TransactionDto{
   note:string;
 }
 
-export interface AccountDto{
+export interface AccountSummaryDto{
   accountId:number;
   name:string;
   balance:number;
@@ -32,6 +32,13 @@ export interface AccountDto{
   income:number;
   expense:number;
   count:number;
+}
+
+export interface AccountDto{
+  accountId:number;
+  name:string;
+  balance:number;
+  note:string;
 }
 
 export interface BudgetDto{
@@ -62,4 +69,8 @@ export interface BudgetSummary{
 export interface CategoryDto{
   categoryId:number;
   name:string;
+}
+export interface LoginRequest{
+  username:string;
+  password:string;
 }

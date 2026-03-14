@@ -3,6 +3,98 @@
   "WorkspaceRootPath": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\logoutusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\logoutusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\getusersusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\getusersusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\auth.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\auth.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\services\\ipasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\services\\ipasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\registrateusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\registrateusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\loginusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\loginusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\request\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\request\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\userssuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\userssuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\validators\\registrationuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\validators\\registrationuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +103,64 @@
       "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\validators\\loginuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationsuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationsuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\response\\logoutresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\response\\logoutresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\response\\logoutsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\response\\logoutsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\request\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\request\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\response\\loginsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\response\\loginsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\userserrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\userserrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\migrations\\20260102221725_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\migrations\\20260102221725_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\migrations\\authdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\migrations\\authdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A1F96DA-7137-E1D9-E205-237CC6DF173C}|Auth.Domain\\Auth.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,34 +175,6 @@
       "RelativeMoniker": "D:0:0:{4A1F96DA-7137-E1D9-E205-237CC6DF173C}|Auth.Domain\\Auth.Domain.csproj|solutionrelative:auth.domain\\interfaces\\ipermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\services\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\services\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\services\\ipasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\services\\ipasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -69,24 +185,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auth.API\\Auth.API.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\registrateusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\registrateusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\configurations\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\configurations\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -99,30 +199,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\permissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\getusersusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\getusersusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\loginusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\loginusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\logoutusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\logoutusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A1F96DA-7137-E1D9-E205-237CC6DF173C}|Auth.Domain\\Auth.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.domain\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -141,64 +217,8 @@
       "RelativeMoniker": "D:0:0:{4A1F96DA-7137-E1D9-E205-237CC6DF173C}|Auth.Domain\\Auth.Domain.csproj|solutionrelative:auth.domain\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\migrations\\authdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\migrations\\authdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\persistence\\migrations\\20260102221725_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\persistence\\migrations\\20260102221725_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\auth.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\auth.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D77236F-3F3E-E1FC-A653-90CEBBA82EC5}|Auth.Infrastructure\\Auth.Infrastructure.csproj|solutionrelative:auth.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|solutionrelative:auth.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationsuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationsuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\registrateuser\\response\\registrationerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\response\\registrationerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\request\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\request\\usersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\userssuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\userssuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\getusers\\response\\userserrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\getusers\\response\\userserrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\response\\loginrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -207,10 +227,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\response\\loginerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\response\\loginerrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\loginuser\\response\\loginsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\loginuser\\response\\loginsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CCB51E9-DAB4-2CD9-A6C7-0D831C6FB937}|Auth.API\\Auth.API.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.api\\auth.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -237,18 +253,6 @@
       "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\registrateuser\\request\\registrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\response\\logoutsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\response\\logoutsuccessrepsonse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\response\\logoutresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\response\\logoutresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\request\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\request\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\authservice\\auth.application\\usecases\\logoutuser\\response\\logouterrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E0E8150-9E3B-EA87-5C9F-68055BC6148B}|Auth.Application\\Auth.Application.csproj|solutionrelative:auth.application\\usecases\\logoutuser\\response\\logouterrorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -260,7 +264,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -273,476 +277,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\TokenService.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Services\\TokenService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAUwBUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T16:20:34.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\ITokenService.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\Services\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\ITokenService.cs",
-              "RelativeToolTip": "Auth.Application\\Services\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T16:13:12.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPermissionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IPermissionRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IPermissionRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IPermissionRepository.cs",
-              "RelativeToolTip": "Auth.Domain\\Interfaces\\IPermissionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:37:01.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IRoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IRoleRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IRoleRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IRoleRepository.cs",
-              "RelativeToolTip": "Auth.Domain\\Interfaces\\IRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:36:50.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "Auth.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:36:39.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Auth.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Auth.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwCcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:41:07.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginUserRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\LoginUserRequestValidator.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\Validators\\LoginUserRequestValidator.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\LoginUserRequestValidator.cs",
-              "RelativeToolTip": "Auth.Application\\Validators\\LoginUserRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-01T17:54:42.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegistrationUserRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
-              "RelativeToolTip": "Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-01T18:03:23.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PasswordService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\PasswordService.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\PasswordService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\PasswordService.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Services\\PasswordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T17:38:02.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "JwtSettings.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\JwtSettings.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\JwtSettings.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\JwtSettings.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Services\\JwtSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T16:41:37.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IPasswordService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\IPasswordService.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\Services\\IPasswordService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\IPasswordService.cs",
-              "RelativeToolTip": "Auth.Application\\Services\\IPasswordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T17:38:17.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "Auth.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T23:11:56.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Auth.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\appsettings.json",
-              "RelativeToolTip": "Auth.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-21T23:33:55.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile",
-              "RelativeDocumentMoniker": "Auth.API\\Dockerfile",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile",
-              "RelativeToolTip": "Auth.API\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-21T23:33:49.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AuthDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAvwBsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T23:01:29.46Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:37:13.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Dockerfile.original",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile.original",
-              "RelativeDocumentMoniker": "Auth.API\\Dockerfile.original",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile.original",
-              "RelativeToolTip": "Auth.API\\Dockerfile.original",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-01-29T12:33:26.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": ".dockerignore",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\.dockerignore",
-              "RelativeDocumentMoniker": ".dockerignore",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\.dockerignore",
-              "RelativeToolTip": ".dockerignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-01-03T00:43:51.01Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Program.cs",
-              "RelativeDocumentMoniker": "Auth.API\\Program.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Program.cs",
-              "RelativeToolTip": "Auth.API\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwEAAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T22:32:38.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RoleConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:04:39.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RegistrateUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T20:18:42.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:04:28.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PermissionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAawCQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:37:43.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "RoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:37:26.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GetUsersUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:21:25.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UserInfo.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\UserInfo.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\UserInfo.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\UserInfo.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\UserInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T22:43:12.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LoginUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwB4AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T20:18:24.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LogoutUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T20:18:33.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Permission.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Permission.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\Permission.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Permission.cs",
-              "RelativeToolTip": "Auth.Domain\\Permission.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:22:14.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "PermissionConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T23:04:55.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\User.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\User.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\User.cs",
-              "RelativeToolTip": "Auth.Domain\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T22:57:22.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Role.cs",
-              "RelativeDocumentMoniker": "Auth.Domain\\Role.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Role.cs",
-              "RelativeToolTip": "Auth.Domain\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T22:58:35.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Response.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\Response.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\Response.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\Response.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\Response.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:06:29.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUnitOfWork.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:28:50.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AuthDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T22:17:30.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "20260102221725_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T22:17:25.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Auth.API.http",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.http",
-              "RelativeDocumentMoniker": "Auth.API\\Auth.API.http",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.http",
-              "RelativeToolTip": "Auth.API\\Auth.API.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-12-27T23:10:44.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T23:52:53.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Auth.API\\Properties\\launchSettings.json",
@@ -754,67 +288,237 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "RegistrationSuccessResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwCoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:00:39.869Z"
+              "WhenOpened": "2025-12-25T16:20:34.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "RegistrationResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Auth.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Auth.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwEcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:00:12.641Z"
+              "WhenOpened": "2025-12-25T18:41:07.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "RegistrationErrorResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "PasswordService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\PasswordService.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\PasswordService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\PasswordService.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Services\\PasswordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:00:25.941Z"
+              "WhenOpened": "2025-12-26T17:38:02.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "UsersRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Services\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Services\\JwtSettings.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Services\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:16:11.416Z"
+              "WhenOpened": "2025-12-25T16:41:37.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "UsersSuccessResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "Auth.Application\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:16:51.815Z"
+              "WhenOpened": "2025-12-27T23:11:56.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 6,
+              "Title": "GetUsersUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\GetUsersUseCase.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABQAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T01:21:25.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogoutUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LogoutUser\\LogoutUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T20:18:33.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Program.cs",
+              "RelativeDocumentMoniker": "Auth.API\\Program.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Program.cs",
+              "RelativeToolTip": "Auth.API\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T22:32:38.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Auth.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\appsettings.json",
+              "RelativeToolTip": "Auth.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-21T23:33:55.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile",
+              "RelativeDocumentMoniker": "Auth.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile",
+              "RelativeToolTip": "Auth.API\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-21T23:33:49.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Auth.API.http",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.http",
+              "RelativeDocumentMoniker": "Auth.API\\Auth.API.http",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.http",
+              "RelativeToolTip": "Auth.API\\Auth.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-12-27T23:10:44.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PermissionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\PermissionRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAawCQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:37:43.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAABQwCYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:37:13.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Repositories\\RoleRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwCAAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:37:26.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\Services\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\ITokenService.cs",
+              "RelativeToolTip": "Auth.Application\\Services\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:13:12.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IPasswordService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\IPasswordService.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\Services\\IPasswordService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Services\\IPasswordService.cs",
+              "RelativeToolTip": "Auth.Application\\Services\\IPasswordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T17:38:17.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\AuthDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T23:01:29.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegistrateUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\RegistrateUseCase.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T20:18:42.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\LoginUseCase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T20:18:24.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "UsersResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersResponse.cs",
               "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersResponse.cs",
@@ -826,174 +530,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "ViewState": "AgIAAJ8BAAAAAAAAAAAnwLcBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-02T23:54:51.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "UsersErrorResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "UsersRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Request\\UsersRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:16:42.025Z"
+              "WhenOpened": "2026-01-03T01:16:11.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "UsersSuccessResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersSuccessResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:53:57.721Z"
+              "WhenOpened": "2026-01-03T01:16:51.815Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "LoginRepsonse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "RegistrationUserRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
+              "RelativeToolTip": "Auth.Application\\Validators\\RegistrationUserRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:57:17.755Z"
+              "WhenOpened": "2026-01-01T18:03:23.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAL8TAAAAAAAAAAAnwNcTAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-03T01:24:17.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "LoginErrorResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "LoginUserRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\LoginUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\Validators\\LoginUserRequestValidator.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Validators\\LoginUserRequestValidator.cs",
+              "RelativeToolTip": "Auth.Application\\Validators\\LoginUserRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:59:14.05Z"
+              "WhenOpened": "2026-01-01T17:54:42.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "LoginSuccessRepsonse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "UserInfo.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\UserInfo.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\UserInfo.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\UserInfo.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\UserInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:59:24.691Z"
+              "WhenOpened": "2025-12-27T22:43:12.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Auth.API",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj",
-              "RelativeDocumentMoniker": "Auth.API\\Auth.API.csproj",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj",
-              "RelativeToolTip": "Auth.API\\Auth.API.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-02T23:19:01.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "20260102221725_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
-              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAABGAAAAAAAAAA==",
+              "DocumentIndex": 26,
+              "Title": "IUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUseCase.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\IUseCase.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUseCase.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\IUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T23:02:09.703Z"
+              "WhenOpened": "2026-03-10T21:56:43.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Auth.API.csproj.user",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj.user",
-              "RelativeDocumentMoniker": "Auth.API\\Auth.API.csproj.user",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj.user",
-              "RelativeToolTip": "Auth.API\\Auth.API.csproj.user",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2026-01-02T01:27:32.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Auth.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Auth.Application.csproj",
-              "RelativeDocumentMoniker": "Auth.Application\\Auth.Application.csproj",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Auth.Application.csproj",
-              "RelativeToolTip": "Auth.Application\\Auth.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-02T01:59:58.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Auth.Domain.csproj",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Auth.Domain.csproj",
-              "RelativeDocumentMoniker": "Auth.Domain\\Auth.Domain.csproj",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Auth.Domain.csproj",
-              "RelativeToolTip": "Auth.Domain\\Auth.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-02T01:56:21.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Auth.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Auth.Infrastructure\\Auth.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
-              "RelativeToolTip": "Auth.Infrastructure\\Auth.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-02T02:00:02.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "RegistrationRequest.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\Response.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\Response.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\Response.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:56:13.461Z"
+              "WhenOpened": "2026-03-10T21:59:02.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 28,
+              "Title": "RegistrationErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:00:25.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegistrationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:00:12.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RegistrationSuccessResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Response\\RegistrationSuccessResponse.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:00:39.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "LogoutSuccessRepsonse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutSuccessRepsonse.cs",
               "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutSuccessRepsonse.cs",
@@ -1005,19 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "LogoutResponse.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
-              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
-              "RelativeToolTip": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:56:43.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 33,
               "Title": "LogoutRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Request\\LogoutRequest.cs",
               "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\Request\\LogoutRequest.cs",
@@ -1029,7 +674,366 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\IUnitOfWork.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T01:28:50.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LoginSuccessRepsonse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginSuccessRepsonse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:59:24.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UsersErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\GetUsers\\Response\\UsersErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T01:16:42.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LogoutResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:56:43.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20260102221725_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T22:17:25.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AuthDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\AuthDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAIBJwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T22:17:30.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Request\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:53:57.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Auth.Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:36:39.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IRoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IRoleRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IRoleRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IRoleRepository.cs",
+              "RelativeToolTip": "Auth.Domain\\Interfaces\\IRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:36:50.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IPermissionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IPermissionRepository.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\Interfaces\\IPermissionRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Interfaces\\IPermissionRepository.cs",
+              "RelativeToolTip": "Auth.Domain\\Interfaces\\IPermissionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:37:01.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Dockerfile.original",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile.original",
+              "RelativeDocumentMoniker": "Auth.API\\Dockerfile.original",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Dockerfile.original",
+              "RelativeToolTip": "Auth.API\\Dockerfile.original",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-29T12:33:26.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-03T00:43:51.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "RoleConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\RoleConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:04:39.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:04:28.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Permission.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\Permission.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Permission.cs",
+              "RelativeToolTip": "Auth.Domain\\Permission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:22:14.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "PermissionConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Configurations\\PermissionConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:04:55.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\User.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\User.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\User.cs",
+              "RelativeToolTip": "Auth.Domain\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T22:57:22.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Role.cs",
+              "RelativeDocumentMoniker": "Auth.Domain\\Role.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Role.cs",
+              "RelativeToolTip": "Auth.Domain\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T22:58:35.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T23:52:53.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "ViewState": "AgIAAJ8BAAAAAAAAAAAnwLcBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-01-02T23:54:51.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "LoginRepsonse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginRepsonse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:57:17.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAL8TAAAAAAAAAAAnwNcTAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-01-03T01:24:17.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "LoginErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\LoginUser\\Response\\LoginErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:59:14.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Auth.API",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj",
+              "RelativeDocumentMoniker": "Auth.API\\Auth.API.csproj",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj",
+              "RelativeToolTip": "Auth.API\\Auth.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-02T23:19:01.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "20260102221725_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
+              "RelativeToolTip": "Auth.Infrastructure\\Persistence\\Migrations\\20260102221725_InitialCreate.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T23:02:09.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Auth.API.csproj.user",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj.user",
+              "RelativeDocumentMoniker": "Auth.API\\Auth.API.csproj.user",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.API\\Auth.API.csproj.user",
+              "RelativeToolTip": "Auth.API\\Auth.API.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2026-01-02T01:27:32.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Auth.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Auth.Application.csproj",
+              "RelativeDocumentMoniker": "Auth.Application\\Auth.Application.csproj",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\Auth.Application.csproj",
+              "RelativeToolTip": "Auth.Application\\Auth.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-02T01:59:58.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Auth.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Auth.Domain.csproj",
+              "RelativeDocumentMoniker": "Auth.Domain\\Auth.Domain.csproj",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Domain\\Auth.Domain.csproj",
+              "RelativeToolTip": "Auth.Domain\\Auth.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-02T01:56:21.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Auth.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Auth.Infrastructure\\Auth.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
+              "RelativeToolTip": "Auth.Infrastructure\\Auth.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-02T02:00:02.153Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 62,
+              "Title": "RegistrationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
+              "RelativeDocumentMoniker": "Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
+              "RelativeToolTip": "Auth.Application\\UseCases\\RegistrateUser\\Request\\RegistrationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:56:13.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
               "Title": "LogoutErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\AuthService\\Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutErrorResponse.cs",
               "RelativeDocumentMoniker": "Auth.Application\\UseCases\\LogoutUser\\Response\\LogoutErrorResponse.cs",

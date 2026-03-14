@@ -23,19 +23,14 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsByUserId
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetBudgetsByUserIdResponse> ExecuteAsync(GetBudgetsByUserIdRequest request, CancellationToken ct)
+        public async Task<GetBudgetsByUserIdResponse> ExecuteAsync(GetBudgetsByUserIdRequest request, int userId, CancellationToken ct)
         {
-            if (request.UserId <= 0)
-            {
-                _logger.LogWarning("GetBudgetRequest is null");
-                return new GetBudgetsByUserIdErrorResponse("Invalid User id", "INVALID_USER_ID");
-            }
-            var cacheKey = $"budgets:user:{request.UserId}:" + "byId";
+            var cacheKey = $"budgets:user:{userId}:" + "byId";
             try
             {
                 var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var budgets = await _budget.GetBudgetsByUserId(request.UserId, ct);
+                    var budgets = await _budget.GetBudgetsByUserId(userId, ct);
                     var result = budgets.Select(x => new BudgetDto
                     {
                         BudgetId = x.BudgetId,
@@ -57,7 +52,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsByUserId
             catch (TimeoutException ex)
             {
                 _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var budgets = await _budget.GetBudgetsByUserId(request.UserId, ct);
+                var budgets = await _budget.GetBudgetsByUserId(userId, ct);
                 var result = budgets.Select(x => new BudgetDto
                 {
                     BudgetId = x.BudgetId,

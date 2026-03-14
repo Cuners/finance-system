@@ -22,7 +22,7 @@ namespace Finance.Application.UseCases.Accounts.GetAccountById
             _logger = logger;
             _transaction = transaction;
         }
-        public async Task<GetAccountByIdResponse> ExecuteAsync(GetAccountByIdRequest request, CancellationToken ct)
+        public async Task<GetAccountByIdResponse> ExecuteAsync(GetAccountByIdRequest request, int userId, CancellationToken ct)
         {
             try
             {
@@ -32,10 +32,10 @@ namespace Finance.Application.UseCases.Accounts.GetAccountById
                     return new GetAccountByIdErrorResponse("Invalid account id", "INVALID_USER_ID");
                 }
                 var accounts = await _accountRepository.GetAccountByAccountId(request.AccountId,ct);
-                if (accounts == null)
+                if (accounts == null || accounts.UserId != userId)
                 {
-                    _logger.LogWarning("GetAccountRequest account is null");
-                    return new GetAccountByIdErrorResponse("No account found", "ACCOUNT_NOT_FOUND");
+                    _logger.LogWarning("GetAccountRequest account is null or access denied");
+                    return new GetAccountByIdErrorResponse("No account found or access denied", "ACCOUNT_ACCESS_DENIED");
                 }
                 var result = new AccountDto
                 {

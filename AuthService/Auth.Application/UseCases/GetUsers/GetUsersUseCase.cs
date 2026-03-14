@@ -1,4 +1,5 @@
-﻿using Auth.Application.UseCases.GetUsers.Response;
+﻿using Auth.Application.UseCases.GetUsers.Request;
+using Auth.Application.UseCases.GetUsers.Response;
 using Auth.Domain;
 using Auth.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -8,7 +9,7 @@ using System.Text;
 
 namespace Auth.Application.UseCases.GetUsers
 {
-    public class GetUsersUseCase
+    public class GetUsersUseCase : IUseCase<UsersRequest, UsersResponse>
     {
         private readonly IUserRepository _Users;
         private readonly ILogger<GetUsersUseCase> _logger;
@@ -17,7 +18,7 @@ namespace Auth.Application.UseCases.GetUsers
             _Users = users;
             _logger = logger;
         }
-        public async Task<UsersResponse> ExecuteAsync(CancellationToken ct)
+        public async Task<UsersResponse> ExecuteAsync(UsersRequest request,CancellationToken ct)
         {
             try
             {

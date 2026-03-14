@@ -1,7 +1,7 @@
 import type { CategoryDto } from '../../Types';
 import { httpService } from '../httpService';
 
-const API_BASE = 'http://localhost:5000/api/budget/Category';
+const API_BASE = '/api/budget/Category';
 
 export const categoryService = {
     getCategory(): Promise<CategoryDto[]> {

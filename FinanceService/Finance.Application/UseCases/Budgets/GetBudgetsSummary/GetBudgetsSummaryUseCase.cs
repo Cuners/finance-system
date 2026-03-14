@@ -21,19 +21,19 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsSummary
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetBudgetsSummaryResponse> ExecuteAsync(GetBudgetsSummaryRequest request, CancellationToken ct)
+        public async Task<GetBudgetsSummaryResponse> ExecuteAsync(GetBudgetsSummaryRequest request,int userId, CancellationToken ct)
         {
-            if (request.UserId <= 0)
-            {
-                _logger.LogWarning("GetBudgetRequest is null");
-                return new GetBudgetsSummaryErrorResponse("Invalid User id", "INVALID_USER_ID");
-            }
-            var cacheKey = $"dashboard:user:{request.UserId}:" + "budgetsSummary";
+            //if (request.UserId <= 0)
+            //{
+            //    _logger.LogWarning("GetBudgetRequest is null");
+            //    return new GetBudgetsSummaryErrorResponse("Invalid User id", "INVALID_USER_ID");
+            //}
+            var cacheKey = $"dashboard:user:{userId}:" + "budgetsSummary";
             try
             {
                 var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var budgets = await _BudgetRepository.GetBudgetStatusAsync(request.UserId, ct);
+                    var budgets = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
                     var totalBudget = budgets.Sum(b => b.LimitAmount);
                     var totalSpent = budgets.Sum(b => b.TotalSpent);
                     var remaining = totalBudget - totalSpent;
@@ -54,7 +54,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsSummary
             catch (TimeoutException ex)
             {
                 _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var budgets = await _BudgetRepository.GetBudgetStatusAsync(request.UserId, ct);
+                var budgets = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
                 var totalBudget = budgets.Sum(b => b.LimitAmount);
                 var totalSpent = budgets.Sum(b => b.TotalSpent);
                 var remaining = totalBudget - totalSpent;

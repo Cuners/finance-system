@@ -7,6 +7,5 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.R
     public class GetTransactionsByAccountIdRequest
     {
         public int AccountId {  get; set; }
-        public int UserId {  get; set; }
     }
 }

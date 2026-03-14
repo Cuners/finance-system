@@ -6,6 +6,5 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsSummary.Request
 {
     public class GetBudgetsSummaryRequest
     {
-        public int UserId { get; set; }
     }
 }

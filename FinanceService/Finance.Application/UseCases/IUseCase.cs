@@ -6,6 +6,6 @@ namespace Finance.Application.UseCases
 {
     public interface IUseCase<TRequest, TResponse>
     {
-        Task<TResponse> ExecuteAsync(TRequest request, CancellationToken ct);
+        Task<TResponse> ExecuteAsync(TRequest request, int userId, CancellationToken ct);
     }
 }

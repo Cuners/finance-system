@@ -17,7 +17,7 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionById
             _TransactionRepository = TransactionRepository;
             _logger = logger;
         }
-        public async Task<GetTransactionByIdResponse> ExecuteAsync(GetTransactionByIdRequest request, CancellationToken ct)
+        public async Task<GetTransactionByIdResponse> ExecuteAsync(GetTransactionByIdRequest request,int userId, CancellationToken ct)
         {
             try
             {

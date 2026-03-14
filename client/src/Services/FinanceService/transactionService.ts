@@ -1,7 +1,7 @@
 import { httpService } from '../httpService';
 import { type TransactionSummaryDto, type TransactionDto } from '../../Types';
 
-const API_BASE = 'http://localhost:5000/api/budget/Transaction';
+const API_BASE = '/api/budget/Transaction';
 export interface GetTransactionsParams {
   accountId?:number,
   type?: 'income' | 'expense';

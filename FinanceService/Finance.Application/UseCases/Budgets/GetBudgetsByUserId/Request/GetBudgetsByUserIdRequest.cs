@@ -7,6 +7,6 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Request
 {
     public class GetBudgetsByUserIdRequest
     {
-        public int UserId {  get; set; }
+
     }
 }

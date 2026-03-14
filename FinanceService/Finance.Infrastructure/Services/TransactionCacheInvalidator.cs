@@ -30,12 +30,11 @@ namespace Finance.Infrastructure.Services
                     _cache.RemoveByPatternAsync($"dashboard:user:{userId}:", ct),
                     _cache.RemoveByPatternAsync($"budgets:user:{userId}:", ct)
                 );
-                _logger.LogInformation("Cache invalidated for user {UserId}, transaction {TransactionId}",
-                    userId, transactionId);
+                _logger.LogInformation($"Cache invalidated for user {userId}, transaction {transactionId}");
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, "Failed to invalidate cache for user {UserId}, transaction {TransactionId}",userId, transactionId);
+                _logger.LogWarning(ex, $"Failed to invalidate cache for user {userId}, transaction {transactionId}");
             }
         }
 

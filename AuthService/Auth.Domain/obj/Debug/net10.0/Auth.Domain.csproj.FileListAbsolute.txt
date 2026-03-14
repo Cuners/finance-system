@@ -20,3 +20,15 @@ C:\Users\marat\source\repos\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domai
 C:\Users\marat\source\repos\AuthService\Auth.Domain\obj\Debug\net10.0\refint\Auth.Domain.dll
 C:\Users\marat\source\repos\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.pdb
 C:\Users\marat\source\repos\AuthService\Auth.Domain\obj\Debug\net10.0\ref\Auth.Domain.dll
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\bin\Debug\net10.0\Auth.Domain.deps.json
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\bin\Debug\net10.0\Auth.Domain.dll
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\bin\Debug\net10.0\Auth.Domain.pdb
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.AssemblyInfoInputs.cache
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.AssemblyInfo.cs
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.csproj.CoreCompileInputs.cache
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.sourcelink.json
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.dll
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\refint\Auth.Domain.dll
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\Auth.Domain.pdb
+C:\Users\marat\Desktop\finance-system\AuthService\Auth.Domain\obj\Debug\net10.0\ref\Auth.Domain.dll

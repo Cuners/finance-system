@@ -18,7 +18,7 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetById
             _BudgetRepository = BudgetRepository;
             _logger = logger;
         }
-        public async Task<GetBudgetByIdResponse> ExecuteAsync(GetBudgetByIdRequest request, CancellationToken ct)
+        public async Task<GetBudgetByIdResponse> ExecuteAsync(GetBudgetByIdRequest request, int userId, CancellationToken ct)
         {
             if (request.BudgetId <= 0)
             {
@@ -29,10 +29,10 @@ namespace Finance.Application.UseCases.Budgets.GetBudgetById
             {
                 var budgets = await _BudgetRepository.GetBudgetById(request.BudgetId, ct);
 
-                if (budgets is null)
+                if (budgets is null || budgets.UserId != userId)
                 {
-                    _logger.LogWarning("GetBudgetRequest is null");
-                    return new GetBudgetByIdErrorResponse("No Budget found", "Budget_NOT_FOUND");
+                    _logger.LogWarning("GetBudgetRequest is null or access denied");
+                    return new GetBudgetByIdErrorResponse("No Budget found or access denied", "BUDGET_ACCESS_DENIED");
                 }
                 var result = new BudgetDto
                 {

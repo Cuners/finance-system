@@ -5,7 +5,6 @@ using System.Text;
 namespace Finance.Application.UseCases.Transactions.GetTransactions.Request
 {
     public record GetTransactionsRequest(
-        int UserId,
         int? AccountId,
         string? Type = null,
         string? SortOrder=null,

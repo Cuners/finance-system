@@ -47,7 +47,7 @@ const AddBudgetModal = ({
     const newErrors: { [key: string]: string } = {};
     
     const parsedAmount = parseFloat(amount);
-    if (!amount || isNaN(parsedAmount) || parsedAmount <= 0) {
+    if (!amount || isNaN(parsedAmount)) {
       newErrors.amount = 'Введите корректную сумму';
     }
     

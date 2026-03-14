@@ -25,7 +25,7 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
             _logger = logger;
             _cache = cache;
         }
-        public async Task<UpdateBudgetResponse> ExecuteAsync(UpdateBudgetRequest request, CancellationToken ct)
+        public async Task<UpdateBudgetResponse> ExecuteAsync(UpdateBudgetRequest request, int userId, CancellationToken ct)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
                 Budget.CategoryId = request.CategoryId;
                 await _Budget.UpdateBudget(Budget);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1, request.BudgetId, ct);
+                await _cache.InvalidateAsync(userId, request.BudgetId, ct);
                 return new UpdateBudgetSuccessResponse(Budget.BudgetId);
             }
             catch (Exception ex)

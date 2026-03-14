@@ -1,30 +1,31 @@
 ﻿
-using Auth.Application.UseCases.GetUsers;
-using Auth.Application.UseCases.LoginUser;
+using Auth.Application.UseCases;
+using Auth.Application.UseCases.GetUsers.Request;
+using Auth.Application.UseCases.GetUsers.Response;
 using Auth.Application.UseCases.LoginUser.Request;
 using Auth.Application.UseCases.LoginUser.Response;
 using Auth.Application.UseCases.LogoutUser;
 using Auth.Application.UseCases.LogoutUser.Response;
-using Auth.Application.UseCases.RegistrateUser;
 using Auth.Application.UseCases.RegistrateUser.Request;
 using Auth.Application.UseCases.RegistrateUser.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Auth.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth/[controller]")]
     [ApiController]
     public class AuthController : Controller
     {
-        private readonly LoginUseCase _loginUseCase;
-        private readonly RegistrateUseCase _registrateUseCase;
+        private readonly IUseCase<LoginRequest, LoginRepsonse> _loginUseCase;
+        private readonly IUseCase<RegistrationRequest, RegistrationResponse> _registrateUseCase;
         private readonly LogoutUseCase _logoutUseCase;
-        private readonly GetUsersUseCase _getUsersUseCase;
-        public AuthController(LoginUseCase loginUseCase, 
-                              RegistrateUseCase registrateUseCase,
+        private readonly IUseCase<UsersRequest, UsersResponse> _getUsersUseCase;
+        public AuthController(IUseCase<LoginRequest, LoginRepsonse> loginUseCase,
+                              IUseCase<RegistrationRequest, RegistrationResponse> registrateUseCase,
                               LogoutUseCase logoutUseCase,
-                              GetUsersUseCase getUsersUseCase)
+                              IUseCase<UsersRequest, UsersResponse> getUsersUseCase)
         {
             _loginUseCase = loginUseCase;
             _registrateUseCase = registrateUseCase;
@@ -32,13 +33,14 @@ namespace Auth.API.Controllers
             _getUsersUseCase = getUsersUseCase;
         }
         [HttpGet]
-        public async Task<ActionResult> GetUsers(CancellationToken ct)
+        public async Task<ActionResult<UsersResponse>> GetUsers(CancellationToken ct)
         {
-            var response = await _getUsersUseCase.ExecuteAsync(ct);
+            
+            var response = await _getUsersUseCase.ExecuteAsync(new Application.UseCases.GetUsers.Request.UsersRequest(),ct);
             return Ok(response);
         }
         [HttpPost("login")]
-        public async Task<ActionResult> Login(LoginRequest loginRequest, CancellationToken ct)
+        public async Task<ActionResult<LoginRepsonse>> Login(LoginRequest loginRequest, CancellationToken ct)
         {
             var response = await _loginUseCase.ExecuteAsync(loginRequest,ct);
             var responses= response as LoginSuccessRepsonse;
@@ -50,7 +52,7 @@ namespace Auth.API.Controllers
             return Ok(response);
         }
         [HttpPost("registration")]
-        public async Task<ActionResult> Registration(RegistrationRequest registrationRequest, CancellationToken ct)
+        public async Task<ActionResult<RegistrationResponse>> Registration(RegistrationRequest registrationRequest, CancellationToken ct)
         {
             var response = await _registrateUseCase.ExecuteAsync(registrationRequest,ct);
             var responses = response as RegistrationSuccessResponse;
@@ -61,8 +63,9 @@ namespace Auth.API.Controllers
             }
             return Ok(response);
         }
+        [Authorize]
         [HttpPost("logout")]
-        public async Task<ActionResult> Logout()
+        public async Task<ActionResult<LogoutResponse>> Logout()
         {
             var response = _logoutUseCase.Execute();
             if (response is LogoutSuccessRepsonse)

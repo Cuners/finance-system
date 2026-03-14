@@ -10,19 +10,24 @@ using System.Text;
 
 namespace Auth.Application.UseCases.RegistrateUser
 {
-    public class RegistrateUseCase
+    public class RegistrateUseCase : IUseCase<RegistrationRequest,RegistrationResponse>
     {
         private readonly IUserRepository _userRepository;
         private readonly IPasswordService _passwordService;
         private readonly ITokenService _tokenService;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<RegistrateUseCase> _logger;
-        public RegistrateUseCase(IUserRepository userRepository, IUnitOfWork unitOfWork, IPasswordService passwordService, ITokenService tokenService, ILogger<RegistrateUseCase> logger)
+        public RegistrateUseCase(IUserRepository userRepository, 
+                                 IUnitOfWork unitOfWork, 
+                                 IPasswordService passwordService, 
+                                 ITokenService tokenService, 
+                                 ILogger<RegistrateUseCase> logger)
         {
             _userRepository = userRepository;
             _passwordService = passwordService;
             _tokenService = tokenService;
             _unitOfWork = unitOfWork;
+            _logger = logger;
         }
 
         public async Task<RegistrationResponse> ExecuteAsync(RegistrationRequest request, CancellationToken ct)

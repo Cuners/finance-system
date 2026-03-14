@@ -187,3 +187,4 @@ C:\Users\marat\Desktop\finance-system\FinanceService\BudgetServer\obj\Debug\net1
 C:\Users\marat\Desktop\finance-system\FinanceService\BudgetServer\obj\Debug\net10.0\BudgetSe.75FD28AB.Up2Date
 C:\Users\marat\Desktop\finance-system\FinanceService\BudgetServer\obj\Debug\net10.0\BudgetServer.genruntimeconfig.cache
 C:\Users\marat\Desktop\finance-system\FinanceService\BudgetServer\obj\Debug\net10.0\ref\BudgetServer.dll
+C:\Users\marat\Desktop\finance-system\FinanceService\BudgetServer\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

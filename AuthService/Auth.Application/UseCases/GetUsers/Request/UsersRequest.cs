@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Auth.Application.UseCases.GetUsers.Request
 {
-    internal class UsersRequest
+    public class UsersRequest
     {
     }
 }

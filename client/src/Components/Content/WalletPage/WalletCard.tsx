@@ -23,12 +23,14 @@ interface WalletCardProps {
   wallet: WalletData;
   onViewHistory?: (id: string) => void;
   onDelete?: (id: number) => void;
+  onEdit?: (wallet: WalletData) => void;
 }
 
 const WalletCard: React.FC<WalletCardProps> = ({
   wallet,
   onViewHistory,
-  onDelete
+  onDelete,
+  onEdit
 }) => {
   const { deleteAccount, loading,error } = useAccountDelete();
     const handleDelete = async () => {
@@ -91,9 +93,9 @@ const WalletCard: React.FC<WalletCardProps> = ({
           onClick={() => onViewHistory?.(wallet.id)}>
             <HistoryIcon/> История
         </button>
-        <button 
+        <button
           className="wallet-card__btn wallet-card__btn--edit"
-          onClick={() => console.log(wallet.id)}>
+          onClick={() => onEdit?.(wallet)}>
             <EditIcon /> Редактировать
         </button>
         <button 

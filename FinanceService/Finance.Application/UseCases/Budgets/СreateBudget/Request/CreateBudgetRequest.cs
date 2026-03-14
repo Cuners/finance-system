@@ -7,13 +7,10 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget.Request
 {
     public class CreateBudgetRequest
     {
-        public int UserId { get; set; }
 
         public string Name { get; set; } = null!;
 
         public decimal LimitAmount { get; set; }
-
-        
 
         public int CategoryId { get; set; }
     }

@@ -568,6 +568,18 @@
         }
       }
     },
+    "/api/budget/DebugAuth/check": {
+      "get": {
+        "tags": [
+          "DebugAuth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/budget/Transaction/Accounts/{accountId}/Transactions": {
       "get": {
         "tags": [
@@ -1094,6 +1106,9 @@
     },
     {
       "name": "Category"
+    },
+    {
+      "name": "DebugAuth"
     },
     {
       "name": "Transaction"

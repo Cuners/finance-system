@@ -24,17 +24,22 @@ namespace Finance.Application.UseCases.Accounts.UpdateAccount
             _logger = logger;
             _cache = cache;
         }
-        public async Task<UpdateAccountResponse> ExecuteAsync(UpdateAccountRequest request, CancellationToken ct)
+        public async Task<UpdateAccountResponse> ExecuteAsync(UpdateAccountRequest request, int userId, CancellationToken ct)
         {
             try
             {
                 var account = await _account.GetAccountByAccountId(request.AccountId,ct);
+                if (account == null || account.UserId != userId)
+                {
+                    return new UpdateAccountErrorResponse("Account not found or access denied", "ACCOUNT_ACCESS_DENIED");
+                }
+                
                 account.Balance = request.Balance;
                 account.Name = request.Name;
                 account.Note = request.Note;
                 await _account.UpdateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1, request.AccountId, ct);
+                await _cache.InvalidateAsync(userId, request.AccountId, ct);
                 return new UpdateAccountSuccessResponse(account.AccountId);
             }
             catch (Exception ex)

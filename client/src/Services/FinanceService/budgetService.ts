@@ -1,7 +1,7 @@
 import type { BudgetDto, BudgetStatus, BudgetSummary } from '../../Types';
 import { httpService } from '../httpService';
 
-const API_BASE = 'http://localhost:5000/api/budget';
+const API_BASE = '/api/budget';
 export const budgetService = {
     getBudget(): Promise<BudgetDto[]> {
         return httpService.get(`${API_BASE}/Budget`);

@@ -29,13 +29,13 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
             _logger = logger;
             _cache = cache; 
         }
-        public async Task<CreateBudgetResponse> ExecuteAsync(CreateBudgetRequest request, CancellationToken ct)
+        public async Task<CreateBudgetResponse> ExecuteAsync(CreateBudgetRequest request, int userId, CancellationToken ct)
         {
             try
             {
                 var budget = new Domain.Budget
                 {
-                    UserId = request.UserId,
+                    UserId = userId,
                     Name = request.Name,
                     LimitAmount = request.LimitAmount,
                     Date=DateOnly.FromDateTime(DateTime.UtcNow),
@@ -43,14 +43,14 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
                 };
                 await _budgetRepository.CreateBudget(budget);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(1,request.UserId,ct);
+                await _cache.InvalidateAsync(userId,budget.BudgetId,ct);
                 return new CreateBudgetSuccessResponse(budget.BudgetId);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 _logger.LogWarning(ex,ex.Message,request.Name);
                 return new CreateBudgetErrorResponse("Unable TO CREATE BUDGET at this time", "INVALID_CREATE");
             }
-        } 
+        }
     }
 }

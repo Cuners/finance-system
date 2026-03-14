@@ -6,7 +6,6 @@ namespace Finance.Application.UseCases.Transactions.GetTransactionsSummary.Reque
 {
     public class GetTransactionsSummaryRequest
     {
-        public int UserId { get; set; }
         public int Year { get; set; }
         public int Month { get; set; }
     }
