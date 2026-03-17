@@ -4,7 +4,5 @@ using System.Text;
 
 namespace Auth.Application.UseCases.LogoutUser.Request
 {
-    internal class LogoutRequest
-    {
-    }
+    public record LogoutRequest(string? RefreshToken);
 }

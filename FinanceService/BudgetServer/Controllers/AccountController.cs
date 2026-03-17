@@ -76,7 +76,7 @@ namespace BudgetServer.Controllers
             return Ok(response);
         }
         [HttpPost]
-
+        [Authorize]
         public async Task<ActionResult<CreateAccountResponse>> Create(CreateAccountRequest request, CancellationToken ct)
         {
             var userId = _currentUser.UserId;

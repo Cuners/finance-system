@@ -13,35 +13,41 @@ namespace Auth.Infrastructure.Services
     public class TokenService : ITokenService
     {
         private readonly JwtSettings _jwtSettings;
+        private readonly SymmetricSecurityKey _signingKey;
 
         public TokenService(IOptions<JwtSettings> jwtSettings)
         {
             _jwtSettings = jwtSettings.Value;
-
-            // Валидация настроек
             if (string.IsNullOrWhiteSpace(_jwtSettings.SecretKey))
+            {
                 throw new InvalidOperationException("JWT SecretKey is not configured.");
+            }
             if (_jwtSettings.SecretKey.Length < 32)
+            {
                 throw new InvalidOperationException("JWT SecretKey must be at least 32 characters long.");
+            }
+            _signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
         }
 
         public List<Claim> GenerateUserClaims(User user)
         {
-            if (user == null)
-                throw new ArgumentNullException(nameof(user));
+            if (user == null) throw new ArgumentNullException(nameof(user));
 
             var claims = new List<Claim>
             {
                 new(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
                 new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new(ClaimTypes.Name, user.Login),
-                new("user_id",user.UserId.ToString())
+                new("user_id", user.UserId.ToString())
             };
+
             foreach (var role in user.Roles)
             {
                 if (!string.IsNullOrWhiteSpace(role.RoleName))
+                {
                     claims.Add(new Claim(ClaimTypes.Role, role.RoleName));
-                foreach(var permission in role.Permissions)
+                }
+                foreach (var permission in role.Permissions)
                 {
                     claims.Add(new Claim("permission", permission.PermissionName));
                 }
@@ -49,25 +55,33 @@ namespace Auth.Infrastructure.Services
             return claims;
         }
 
-        public string GenerateAccessToken(IEnumerable<Claim> claims)
+        public string GenerateAccessToken(User user)
         {
+            var claims = GenerateUserClaims(user);
+            claims.Add(new Claim("token_type", "access"));
             return CreateToken(claims, TimeSpan.FromMinutes(_jwtSettings.AccessTokenExpiryMinutes));
         }
 
-        public string GenerateRefreshToken(IEnumerable<Claim> claims)
+        public string GenerateRefreshToken(User user)
         {
+            var claims = new List<Claim>
+            {
+                new(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
+                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()), 
+                new("user_id", user.UserId.ToString()),
+                new("token_type", "refresh")
+            };
             return CreateToken(claims, TimeSpan.FromDays(_jwtSettings.RefreshTokenExpiryDays));
         }
 
-        public (string AccessToken, string RefreshToken) RefreshTokens(string refreshToken)
+        public ClaimsPrincipal? ValidateToken(string token)
         {
-            if (string.IsNullOrWhiteSpace(refreshToken))
-                throw new ArgumentException("Refresh token is required.", nameof(refreshToken));
-
+            if (string.IsNullOrWhiteSpace(token)) 
+            { 
+                return null; 
+            }
             var handler = new JwtSecurityTokenHandler();
-
-            // Валидируем refresh token
-            var validationParameters = new TokenValidationParameters
+            var validationParams = new TokenValidationParameters
             {
                 ValidateIssuer = true,
                 ValidateAudience = true,
@@ -75,30 +89,68 @@ namespace Auth.Infrastructure.Services
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = _jwtSettings.Issuer,
                 ValidAudience = _jwtSettings.Audience,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey)),
+                IssuerSigningKey = _signingKey,
+                ClockSkew = TimeSpan.Zero
             };
-
             try
             {
-                handler.ValidateToken(refreshToken, validationParameters, out _);
-                var jwtToken = handler.ReadJwtToken(refreshToken);
-                var claims = jwtToken.Claims.ToList();
+                var principal = handler.ValidateToken(token, validationParams, out _);
+                var tokenType = principal.FindFirst("token_type")?.Value;
+                if (string.IsNullOrEmpty(tokenType))
+                {
+                    return null;
+                }
 
-                var accessToken = GenerateAccessToken(claims);
-                var newRefreshToken = GenerateRefreshToken(claims);
-
-                return (accessToken, newRefreshToken);
+                return principal;
             }
-            catch (SecurityTokenException ex)
+            catch
             {
-                throw new InvalidOperationException("Invalid refresh token.", ex);
+                return null;
+            }
+        }
+        public string? GetJtiFromToken(string token)
+        {
+            try
+            {
+                var handler = new JwtSecurityTokenHandler();
+                var jwtToken = handler.ReadJwtToken(token);
+                return jwtToken.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti)?.Value;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public DateTime GetExpirationFromToken(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadJwtToken(token);
+            return jwtToken.ValidTo;
+        }
+
+        public int? GetUserIdFromToken(string token)
+        {
+            try
+            {
+                var handler = new JwtSecurityTokenHandler();
+                var jwtToken = handler.ReadJwtToken(token);
+                var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "user_id")?.Value;
+
+                if (int.TryParse(userIdClaim, out var userId))
+                    return userId;
+
+                return null;
+            }
+            catch
+            {
+                return null;
             }
         }
 
         private string CreateToken(IEnumerable<Claim> claims, TimeSpan expiry)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var creds = new SigningCredentials(_signingKey, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,

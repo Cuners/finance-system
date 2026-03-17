@@ -1,6 +1,7 @@
 using Auth.Application;
 using Auth.Application.DependencyInjection;
 using Auth.Application.UseCases;
+using Auth.Domain;
 using Auth.Infrastructure.DependencyInjection;
 using Auth.Infrastructure.Persistence;
 using Auth.Infrastructure.Services;
@@ -37,7 +38,7 @@ builder.Services.AddAuthentication(options =>
 
 .AddJwtBearer(options =>
 {
-    var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+    var jwtSettings = builder.Configuration.GetSection("jwtSettings");
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -61,19 +62,17 @@ builder.Services.AddAuthentication(options =>
         }
     };
 });
+
 builder.Services.AddAuthorization();
 builder.Services.Configure<JwtSettings>(
-    builder.Configuration.GetSection("JwtSettings")
+    builder.Configuration.GetSection("jwtSettings")
 );
 builder.Services.AddScoped<IUnitOfWork>(provider => (IUnitOfWork)provider.GetRequiredService<AuthDbContext>());
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 var app = builder.Build();
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<AuthDbContext>();
-    //context.Database.Migrate(); 
-}
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -82,11 +81,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseDeveloperExceptionPage();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("CORSPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

@@ -4,10 +4,7 @@ using System.Text;
 
 namespace Auth.Application.UseCases.RegistrateUser.Request
 {
-    public class RegistrationRequest
-    {
-        public string Login { get; set; }
-        public string Password{ get; set; }
-        public string Email { get; set; }
-    }
+    public record RegistrationRequest(string Login,
+                                      string Password,
+                                      string Email);
 }

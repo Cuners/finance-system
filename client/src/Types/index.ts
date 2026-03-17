@@ -74,3 +74,9 @@ export interface LoginRequest{
   username:string;
   password:string;
 }
+
+export interface UserDto{
+  login:string;
+  password:string;
+  email:string;
+}

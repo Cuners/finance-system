@@ -16,6 +16,10 @@ namespace Auth.Application.Validators
                 .MaximumLength(100).WithMessage("User name maximum length is 100")
                 .Must(name => !name.All(char.IsDigit))
                 .WithMessage("User name cannot consist only of digits.");
+            RuleFor(x => x.Email)
+                .NotEmpty().WithMessage("Email is required.")
+                .NotNull()
+                .MaximumLength(100).WithMessage("Email maximum length is 100");
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Password is required");
         }

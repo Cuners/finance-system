@@ -67,6 +67,16 @@
   },
   {
     "ContainingType": "Auth.API.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auth.API.Controllers.AuthController",
     "Method": "Registration",
     "RelativePath": "api/auth/Auth/registration",
     "HttpMethod": "POST",

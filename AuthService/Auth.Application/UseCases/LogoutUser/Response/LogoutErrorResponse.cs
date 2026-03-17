@@ -1,11 +1,10 @@
-﻿using Auth.Application.UseCases.LoginUser.Response;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Auth.Application.UseCases.LogoutUser.Response
 {
-    public class LogoutErrorResponse : LoginRepsonse
+    public class LogoutErrorResponse : LogoutResponse
     {
         public string Message { get; }
         public string Code { get; }

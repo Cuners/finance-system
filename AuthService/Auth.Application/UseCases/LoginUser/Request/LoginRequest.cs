@@ -4,9 +4,6 @@ using System.Text;
 
 namespace Auth.Application.UseCases.LoginUser.Request
 {
-    public class LoginRequest
-    {
-        public string Username { get; set; } // Логин пользователя
-        public string Password { get; set; } // Пароль пользователя
-    }
+    public record LoginRequest(string Username, 
+                               string Password);
 }

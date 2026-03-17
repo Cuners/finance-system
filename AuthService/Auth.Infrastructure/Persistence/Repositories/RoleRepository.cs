@@ -18,7 +18,7 @@ namespace Auth.Infrastructure.Persistence.Repositories
         {
             return await _context.Roles
                 .AsNoTracking()
-                .ToListAsync();
+                .ToListAsync(ct);
         }
 
         public async Task<Role?> GetRoleById(int Id, CancellationToken ct)
@@ -27,7 +27,7 @@ namespace Auth.Infrastructure.Persistence.Repositories
                 .AsNoTracking()
                 .Include(x => x.Permissions)
                 .Where(x => x.RoleId == Id)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(ct);
         }
 
         public async Task<IEnumerable<Role>> GetRolesById(List<int> ids, CancellationToken ct)
@@ -35,7 +35,18 @@ namespace Auth.Infrastructure.Persistence.Repositories
             return await _context.Roles
                 .AsNoTracking()
                 .Where(x => ids.Contains(x.RoleId))
-                .ToListAsync();
+                .ToListAsync(ct);
+        }
+
+        public async Task<Role?> GetRoleByName(string name,CancellationToken ct)
+        {
+            return await _context.Roles
+                        .Where(x => x.RoleName == name)
+                        .FirstOrDefaultAsync(ct);
+        }
+        public async Task Create(Role role, CancellationToken ct)
+        {
+            await _context.Roles.AddAsync(role, ct);
         }
     }
 }

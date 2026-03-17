@@ -11,6 +11,7 @@ namespace Auth.Infrastructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.ToTable("Users");
             builder.Property(e => e.Email).HasMaxLength(100);
             builder.Property(e => e.Login).HasMaxLength(100);
             builder.Property(e => e.PassHash).HasMaxLength(500);

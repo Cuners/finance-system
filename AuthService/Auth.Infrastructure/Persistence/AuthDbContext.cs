@@ -25,6 +25,8 @@ namespace Auth.Infrastructure.Persistence
 
         public virtual DbSet<Permission> Permissions { get; set; }
 
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
+
         public async Task SaveChangesAsync(CancellationToken ct=default)
         {
             await base.SaveChangesAsync(ct);

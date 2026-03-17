@@ -20,7 +20,7 @@ namespace Auth.Infrastructure.Persistence.Repositories
         {
             return await _context.Users
                 .AsNoTracking()
-                .ToListAsync();
+                .ToListAsync(ct);
         }
 
         public async Task<User?> GetUserById(int id, CancellationToken ct)
@@ -38,7 +38,7 @@ namespace Auth.Infrastructure.Persistence.Repositories
                 .Include(x=>x.Roles)
                 .ThenInclude(p=>p.Permissions)
                 .Where(x=>x.Login==login)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(ct);
         }
         public async Task CreateUser(User user)
         {

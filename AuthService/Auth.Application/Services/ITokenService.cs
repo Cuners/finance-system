@@ -10,9 +10,11 @@ namespace Auth.Application.Services
     {
         List<Claim> GenerateUserClaims(User user);
 
-        string GenerateAccessToken(IEnumerable<Claim> claims);
-        string GenerateRefreshToken(IEnumerable<Claim> claims);
-
-        (string AccessToken, string RefreshToken) RefreshTokens(string oldRefreshToken);
+        string GenerateAccessToken(User user);
+        string GenerateRefreshToken(User user);
+        string? GetJtiFromToken(string token);
+        DateTime GetExpirationFromToken(string token);
+        int? GetUserIdFromToken(string token);
+        ClaimsPrincipal? ValidateToken(string token);
     }
 }
