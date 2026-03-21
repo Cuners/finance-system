@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marat\\source\\repos\\NotificationService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{993FC448-9AC5-4534-95BA-FBCD65B0D9DB}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\source\\repos\\notificationservice\\notificationservice.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{993FC448-9AC5-4534-95BA-FBCD65B0D9DB}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2BBE471-4F83-42C2-B33F-342CDEA7792B}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\source\\repos\\notificationservice\\notificationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2BBE471-4F83-42C2-B33F-342CDEA7792B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4381519A-4E67-46D1-B024-CA48C0E34330}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\source\\repos\\notificationservice\\notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4381519A-4E67-46D1-B024-CA48C0E34330}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70837EC6-CA67-49B6-9EBD-B6B09FDEC25D}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\source\\repos\\notificationservice\\notificationservice.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70837EC6-CA67-49B6-9EBD-B6B09FDEC25D}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2BBE471-4F83-42C2-B33F-342CDEA7792B}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\source\\repos\\notificationservice\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2BBE471-4F83-42C2-B33F-342CDEA7792B}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\Notification.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\Notification.cs",
+              "ToolTip": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\Notification.cs",
+              "RelativeToolTip": "NotificationService.Domain\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:31:07.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:30:51.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Application\\Class1.cs",
+              "RelativeToolTip": "NotificationService.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:30:32.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "NotificationService\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:28:36.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService\\Program.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Program.cs",
+              "ToolTip": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService\\Program.cs",
+              "RelativeToolTip": "NotificationService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:28:26.728Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

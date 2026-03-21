@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\transactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\transactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\budgetconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\budgetconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{75DD30D6-1469-4C8B-A5B7-9637D7EE2701}|Finance.Domain\\Finance.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75DD30D6-1469-4C8B-A5B7-9637D7EE2701}|Finance.Domain\\Finance.Domain.csproj|solutionrelative:finance.domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\services\\transactioncacheinvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\services\\transactioncacheinvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -395,10 +411,6 @@
       "RelativeMoniker": "D:0:0:{D70BDAFF-0038-4EEF-8FA3-1EBE590FE930}|Finance.Application\\Finance.Application.csproj|solutionrelative:finance.application\\usecases\\categories\\getcategories\\response\\getcategoriessuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D70BDAFF-0038-4EEF-8FA3-1EBE590FE930}|Finance.Application\\Finance.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.application\\services\\itransactioncacheinvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D70BDAFF-0038-4EEF-8FA3-1EBE590FE930}|Finance.Application\\Finance.Application.csproj|solutionrelative:finance.application\\services\\itransactioncacheinvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -419,20 +431,8 @@
       "RelativeMoniker": "D:0:0:{D70BDAFF-0038-4EEF-8FA3-1EBE590FE930}|Finance.Application\\Finance.Application.csproj|solutionrelative:finance.application\\usecases\\budgets\\budgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\transactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\transactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{75DD30D6-1469-4C8B-A5B7-9637D7EE2701}|Finance.Domain\\Finance.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.domain\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75DD30D6-1469-4C8B-A5B7-9637D7EE2701}|Finance.Domain\\Finance.Domain.csproj|solutionrelative:finance.domain\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.infrastructure\\persistence\\configurations\\budgetconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{929A34B2-EA02-4ABC-9BA5-6C60D0B89AEE}|Finance.Infrastructure\\Finance.Infrastructure.csproj|solutionrelative:finance.infrastructure\\persistence\\configurations\\budgetconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D70BDAFF-0038-4EEF-8FA3-1EBE590FE930}|Finance.Application\\Finance.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\financeservice\\finance.application\\usecases\\transactions\\gettransactionsbyaccountid\\response\\gettransactionsbyaccountidsuccessresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -682,7 +682,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -694,80 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BudgetController.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\BudgetController.cs",
-              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\BudgetController.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\BudgetController.cs",
-              "RelativeToolTip": "BudgetServer\\Controllers\\BudgetController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGkAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:38:17.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "BudgetServer\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:59:51.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TransactionController.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\TransactionController.cs",
-              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\TransactionController.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\TransactionController.cs",
-              "RelativeToolTip": "BudgetServer\\Controllers\\TransactionController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:00:35.855Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CurrentUserService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\CurrentUserService.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\CurrentUserService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\CurrentUserService.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Services\\CurrentUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T11:18:15.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Program.cs",
-              "RelativeDocumentMoniker": "BudgetServer\\Program.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Program.cs",
-              "RelativeToolTip": "BudgetServer\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T12:14:31.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BudgetStatus.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\BudgetStatus.cs",
-              "RelativeDocumentMoniker": "Finance.Domain\\BudgetStatus.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\BudgetStatus.cs",
-              "RelativeToolTip": "Finance.Domain\\BudgetStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T16:26:23.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Budget.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Budget.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Budget.cs",
@@ -775,12 +702,11 @@
               "RelativeToolTip": "Finance.Domain\\Budget.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T21:00:09.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T21:00:09.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Transaction.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Transaction.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Transaction.cs",
@@ -788,12 +714,11 @@
               "RelativeToolTip": "Finance.Domain\\Transaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T20:59:32.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T20:59:32.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FinancialSummary.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\FinancialSummary.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\FinancialSummary.cs",
@@ -801,12 +726,11 @@
               "RelativeToolTip": "Finance.Domain\\FinancialSummary.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T18:57:18.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T18:57:18.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Category.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Category.cs",
@@ -819,7 +743,144 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T18:32:04.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BudgetConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:35:16.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:31:39.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:38:05.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:32:37.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BudgetStatus.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\BudgetStatus.cs",
+              "RelativeDocumentMoniker": "Finance.Domain\\BudgetStatus.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\BudgetStatus.cs",
+              "RelativeToolTip": "Finance.Domain\\BudgetStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T16:26:23.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Program.cs",
+              "RelativeDocumentMoniker": "BudgetServer\\Program.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Program.cs",
+              "RelativeToolTip": "BudgetServer\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T12:14:31.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\CurrentUserService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\CurrentUserService.cs",
+              "RelativeToolTip": "Finance.Infrastructure\\Services\\CurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T11:18:15.168Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "BudgetServer\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:00:35.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "BudgetServer\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:59:51.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BudgetController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\BudgetController.cs",
+              "RelativeDocumentMoniker": "BudgetServer\\Controllers\\BudgetController.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\BudgetController.cs",
+              "RelativeToolTip": "BudgetServer\\Controllers\\BudgetController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGkAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:38:17.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\appsettings.json",
               "RelativeDocumentMoniker": "BudgetServer\\appsettings.json",
@@ -831,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "BudgetCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\BudgetCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\BudgetCacheInvalidator.cs",
@@ -843,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "BudgetServer\\Controllers\\AccountController.cs",
@@ -855,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "BudgetRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Repositories\\BudgetRepository.cs",
@@ -867,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\AccountRepository.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Repositories\\AccountRepository.cs",
@@ -879,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "CasheAsideService.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\CasheAsideService.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\CasheAsideService.cs",
@@ -891,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "TransactionCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\TransactionCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\TransactionCacheInvalidator.cs",
@@ -903,19 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T18:32:04.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "TransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Repositories\\TransactionRepository.cs",
@@ -927,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "UpdateTransactionRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\UpdateTransactionRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\UpdateTransactionRequestValidator.cs",
@@ -939,7 +988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "CreateTransactionRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\CreateTransactionRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\CreateTransactionRequestValidator.cs",
@@ -951,7 +1000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "CreateAccountRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\CreateAccountRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\CreateAccountRequestValidator.cs",
@@ -963,7 +1012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "CreateBudgetRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\CreateBudgetRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\CreateBudgetRequestValidator.cs",
@@ -975,7 +1024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "UpdateAccountRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\UpdateAccountRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\UpdateAccountRequestValidator.cs",
@@ -987,7 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "UpdateBudgetRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Validators\\UpdateBudgetRequestValidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Validators\\UpdateBudgetRequestValidator.cs",
@@ -999,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "GetCategoriesUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Categories\\GetCategories\\GetCategoriesUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Categories\\GetCategories\\GetCategoriesUseCase.cs",
@@ -1011,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "GetAccountsByUserIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\GetAccountsByUserIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\GetAccountsByUserIdUseCase.cs",
@@ -1023,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "UpdateTransactionUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\UpdateTransactionUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\UpdateTransactionUseCase.cs",
@@ -1035,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "TransactionSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\TransactionSummaryDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\TransactionSummaryDto.cs",
@@ -1047,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "UpdateTransactionRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Request\\UpdateTransactionRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Request\\UpdateTransactionRequest.cs",
@@ -1059,7 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "GetTransactionsSummaryUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionsSummary\\GetTransactionsSummaryUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionsSummary\\GetTransactionsSummaryUseCase.cs",
@@ -1071,7 +1120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "GetTransactionsSummaryRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionsSummary\\Request\\GetTransactionsSummaryRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionsSummary\\Request\\GetTransactionsSummaryRequest.cs",
@@ -1083,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "GetTransactionsByAccountIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\GetTransactionsByAccountIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\GetTransactionsByAccountIdUseCase.cs",
@@ -1095,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "GetTransactionsByAccountIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\Request\\GetTransactionsByAccountIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\Request\\GetTransactionsByAccountIdRequest.cs",
@@ -1107,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "GetTransactionsUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactions\\GetTransactionsUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactions\\GetTransactionsUseCase.cs",
@@ -1119,7 +1168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "GetTransactionsRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactions\\Request\\GetTransactionsRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactions\\Request\\GetTransactionsRequest.cs",
@@ -1131,7 +1180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "GetTransactionByIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionById\\GetTransactionByIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionById\\GetTransactionByIdUseCase.cs",
@@ -1143,7 +1192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "GetTransactionByIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionById\\Request\\GetTransactionByIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionById\\Request\\GetTransactionByIdRequest.cs",
@@ -1155,7 +1204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "DeleteTransactionUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\DeleteTransaction\\DeleteTransactionUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\DeleteTransaction\\DeleteTransactionUseCase.cs",
@@ -1167,7 +1216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "DeleteTransactionRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\DeleteTransaction\\Request\\DeleteTransactionRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\DeleteTransaction\\Request\\DeleteTransactionRequest.cs",
@@ -1179,7 +1228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "CreateTransactionRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\CreateTransaction\\Request\\CreateTransactionRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\CreateTransaction\\Request\\CreateTransactionRequest.cs",
@@ -1191,7 +1240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "CreateTransactionUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\CreateTransaction\\CreateTransactionUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\CreateTransaction\\CreateTransactionUseCase.cs",
@@ -1203,7 +1252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "CreateBudgetUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\\u0421reateBudget\\CreateBudgetUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\\u0421reateBudget\\CreateBudgetUseCase.cs",
@@ -1215,7 +1264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "UpdateBudgetUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\UpdateBudget\\UpdateBudgetUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\UpdateBudget\\UpdateBudgetUseCase.cs",
@@ -1227,7 +1276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "GetBudgetsSummaryUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsSummary\\GetBudgetsSummaryUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsSummary\\GetBudgetsSummaryUseCase.cs",
@@ -1239,7 +1288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "GetBudgetsStatusUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsStatus\\GetBudgetsStatusUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsStatus\\GetBudgetsStatusUseCase.cs",
@@ -1251,7 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "GetBudgetsByUserIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsByUserId\\GetBudgetsByUserIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsByUserId\\GetBudgetsByUserIdUseCase.cs",
@@ -1263,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "CreateAccountRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\CreateAccount\\Request\\CreateAccountRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\CreateAccount\\Request\\CreateAccountRequest.cs",
@@ -1275,7 +1324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "DeleteAccountRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\DeleteAccount\\Request\\DeleteAccountRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\DeleteAccount\\Request\\DeleteAccountRequest.cs",
@@ -1287,7 +1336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "GetAccountByIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountById\\Request\\GetAccountByIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountById\\Request\\GetAccountByIdRequest.cs",
@@ -1299,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "GetAccountsByUserIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\Request\\GetAccountsByUserIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\Request\\GetAccountsByUserIdRequest.cs",
@@ -1311,7 +1360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "GetValueAccountsRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\Request\\GetValueAccountsRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\Request\\GetValueAccountsRequest.cs",
@@ -1323,7 +1372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "UpdateAccountRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Request\\UpdateAccountRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Request\\UpdateAccountRequest.cs",
@@ -1335,7 +1384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "DeleteBudgetRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\DeleteBudget\\Request\\DeleteBudgetRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\DeleteBudget\\Request\\DeleteBudgetRequest.cs",
@@ -1347,7 +1396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "GetBudgetByIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetById\\Request\\GetBudgetByIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetById\\Request\\GetBudgetByIdRequest.cs",
@@ -1359,7 +1408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "GetBudgetsByUserIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsByUserId\\Request\\GetBudgetsByUserIdRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsByUserId\\Request\\GetBudgetsByUserIdRequest.cs",
@@ -1371,7 +1420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "GetBudgetsStatusRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsStatus\\Request\\GetBudgetsStatusRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsStatus\\Request\\GetBudgetsStatusRequest.cs",
@@ -1383,7 +1432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "GetBudgetsSummaryRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetsSummary\\Request\\GetBudgetsSummaryRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetsSummary\\Request\\GetBudgetsSummaryRequest.cs",
@@ -1395,7 +1444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "UpdateBudgetRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\UpdateBudget\\Request\\UpdateBudgetRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\UpdateBudget\\Request\\UpdateBudgetRequest.cs",
@@ -1407,7 +1456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "CreateBudgetRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\\u0421reateBudget\\Request\\CreateBudgetRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\\u0421reateBudget\\Request\\CreateBudgetRequest.cs",
@@ -1419,7 +1468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "GetBudgetByIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetById\\GetBudgetByIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetById\\GetBudgetByIdUseCase.cs",
@@ -1431,7 +1480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "DeleteBudgetUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\DeleteBudget\\DeleteBudgetUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\DeleteBudget\\DeleteBudgetUseCase.cs",
@@ -1443,7 +1492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "CreateAccountUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\CreateAccount\\CreateAccountUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\CreateAccount\\CreateAccountUseCase.cs",
@@ -1455,7 +1504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "DeleteAccountUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\DeleteAccount\\DeleteAccountUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\DeleteAccount\\DeleteAccountUseCase.cs",
@@ -1467,7 +1516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "UpdateAccountUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\UpdateAccount\\UpdateAccountUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\UpdateAccountUseCase.cs",
@@ -1479,7 +1528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "GetValueAccountsUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\GetValueAccountsUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\GetValueAccountsUseCase.cs",
@@ -1491,7 +1540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "GetAccountByIdUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountById\\GetAccountByIdUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountById\\GetAccountByIdUseCase.cs",
@@ -1503,7 +1552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "IUseCase.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\IUseCase.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\IUseCase.cs",
@@ -1515,7 +1564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\IUnitOfWork.cs",
@@ -1527,7 +1576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "AccountCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\AccountCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\AccountCacheInvalidator.cs",
@@ -1539,7 +1588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 74,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
@@ -1551,7 +1600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 75,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\DependencyInjection\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Finance.Application\\DependencyInjection\\DependencyInjection.cs",
@@ -1563,7 +1612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 76,
               "Title": "ICurrentUserService.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Services\\ICurrentUserService.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Services\\ICurrentUserService.cs",
@@ -1575,7 +1624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 77,
               "Title": "UpdateTransactionSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionSuccessResponse.cs",
@@ -1587,7 +1636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 78,
               "Title": "UpdateAccountSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountSuccessResponse.cs",
@@ -1599,7 +1648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 79,
               "Title": "UpdateTransactionErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionErrorResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionErrorResponse.cs",
@@ -1611,7 +1660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 80,
               "Title": "UpdateAccountErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountErrorResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountErrorResponse.cs",
@@ -1623,7 +1672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 81,
               "Title": "UpdateTransactionResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\Response\\UpdateTransactionResponse.cs",
@@ -1635,7 +1684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 82,
               "Title": "AccountSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\AccountSummaryDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\AccountSummaryDto.cs",
@@ -1647,7 +1696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 83,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BudgetServer\\Properties\\launchSettings.json",
@@ -1659,7 +1708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 84,
               "Title": "GetAccountByIdSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountById\\Response\\GetAccountByIdSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountById\\Response\\GetAccountByIdSuccessResponse.cs",
@@ -1671,7 +1720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 85,
               "Title": "AccountDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\AccountDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\AccountDto.cs",
@@ -1683,7 +1732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 86,
               "Title": "GetAccountsByUserIdSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\Response\\GetAccountsByUserIdSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetAccountsByUserId\\Response\\GetAccountsByUserIdSuccessResponse.cs",
@@ -1695,7 +1744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 87,
               "Title": "GetValueAccountsSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\Response\\GetValueAccountsSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\Response\\GetValueAccountsSuccessResponse.cs",
@@ -1707,7 +1756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 89,
               "Title": "GetTransactionsResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactions\\Response\\GetTransactionsResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactions\\Response\\GetTransactionsResponse.cs",
@@ -1719,7 +1768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 88,
               "Title": "GetTransactionsSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactions\\Response\\GetTransactionsSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactions\\Response\\GetTransactionsSuccessResponse.cs",
@@ -1731,7 +1780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 90,
               "Title": "ITransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Interfaces\\ITransactionRepository.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Interfaces\\ITransactionRepository.cs",
@@ -1743,7 +1792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 91,
               "Title": "AccountTransactions.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\AccountTransactions.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\AccountTransactions.cs",
@@ -1755,7 +1804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 92,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Account.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Account.cs",
@@ -1767,7 +1816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 93,
               "Title": "TransactionDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\TransactionDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\TransactionDto.cs",
@@ -1779,7 +1828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 94,
               "Title": "TransactionFilter.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Queries\\TransactionFilter.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Queries\\TransactionFilter.cs",
@@ -1791,7 +1840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 95,
               "Title": "BudgetDbContext.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\BudgetDbContext.cs",
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\BudgetDbContext.cs",
@@ -1803,7 +1852,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 96,
               "Title": "IBudgetRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Interfaces\\IBudgetRepository.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Interfaces\\IBudgetRepository.cs",
@@ -1815,7 +1864,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 97,
               "Title": "GetBudgetByIdSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\GetBudgetById\\Response\\GetBudgetByIdSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\GetBudgetById\\Response\\GetBudgetByIdSuccessResponse.cs",
@@ -1827,7 +1876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 98,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Categories\\CategoryDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Categories\\CategoryDto.cs",
@@ -1839,7 +1888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 99,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Dockerfile",
               "RelativeDocumentMoniker": "BudgetServer\\Dockerfile",
@@ -1851,7 +1900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 100,
               "Title": "GetCategoriesRequest.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Categories\\GetCategories\\Request\\GetCategoriesRequest.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Categories\\GetCategories\\Request\\GetCategoriesRequest.cs",
@@ -1863,7 +1912,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 101,
               "Title": "GetCategoriesSuccessResponse.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Categories\\GetCategories\\Response\\GetCategoriesSuccessResponse.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Categories\\GetCategories\\Response\\GetCategoriesSuccessResponse.cs",
@@ -1875,19 +1924,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
-              "Title": "AccountConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\AccountConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T15:32:37.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 102,
               "Title": "ITransactionCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Services\\ITransactionCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Services\\ITransactionCacheInvalidator.cs",
@@ -1899,7 +1936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 103,
               "Title": "IBudgetCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Services\\IBudgetCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Services\\IBudgetCacheInvalidator.cs",
@@ -1911,7 +1948,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 104,
               "Title": "IAccountCacheInvalidator.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Services\\IAccountCacheInvalidator.cs",
               "RelativeDocumentMoniker": "Finance.Application\\Services\\IAccountCacheInvalidator.cs",
@@ -1923,7 +1960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 105,
               "Title": "BudgetServer.http",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\BudgetServer.http",
               "RelativeDocumentMoniker": "BudgetServer\\BudgetServer.http",
@@ -1935,7 +1972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 106,
               "Title": "BudgetDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\BudgetDto.cs",
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\BudgetDto.cs",
@@ -1947,19 +1984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
-              "Title": "TransactionConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\TransactionConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T15:38:05.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 107,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Domain\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "Finance.Domain\\Interfaces\\ICategoryRepository.cs",
@@ -1968,30 +1993,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-06T18:31:11.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 106,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\CategoryConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T15:31:39.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 107,
-              "Title": "BudgetConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
-              "RelativeDocumentMoniker": "Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
-              "RelativeToolTip": "Finance.Infrastructure\\Persistence\\Configurations\\BudgetConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T15:35:16.179Z"
             },
             {
               "$type": "Document",
