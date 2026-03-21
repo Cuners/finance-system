@@ -700,7 +700,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\DependencyInjection\\DependencyInjection.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\DependencyInjection\\DependencyInjection.cs",
               "RelativeToolTip": "Finance.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAIBJwFIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T19:38:03.185Z",
               "EditorCaption": ""
@@ -739,7 +739,7 @@
               "RelativeDocumentMoniker": "BudgetServer\\Program.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\BudgetServer\\Program.cs",
               "RelativeToolTip": "BudgetServer\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAIBJwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T12:14:31.93Z",
               "EditorCaption": ""
@@ -960,7 +960,7 @@
               "RelativeDocumentMoniker": "Finance.Infrastructure\\Services\\BudgetCacheInvalidator.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Infrastructure\\Services\\BudgetCacheInvalidator.cs",
               "RelativeToolTip": "Finance.Infrastructure\\Services\\BudgetCacheInvalidator.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIBJwCAAAABnAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBZwCAAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T15:06:19.339Z",
               "EditorCaption": ""
@@ -1155,7 +1155,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\UpdateTransactionUseCase.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\UpdateTransactionUseCase.cs",
               "RelativeToolTip": "Finance.Application\\UseCases\\Transactions\\UpdateTransaction\\UpdateTransactionUseCase.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA8wCkAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-13T20:23:47.795Z",
               "EditorCaption": ""
@@ -1220,7 +1220,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\GetTransactionsByAccountIdUseCase.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\GetTransactionsByAccountIdUseCase.cs",
               "RelativeToolTip": "Finance.Application\\UseCases\\Transactions\\GetTransactionsByAccountId\\GetTransactionsByAccountIdUseCase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwB8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwB8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T19:24:12.339Z",
               "EditorCaption": ""
@@ -1363,7 +1363,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Budgets\\UpdateBudget\\UpdateBudgetUseCase.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Budgets\\UpdateBudget\\UpdateBudgetUseCase.cs",
               "RelativeToolTip": "Finance.Application\\UseCases\\Budgets\\UpdateBudget\\UpdateBudgetUseCase.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwCIAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwCIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T19:19:21.036Z",
               "EditorCaption": ""
@@ -1649,7 +1649,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\GetValueAccountsUseCase.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\GetValueAccountsUseCase.cs",
               "RelativeToolTip": "Finance.Application\\UseCases\\Accounts\\GetValueAccounts\\GetValueAccountsUseCase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T20:45:37.996Z",
               "EditorCaption": ""
@@ -1766,7 +1766,7 @@
               "RelativeDocumentMoniker": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountErrorResponse.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountErrorResponse.cs",
               "RelativeToolTip": "Finance.Application\\UseCases\\Accounts\\UpdateAccount\\Response\\UpdateAccountErrorResponse.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-08T19:47:37.291Z",
               "EditorCaption": ""
