@@ -108,7 +108,8 @@ namespace TransactionServer.Controllers
         public async Task<ActionResult<CreateTransactionResponse>> Create(CreateTransactionRequest request, CancellationToken ct)
         {
             int userId=_currentUser.UserId;
-            var response = await _createTransaction.ExecuteAsync(request,userId,ct);
+            string email=_currentUser.Email;
+            var response = await _createTransaction.ExecuteAsync(request,userId, ct);
             return Ok(response);
         }
     }

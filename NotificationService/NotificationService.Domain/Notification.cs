@@ -9,7 +9,7 @@
         public string Message { get; set; }
         public bool IsRead { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string? EmailSentAt { get; set; }
+        public DateTime? EmailSentAt { get; set; }
         public string? Data { get; set; }
         public virtual NotificationType NotificationType { get; set; } = null!;
     }

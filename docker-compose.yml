@@ -19,6 +19,36 @@ services:
     restart: unless-stopped
     command: redis-server --appendonly yes
 
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"      
+      - "15672:15672"    
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_/var/lib/rabbitmq
+    networks:
+      - app
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: budget-mailhog
+    ports:
+      - "1025:1025"   
+      - "8025:8025"  
+    networks:
+      - app
+    restart: unless-stopped
+
   auth-api:
     build:
       context: ./AuthService
@@ -31,6 +61,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__Redis=redis:6379,abortConnect=false,connectTimeout=5000,syncTimeout=5000
+      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Username=guest
+      - RabbitMQ__Password=guest
     networks:
       - app
 
@@ -45,6 +78,47 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__Redis=redis:6379,abortConnect=false,connectTimeout=5000,syncTimeout=5000
+      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Username=guest
+      - RabbitMQ__Password=guest
+    networks:
+      - app
+
+  notificationservice:
+    build:
+      context: ./NotificationService
+      dockerfile: NotificationService.API/Dockerfile
+    container_name: budget-notifications
+    ports:
+      - "5002:5002"
+    expose:
+      - "5002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5002
+      # Добавить дб для docker
+      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Username=guest
+      - RabbitMQ__Password=guest
+      # Email Settings (MailHog для разработки)
+      - EmailSettings__SmtpServer=mailhog
+      - EmailSettings__SmtpPort=1025
+      - EmailSettings__SmtpUser=
+      - EmailSettings__SmtpPassword=
+      - EmailSettings__SmtpUseSsl=false
+      - EmailSettings__FromEmail=
+      - EmailSettings__FromName=Budget App
+      - Jwt__Issuer=BudgetApp
+      - Jwt__Audience=BudgetApp
+      - Jwt__Secret=your-super-secret-key-min-32-chars!!
+    depends_on:
+      postgres-notifications:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      mailhog:
+        condition: service_started
     networks:
       - app
 
@@ -57,6 +131,7 @@ services:
     depends_on:
       - auth-api
       - budgetserver
+      - notificationservice
     networks:
       - app
 
@@ -65,4 +140,5 @@ networks:
     driver: bridge
 
 volumes:
-  redis: 
+  redis:
+  rabbitmq: 

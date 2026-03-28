@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj": {}
+    "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj": {
+    "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj",
         "projectName": "NotificationService.Domain",
-        "projectPath": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj",
+        "projectPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj",
         "packagesPath": "C:\\Users\\marat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Domain\\obj\\",
+        "outputPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

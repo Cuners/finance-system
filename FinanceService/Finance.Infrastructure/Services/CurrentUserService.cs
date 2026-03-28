@@ -16,5 +16,6 @@ namespace Finance.Infrastructure.Services
             _httpContext = httpContext;
         }
         public int UserId => int.Parse(_httpContext.HttpContext.User.FindFirstValue("user_id"));
+        public string Email=> _httpContext.HttpContext.User.FindFirstValue(ClaimTypes.Email);
     }
 }

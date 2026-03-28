@@ -38,6 +38,7 @@ namespace Auth.Infrastructure.Services
                 new(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
                 new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new(ClaimTypes.Name, user.Login),
+                new(ClaimTypes.Email, user.Email),
                 new("user_id", user.UserId.ToString())
             };
 

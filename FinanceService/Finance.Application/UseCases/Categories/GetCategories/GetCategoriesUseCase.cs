@@ -1,4 +1,5 @@
-﻿using Finance.Application.Services;
+﻿using Finance.Application.DTO;
+using Finance.Application.Services;
 using Finance.Application.UseCases.Categories.GetCategories.Request;
 using Finance.Application.UseCases.Categories.GetCategories.Response;
 using Finance.Domain.Interfaces;

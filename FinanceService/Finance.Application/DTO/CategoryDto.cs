@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Finance.Application.DTO
+{
+    public class CategoryDto
+    {
+        public int CategoryId {  get; init; }
+        public string Name { get; init; } = null!;
+    }
+}

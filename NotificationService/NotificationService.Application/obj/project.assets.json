@@ -238,6 +238,16 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "NotificationService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/NotificationService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NotificationService.Domain.dll": {}
+        }
       }
     }
   },
@@ -651,12 +661,18 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "NotificationService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../NotificationService.Domain/NotificationService.Domain.csproj",
+      "msbuildProject": "../NotificationService.Domain/NotificationService.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "MassTransit >= 9.0.1",
-      "Microsoft.Extensions.DependencyInjection >= 10.0.5"
+      "Microsoft.Extensions.DependencyInjection >= 10.0.5",
+      "NotificationService.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -666,11 +682,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Application\\NotificationService.Application.csproj",
+      "projectUniqueName": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\NotificationService.Application.csproj",
       "projectName": "NotificationService.Application",
-      "projectPath": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Application\\NotificationService.Application.csproj",
+      "projectPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\NotificationService.Application.csproj",
       "packagesPath": "C:\\Users\\marat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marat\\source\\repos\\NotificationService\\NotificationService.Application\\obj\\",
+      "outputPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -690,7 +706,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj": {
+              "projectPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationService.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

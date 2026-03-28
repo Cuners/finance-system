@@ -17,12 +17,16 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<CreateTransactionUseCase> _logger;
         private readonly ITransactionCacheInvalidator _cache;
+        private readonly IEventPublisher _eventPublisher;
+        private readonly ICurrentUserService _currentUserService;
         public CreateTransactionUseCase(ITransactionRepository transactionRepository,
                                         IAccountRepository accountRepository,
                                         ICategoryRepository categoryRepository,
                                         IUnitOfWork unitOfWork,
                                         ILogger<CreateTransactionUseCase> logger,
-                                        ITransactionCacheInvalidator cache)
+                                        ITransactionCacheInvalidator cache,
+                                        IEventPublisher eventPublisher,
+                                        ICurrentUserService currentUserService)
         {
             _transactionRepository = transactionRepository;
             _accountRepository = accountRepository;
@@ -30,12 +34,15 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
             _unitOfWork = unitOfWork;
             _logger = logger;
             _cache = cache;
+            _eventPublisher = eventPublisher;
+            _currentUserService = currentUserService;
         }
 
-        public async Task<CreateTransactionResponse> ExecuteAsync(CreateTransactionRequest request,int userId, CancellationToken ct)
+        public async Task<CreateTransactionResponse> ExecuteAsync(CreateTransactionRequest request, int userId, CancellationToken ct)
         {
             try
             {
+                var email = _currentUserService.Email;
                 var account = await _accountRepository.GetAccountByAccountId(request.AccountId,ct);
                 if (account == null)
                 {
@@ -55,9 +62,24 @@ namespace Finance.Application.UseCases.Transactions.CreateTransaction
                     Date = request.Date,
                     Note = request.Note
                 };
-
+                account.Balance += request.Amount;
                 await _transactionRepository.CreateTransaction(transaction);
+                await _accountRepository.UpdateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);
+                if (request.Amount < 0 && account.Balance < 0)
+                {
+                    await _eventPublisher.PublishBudgetExceededAsync(
+                        userId,
+                        account.Name,
+                        email,
+                        account.Balance,
+                        Math.Abs(request.Amount),
+                        transaction.TransactionId,
+                        ct);
+
+                    _logger.LogWarning($"Budget exceeded for user {userId}, account {account.Name}, balance {account.Balance}");
+                }
+                
                 await _cache.InvalidateAsync(userId,transaction.TransactionId, ct);
                 return new CreateTransactionSuccessRepsonse(transaction.TransactionId);
             }

@@ -1,4 +1,5 @@
 ﻿
+using Finance.Application.DTO;
 using Finance.Application.UseCases.Accounts.GetAccountById.Request;
 using Finance.Application.UseCases.Accounts.GetAccountById.Response;
 using Finance.Domain.Interfaces;

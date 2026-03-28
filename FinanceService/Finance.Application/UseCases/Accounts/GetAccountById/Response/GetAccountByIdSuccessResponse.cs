@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases.Accounts.GetAccountById.Response;
+﻿using Finance.Application.DTO;
+using Finance.Application.UseCases.Accounts.GetAccountById.Response;
 using System;
 using System.Collections.Generic;
 using System.Text;

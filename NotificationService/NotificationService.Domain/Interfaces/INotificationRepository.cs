@@ -8,7 +8,7 @@ namespace NotificationService.Domain.Interfaces
     {
         Task<Notification> SaveAsync(Notification notification, CancellationToken ct = default);
         Task<Notification?> GetByIdAsync(int id, CancellationToken ct = default);
-        Task<List<Notification>> GetByUserIdAsync(int userId, int page, int pageSize, CancellationToken ct = default);
+        Task<IEnumerable<Notification>> GetByUserIdAsync(int userId, int page, int pageSize, CancellationToken ct = default);
         Task<int> GetUnreadCountAsync(int userId, CancellationToken ct = default);
         Task MarkAsReadAsync(int id, int userId, CancellationToken ct = default);
         Task MarkAllAsReadAsync(int userId, CancellationToken ct = default);

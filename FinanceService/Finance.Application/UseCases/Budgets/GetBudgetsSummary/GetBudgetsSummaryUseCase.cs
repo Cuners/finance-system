@@ -1,4 +1,5 @@
-﻿using Finance.Application.Services;
+﻿using Finance.Application.DTO;
+using Finance.Application.Services;
 using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Request;
 using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response;
 using Finance.Domain.Interfaces;

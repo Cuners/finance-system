@@ -80,3 +80,35 @@ export interface UserDto{
   password:string;
   email:string;
 }
+
+export interface Notification {
+  notificationId: number;
+  userId: number;
+  type: 'transaction' | 'budget' | 'auth' | 'system';
+  typeId: number;
+  title: string;
+  message: string;
+  isRead: boolean;
+  createdAt: string; 
+  emailSentAt?: string | null;
+  data?: string | null; 
+}
+
+export interface NotificationData {
+  type: string;
+  notificationId: number;
+  data?: Record<string, unknown>;
+}
+
+export interface UseNotificationsReturn {
+  notifications: Notification[];
+  unreadCount: number;
+  isConnected: boolean;
+  isLoading: boolean;
+  error: string | null;
+  loadNotifications: () => Promise<void>;
+  loadUnreadCount: () => Promise<void>;
+  markAsRead: (id: number) => Promise<void>;
+  markAllAsRead: () => Promise<void>;
+  refresh: () => void;
+}

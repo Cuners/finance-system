@@ -6,7 +6,7 @@ namespace NotificationService.Application.DTO
 {
     public record NotificationDto(int Id,
                                   int UserId,
-                                  string Type,
+                                  int TypeId,
                                   string Title,
                                   string Message,
                                   bool IsRead,

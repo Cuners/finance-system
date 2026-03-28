@@ -5,6 +5,7 @@ using Finance.Infrastructure.DependencyInjection;
 using Finance.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using RabbitMQ.Client;
 using StackExchange.Redis;
 using System.Text;
 
@@ -62,6 +63,17 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     var config = ConfigurationOptions.Parse(redisConnectionString);
     return ConnectionMultiplexer.Connect(config);
 });
+var rabbitMQFactory = new ConnectionFactory
+{
+    HostName = builder.Configuration["RabbitMQ:Host"],
+    UserName = builder.Configuration["RabbitMQ:Username"],
+    Password = builder.Configuration["RabbitMQ:Password"],
+    AutomaticRecoveryEnabled = true,
+    NetworkRecoveryInterval = TimeSpan.FromSeconds(5)
+};
+IConnection rabbitMQConnection = await rabbitMQFactory.CreateConnectionAsync();
+builder.Services.AddSingleton<IConnection>(rabbitMQConnection);
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");

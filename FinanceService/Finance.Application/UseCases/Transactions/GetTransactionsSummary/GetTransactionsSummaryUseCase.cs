@@ -1,4 +1,5 @@
 ﻿
+using Finance.Application.DTO;
 using Finance.Application.Services;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;

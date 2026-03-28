@@ -1,4 +1,5 @@
-﻿using Finance.Application.UseCases.Transactions.GetTransactionById.Request;
+﻿using Finance.Application.DTO;
+using Finance.Application.UseCases.Transactions.GetTransactionById.Request;
 using Finance.Application.UseCases.Transactions.GetTransactionById.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;

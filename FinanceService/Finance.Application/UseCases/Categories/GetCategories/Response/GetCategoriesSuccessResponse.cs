@@ -1,4 +1,4 @@
-﻿using Finance.Application.UseCases.Categories;
+﻿using Finance.Application.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;

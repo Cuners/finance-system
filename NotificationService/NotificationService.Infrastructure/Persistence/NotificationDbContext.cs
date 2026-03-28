@@ -14,7 +14,7 @@ namespace NotificationService.Infrastructure.Persistence
         {
         }
 
-        public virtual DbSet<Notification> Accounts { get; set; }
+        public virtual DbSet<Notification> Notifications { get; set; }
 
         public virtual DbSet<NotificationType> NotificationTypes { get; set; }
 

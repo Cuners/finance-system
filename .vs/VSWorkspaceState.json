@@ -5,8 +5,9 @@
     "\\FinanceService\\Finance.Infrastructure",
     "\\FinanceService\\Finance.Infrastructure\\Persistence",
     "\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories",
-    "\\nginx"
+    "\\nginx",
+    "\\NotificationService"
   ],
-  "SelectedNode": "\\FinanceService\\Finance.Infrastructure\\Persistence\\Repositories\\CategoryRepository.cs",
+  "SelectedNode": "\\NotificationService\\NotificationService.slnx",
   "PreviewInSolutionExplorer": false
 }
