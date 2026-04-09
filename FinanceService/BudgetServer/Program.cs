@@ -69,7 +69,10 @@ var rabbitMQFactory = new ConnectionFactory
     UserName = builder.Configuration["RabbitMQ:Username"],
     Password = builder.Configuration["RabbitMQ:Password"],
     AutomaticRecoveryEnabled = true,
-    NetworkRecoveryInterval = TimeSpan.FromSeconds(5)
+    NetworkRecoveryInterval = TimeSpan.FromSeconds(5),
+    RequestedConnectionTimeout = TimeSpan.FromSeconds(30),
+    SocketReadTimeout = TimeSpan.FromSeconds(30),
+    SocketWriteTimeout = TimeSpan.FromSeconds(30),
 };
 IConnection rabbitMQConnection = await rabbitMQFactory.CreateConnectionAsync();
 builder.Services.AddSingleton<IConnection>(rabbitMQConnection);

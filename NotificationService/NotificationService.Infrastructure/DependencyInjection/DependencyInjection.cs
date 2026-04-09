@@ -21,7 +21,6 @@ namespace NotificationService.Infrastructure.DependencyInjection
             services.Configure<EmailSettings>(config.GetSection("EmailSettings"));
             services.AddScoped<IWebSocketSender, WebSocketSender>();
             services.AddScoped<IEmailSender,EmailSender>();
-
             services.AddScoped<INotificationRepository, NotificationRepository>();
             return services;
         }

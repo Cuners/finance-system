@@ -49,14 +49,17 @@ export const transactionService = {
     return httpService.get<{ transactions: TransactionDto[] }>(`${API_BASE}`)
       .then(response => response.transactions);
   },
-
+  getTransactionById(id:number): Promise<TransactionDto> {
+        return httpService.get<{transaction:TransactionDto}>(`${API_BASE}/${id}`)
+            .then(response => response.transaction);
+    },
   // POST /api/transactions
   create(data: any): Promise<TransactionDto> {
     return httpService.post(API_BASE, data);
   }, 
 
   update(data: any): Promise<TransactionDto> {
-    return httpService.put(API_BASE, data);
+    return httpService.put(`${API_BASE}/${data.BudgetId}`, data);
   }, 
 
   // DELETE /api/transactions/123

@@ -29,14 +29,15 @@ services:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
     volumes:
-      - rabbitmq_/var/lib/rabbitmq
+      - rabbitmq:/var/lib/rabbitmq
     networks:
       - app
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
       interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 20
+      start_period: 30s
     restart: unless-stopped
 
   mailhog:
@@ -88,7 +89,7 @@ services:
   notificationservice:
     build:
       context: ./NotificationService
-      dockerfile: NotificationService.API/Dockerfile
+      dockerfile: NotificationService/Dockerfile
     container_name: budget-notifications
     ports:
       - "5002:5002"
@@ -113,8 +114,6 @@ services:
       - Jwt__Audience=BudgetApp
       - Jwt__Secret=your-super-secret-key-min-32-chars!!
     depends_on:
-      postgres-notifications:
-        condition: service_healthy
       rabbitmq:
         condition: service_healthy
       mailhog:

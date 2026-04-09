@@ -84,18 +84,36 @@ export interface UserDto{
 export interface Notification {
   notificationId: number;
   userId: number;
-  type: 'transaction' | 'budget' | 'auth' | 'system';
   typeId: number;
   title: string;
   message: string;
   isRead: boolean;
-  createdAt: string; 
+  createdAt: string; // ISO 8601
   emailSentAt?: string | null;
-  data?: string | null; 
+  data?: string | null; // JSON string
+  notificationType?: NotificationType;
+}
+
+export interface NotificationDto {
+  notificationId: number;
+  userId: number;
+  typeId: number;
+  title: string;
+  message: string;
+  isRead: boolean;
+  createdAt: string;
+  emailSentAt?: string | null;
+  data?: string | null;
+}
+
+export interface NotificationType {
+  typeId: number;
+  name: string;
+  notifications?: Notification[];
 }
 
 export interface NotificationData {
-  type: string;
+  typeId: number;
   notificationId: number;
   data?: Record<string, unknown>;
 }

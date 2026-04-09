@@ -94,7 +94,6 @@ namespace BudgetServer.Controllers
         {
             int userId = _currentUser.UserId;
             var response = await _updateBudget.ExecuteAsync(request,userId, ct);
-
             return Ok(response);
         }
         [HttpDelete("{budgetid}")]

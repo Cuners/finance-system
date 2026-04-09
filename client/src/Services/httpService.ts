@@ -4,8 +4,56 @@ interface RequestConfig {
   method?: HttpMethod;
   headers?: HeadersInit;
   body?: BodyInit | null;
-  credentials?: RequestCredentials; 
+  credentials?: RequestCredentials;
+  skipAuthRetry?: boolean; // Флаг: пропустить обработку 401 (для предотвращения цикла)
 }
+
+// 🔹 Глобальное состояние для управления обновлением токена
+let isRefreshing = false;
+type QueuedCallback = (success: boolean) => void;
+let requestQueue: QueuedCallback[] = [];
+
+/**
+ * Обновляет access token через эндпоинт /auth/refresh
+ * true, если обновление успешно, false — если ошибка
+ */
+const refreshAccessToken = async (): Promise<boolean> => {
+  try {
+    console.log('Refreshing access token...');
+    
+    const response = await fetch('/api/auth/Auth/refresh', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.ok) {
+      console.log('Access token refreshed successfully');
+      return true;
+    }
+
+    // Если 401 — значит и refreshToken истёк
+    if (response.status === 401) {
+      console.warn('Refresh token expired, redirecting to login');
+      window.location.href = '/login';
+      return false;
+    }
+
+    console.error('Failed to refresh token:', response.status);
+    return false;
+  } catch (error) {
+    console.error('Error during token refresh:', error);
+    return false;
+  }
+};
+
+/**
+ * Выполняет все запросы из очереди после обновления токена
+ */
+const processQueue = (success: boolean) => {
+  requestQueue.forEach(callback => callback(success));
+  requestQueue = [];
+};
 
 async function request<T>(
   url: string,
@@ -15,21 +63,66 @@ async function request<T>(
     method = 'GET', 
     headers = {}, 
     body = null,
-    credentials = 'include' 
+    credentials = 'include', // Куки отправляются автоматически
+    skipAuthRetry = false    // По умолчанию обрабатываем 401
   } = config;
 
   const defaultHeaders: HeadersInit = {
     'Content-Type': 'application/json',
     ...headers
+    // НЕ добавляем Authorization — куки сделают это за нас
   };
 
   const response = await fetch(url, {
     method,
     headers: defaultHeaders,
     body,
-    credentials,
+    credentials, 
   });
 
+  // Обработка 401: токен истёк → пробуем обновить
+  if (response.status === 401 && !skipAuthRetry) {
+    
+    // Если обновление уже идёт — добавляем запрос в очередь
+    if (isRefreshing) {
+      console.log('Token refresh in progress, queuing request:', url);
+      
+      return new Promise((resolve, reject) => {
+        requestQueue.push((success: boolean) => {
+          if (success) {
+            // Повторяем исходный запрос с флагом skipAuthRetry
+            request<T>(url, { ...config, skipAuthRetry: true })
+              .then(resolve)
+              .catch(reject);
+          } else {
+            reject(new Error('Token refresh failed'));
+          }
+        });
+      });
+    }
+
+    // Запускаем обновление токена
+    console.log('401 received, starting token refresh...');
+    isRefreshing = true;
+    
+    const success = await refreshAccessToken();
+    isRefreshing = false;
+
+    if (success) {
+      // Обновление успешно — выполняем очередь и повторяем запрос
+      console.log('Processing queued requests...');
+      processQueue(true);
+      
+      return request<T>(url, { ...config, skipAuthRetry: true });
+    } else {
+      // Обновление не удалось — отклоняем очередь и выбрасываем ошибку
+      console.error('Token refresh failed, rejecting queued requests');
+      processQueue(false);
+      throw new Error('Authentication failed: please log in again');
+    }
+  }
+
+  // Стандартная обработка ошибок
   if (!response.ok) {
     const errorText = await response.text();
     try {

@@ -67,10 +67,10 @@
           }
         }
       },
-      "MassTransit/9.0.1": {
+      "MassTransit/8.5.9": {
         "type": "package",
         "dependencies": {
-          "MassTransit.Abstractions": "9.0.1",
+          "MassTransit.Abstractions": "8.5.9",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "10.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
@@ -88,7 +88,7 @@
           }
         }
       },
-      "MassTransit.Abstractions/9.0.1": {
+      "MassTransit.Abstractions/8.5.9": {
         "type": "package",
         "compile": {
           "lib/net10.0/MassTransit.Abstractions.dll": {
@@ -1374,7 +1374,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "MassTransit": "9.0.1",
+          "MassTransit": "8.5.9",
           "Microsoft.Extensions.DependencyInjection": "10.0.5",
           "NotificationService.Domain": "1.0.0"
         },
@@ -1502,10 +1502,10 @@
         "mailkit.nuspec"
       ]
     },
-    "MassTransit/9.0.1": {
-      "sha512": "wYMV/TX9AQqG9ybG7i97Et2rjPgIYXmYr3RV5k7ogr/BvPnAF8ohcmeESoTYSgQFWDi2lurKx57uPg1MJ9R0jw==",
+    "MassTransit/8.5.9": {
+      "sha512": "hhJyrU+7qReF1F+MBgH73E+KEx9oBcRFaCzEk90r8hOgI4HPhT2DYVfaHKGTHADE/P49H48xGgvO30Q9nWn7aA==",
       "type": "package",
-      "path": "masstransit/9.0.1",
+      "path": "masstransit/8.5.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1520,15 +1520,15 @@
         "lib/net9.0/MassTransit.xml",
         "lib/netstandard2.0/MassTransit.dll",
         "lib/netstandard2.0/MassTransit.xml",
-        "masstransit.9.0.1.nupkg.sha512",
+        "masstransit.8.5.9.nupkg.sha512",
         "masstransit.nuspec",
         "mt-logo-small.png"
       ]
     },
-    "MassTransit.Abstractions/9.0.1": {
-      "sha512": "Rh3Bj/8VOdaUat2Zepbe1cfqQ+20Pqd9zoUme8w50qXISZ9p6yuxBXNNBazS16TN6Kfd4FLxuMUtjY928Rxqdw==",
+    "MassTransit.Abstractions/8.5.9": {
+      "sha512": "osNYcFMNzMbwPG6x5zc9u5l0t43+uvlbVqjS99hSIaop8uWnABps7NRgqAUgWX30Zd00wKhDv1nBFRtPV6CFSw==",
       "type": "package",
-      "path": "masstransit.abstractions/9.0.1",
+      "path": "masstransit.abstractions/8.5.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1543,7 +1543,7 @@
         "lib/net9.0/MassTransit.Abstractions.xml",
         "lib/netstandard2.0/MassTransit.Abstractions.dll",
         "lib/netstandard2.0/MassTransit.Abstractions.xml",
-        "masstransit.abstractions.9.0.1.nupkg.sha512",
+        "masstransit.abstractions.8.5.9.nupkg.sha512",
         "masstransit.abstractions.nuspec",
         "mt-logo-small.png"
       ]

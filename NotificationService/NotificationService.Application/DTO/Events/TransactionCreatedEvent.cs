@@ -5,9 +5,9 @@ using System.Text;
 namespace NotificationService.Application.DTO.Events
 {
     public record TransactionCreatedEvent(int UserId,
-                                      string email,
-                                      string AccountName,
-                                      decimal Balance,
-                                      decimal SpentAmount
+                                          string Email,
+                                          string AccountName,
+                                          decimal Balance,
+                                          decimal SpentAmount
     );  
 }

@@ -21,7 +21,7 @@ export const budgetService = {
         return httpService.post(`${API_BASE}/Budget`, data);
     },
     update(data: any): Promise<BudgetDto> {
-        return httpService.put(`${API_BASE}/Budget`, data);
+        return httpService.put(`${API_BASE}/Budget/${data.Id}`, data);
     },
     delete(id: number): Promise<void> {
         return httpService.delete(`${API_BASE}/Budget/${id}`);

@@ -3,48 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\consumers\\transactioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\consumers\\transactioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\consumers\\usercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\consumers\\usercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\dto\\events\\transactioncreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dto\\events\\transactioncreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\dto\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dto\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\useremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\useremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\websocketsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\websocketsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\repositories\\notificationtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\persistence\\repositories\\notificationtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\consumers\\transactioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\consumers\\transactioncreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\consumers\\usercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\consumers\\usercreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\websocketsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\websocketsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\interfaces\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,28 +75,35 @@
       "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\interfaces\\inotificationtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\dto\\events\\transactioncreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dto\\events\\transactioncreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\dto\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dto\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\interfaces\\iuseremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\interfaces\\iuseremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\repositories\\notificationtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\persistence\\repositories\\notificationtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\configurations\\notificationtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\persistence\\configurations\\notificationtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\persistence\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\services\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\notificationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,14 +114,6 @@
       "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\interfaces\\iwebsocketsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\dependencyinjection\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\notificationservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\notificationservice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
@@ -103,28 +122,12 @@
       "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\dto\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.application\\interfaces\\iuseremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3F5C34F-B24C-888E-2FE8-83C475AAF29B}|NotificationService.Application\\NotificationService.Application.csproj|solutionrelative:notificationservice.application\\interfaces\\iuseremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\persistence\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\persistence\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\notificationservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\notificationservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -152,110 +155,111 @@
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\UserEmailService.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\UserEmailService.cs",
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\UserEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABpAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T15:12:48.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserCreatedEvent.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
-              "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:18.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TransactionCreatedEvent.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
-              "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:06.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:49:05.058Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserCreatedConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
-              "RelativeToolTip": "NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCMAAAA4AAAAAAAAAA==",
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "NotificationService\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwEIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:41.835Z"
+              "WhenOpened": "2026-03-26T09:54:36.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IEmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IEmailSender.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\Interfaces\\IEmailSender.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IEmailSender.cs",
-              "RelativeToolTip": "NotificationService.Application\\Interfaces\\IEmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:56:24.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\EmailSender.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\EmailSender.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\EmailSender.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\Services\\EmailSender.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwC8AAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:18:41.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "TransactionCreatedConsumer.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\TransactionCreatedConsumer.cs",
               "RelativeDocumentMoniker": "NotificationService.Application\\Consumers\\TransactionCreatedConsumer.cs",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\TransactionCreatedConsumer.cs",
               "RelativeToolTip": "NotificationService.Application\\Consumers\\TransactionCreatedConsumer.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAASwEIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowBAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:30.504Z",
+              "WhenOpened": "2026-03-21T20:19:30.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Program.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
+              "RelativeToolTip": "NotificationService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:28:26.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WebSocketSender.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:05.109Z"
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
+              "RelativeDocumentMoniker": "NotificationService\\appsettings.json",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
+              "RelativeToolTip": "NotificationService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T20:52:33.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Hubs\\NotificationHub.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "NotificationService\\Hubs\\NotificationHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T15:58:35.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\Notification.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
+              "RelativeToolTip": "NotificationService.Domain\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T22:31:07.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
+              "RelativeToolTip": "NotificationService.Domain\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T12:16:52.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:49:05.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\EmailSettings.cs",
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\EmailSettings.cs",
@@ -268,102 +272,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "NotificationTypeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Title": "UserCreatedConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
+              "RelativeToolTip": "NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:52:12.596Z"
+              "WhenOpened": "2026-03-21T20:19:41.835Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "INotificationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
-              "RelativeDocumentMoniker": "NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
-              "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "WebSocketSender.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:59.524Z"
+              "WhenOpened": "2026-03-21T20:19:05.109Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "INotificationTypeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
-              "RelativeDocumentMoniker": "NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
-              "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\EmailSender.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:32:34.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NotificationTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:45:27.733Z"
+              "WhenOpened": "2026-03-21T20:18:41.525Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "NotificationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwBYAAAAgAAAAAAAAAA==",
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:18:25.533Z"
+              "WhenOpened": "2026-03-21T20:49:15.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
-              "RelativeDocumentMoniker": "NotificationService\\appsettings.json",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
-              "RelativeToolTip": "NotificationService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-21T20:52:33.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NotificationHub.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
-              "RelativeDocumentMoniker": "NotificationService\\Hubs\\NotificationHub.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
-              "RelativeToolTip": "NotificationService\\Hubs\\NotificationHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T15:58:35.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
-              "RelativeDocumentMoniker": "NotificationService\\Program.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
-              "RelativeToolTip": "NotificationService\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAFAAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T22:28:26.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 13,
               "Title": "NotificationHub.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Services\\Hubs\\NotificationHub.cs",
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Services\\Hubs\\NotificationHub.cs",
@@ -375,7 +331,139 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IEmailSender.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\Interfaces\\IEmailSender.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IEmailSender.cs",
+              "RelativeToolTip": "NotificationService.Application\\Interfaces\\IEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T11:56:24.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
+              "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T11:55:59.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "INotificationTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
+              "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T09:32:34.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Dockerfile",
+              "RelativeDocumentMoniker": "NotificationService\\Dockerfile",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Dockerfile",
+              "RelativeToolTip": "NotificationService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-21T20:56:05.735Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwEEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-09T12:14:29.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TransactionCreatedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
+              "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T11:55:06.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
+              "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T11:55:18.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IUserEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IUserEmailService.cs",
+              "RelativeDocumentMoniker": "NotificationService.Application\\Interfaces\\IUserEmailService.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IUserEmailService.cs",
+              "RelativeToolTip": "NotificationService.Application\\Interfaces\\IUserEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T15:34:52.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NotificationTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:52:12.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NotificationTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:45:27.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
+              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwBYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:18:25.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "NotificationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\NotificationDbContext.cs",
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\NotificationDbContext.cs",
@@ -387,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "IWebSocketSender.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IWebSocketSender.cs",
               "RelativeDocumentMoniker": "NotificationService.Application\\Interfaces\\IWebSocketSender.cs",
@@ -399,31 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "RelativeToolTip": "NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:49:15.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationController.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
-              "RelativeToolTip": "NotificationService\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T09:54:36.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "NotificationService.http",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\NotificationService.http",
               "RelativeDocumentMoniker": "NotificationService\\NotificationService.http",
@@ -435,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "NotificationDto.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DTO\\NotificationDto.cs",
               "RelativeDocumentMoniker": "NotificationService.Application\\DTO\\NotificationDto.cs",
@@ -447,19 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IUserEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IUserEmailService.cs",
-              "RelativeDocumentMoniker": "NotificationService.Application\\Interfaces\\IUserEmailService.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\Interfaces\\IUserEmailService.cs",
-              "RelativeToolTip": "NotificationService.Application\\Interfaces\\IUserEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T15:34:52.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "NotificationConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationConfiguration.cs",
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationConfiguration.cs",
@@ -471,19 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
-              "RelativeDocumentMoniker": "NotificationService.Domain\\Notification.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
-              "RelativeToolTip": "NotificationService.Domain\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T22:31:07.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "NotificationService.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj",
               "RelativeDocumentMoniker": "NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj",
@@ -492,30 +532,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-24T15:38:01.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
-              "RelativeDocumentMoniker": "NotificationService.Domain\\NotificationType.cs",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
-              "RelativeToolTip": "NotificationService.Domain\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T12:16:52.798Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Dockerfile",
-              "RelativeDocumentMoniker": "NotificationService\\Dockerfile",
-              "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Dockerfile",
-              "RelativeToolTip": "NotificationService\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-21T20:56:05.735Z"
             }
           ]
         }

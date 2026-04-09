@@ -44,20 +44,20 @@ export const NotificationDropdown: React.FC<NotificationDropdownProps> = ({ onCl
     });
   };
 
-  const getIcon = (type: string) => {
+  const getIcon = (type: number) => {
     switch (type) {
-      case 'transaction': return '💰';
-      case 'budget': return '📊';
-      case 'auth': return '🔐';
+      case 1: return '💰';
+      case 2: return '📊';
+      case 3: return '🔐';
       default: return '🔔';
     }
   };
 
-  const getColor = (type: string) => {
+  const getColor = (type: number) => {
     switch (type) {
-      case 'transaction': return '#10b981';
-      case 'budget': return '#ef4444';
-      case 'auth': return '#3b82f6';
+      case 1: return '#10b981';
+      case 2: return '#ef4444';
+      case 3: return '#3b82f6';
       default: return '#6b7280';
     }
   };
@@ -113,8 +113,8 @@ export const NotificationDropdown: React.FC<NotificationDropdownProps> = ({ onCl
                 className={`notification-item ${!notification.isRead ? 'unread' : ''}`}
                 onClick={() => !notification.isRead && markAsRead(notification.notificationId)}
               >
-                <div className="notification-icon" style={{ color: getColor(notification.type) }}>
-                  {getIcon(notification.type)}
+                <div className="notification-icon" style={{ color: getColor(notification.typeId) }}>
+                  {getIcon(notification.typeId)}
                 </div>
                 <div className="notification-body">
                   <div className="notification-title">{notification.title}</div>

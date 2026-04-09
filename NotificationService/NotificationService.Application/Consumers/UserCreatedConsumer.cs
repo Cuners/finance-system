@@ -10,16 +10,13 @@ namespace NotificationService.Application.Consumers
 {
     public class UserCreatedConsumer : IConsumer<UserCreatedEvent>
     {
-        private readonly IUserEmailService _emailService;
         private readonly IEmailSender _emailSender;
         private readonly ILogger<UserCreatedConsumer> _logger;
 
         public UserCreatedConsumer(
-            IUserEmailService emailService,
             IEmailSender emailSender,
             ILogger<UserCreatedConsumer> logger)
         {
-            _emailService = emailService;
             _emailSender = emailSender;
             _logger = logger;
         }
@@ -35,6 +32,7 @@ namespace NotificationService.Application.Consumers
                 // Отправляем приветственное письмо
                 await _emailSender.SendWelcomeEmailAsync(
                     @event.UserId,
+                    @event.Email,
                     @event.Login,
                     context.CancellationToken);
 

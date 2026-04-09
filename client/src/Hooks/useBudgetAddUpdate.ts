@@ -9,6 +9,7 @@ export const useBudgetAddUpdate = () => {
     categoryId: number;
     categoryName: string;
     amount: number;
+    date:Date;
   }) => {
     setLoading(true);
     setError(null);
@@ -36,13 +37,14 @@ export const useBudgetAddUpdate = () => {
     categoryName: string;
     amount: number;
     categoryId: number;
+    date:Date;
   }) => {
     setLoading(true);
     setError(null);
     
     try {
       const budgetData = {
-        Id: data.budgetId,
+        BudgetId: data.budgetId,
         Name: data.categoryName,
         LimitAmount: data.amount,
         CategoryId: data.categoryId,

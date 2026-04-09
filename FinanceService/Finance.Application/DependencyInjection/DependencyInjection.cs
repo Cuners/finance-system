@@ -59,6 +59,9 @@ using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Respo
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
+using Finance.Application.UseCases.Transactions.UpdateTransaction;
+using Finance.Application.UseCases.Transactions.UpdateTransaction.Request;
+using Finance.Application.UseCases.Transactions.UpdateTransaction.Response;
 using Finance.Application.Validators;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -85,6 +88,7 @@ namespace Finance.Application.DependencyInjection
             services.AddScoped<IUseCase<GetCategoriesRequest, GetCategoriesResponse>, GetCategoriesUseCase>();
             services.AddScoped<IUseCase<CreateTransactionRequest, CreateTransactionResponse>, CreateTransactionUseCase>();
             services.AddScoped<IUseCase<DeleteTransactionRequest, DeleteTransactionResponse>, DeleteTransactionUseCase>();
+            services.AddScoped<IUseCase<UpdateTransactionRequest, UpdateTransactionResponse>, UpdateTransactionUseCase>();
             services.AddScoped<IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse>, GetTransactionsByAccountIdUseCase>();
             services.AddScoped<IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse>, GetTransactionByIdUseCase>();
             services.AddScoped<IUseCase<GetTransactionsRequest, GetTransactionsResponse>, GetTransactionsUseCase>();

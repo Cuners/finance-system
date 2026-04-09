@@ -71,14 +71,16 @@ const AddBudgetModal = ({
         await createBudget({
           categoryId: selectedCategoryId!,
           categoryName: categories.find((cat: any) => cat.categoryId === selectedCategoryId)?.name || '',
-          amount: parseFloat(amount)
+          amount: parseFloat(amount),
+          date: new Date(),
         });
       } else if (mode === 'edit' && budgetData) {
         await updateBudget({
           budgetId: budgetData.budgetId,
           categoryId: selectedCategoryId!,
           categoryName: categories.find((cat: any) => cat.categoryId === selectedCategoryId)?.name || '',
-          amount: parseFloat(amount)
+          amount: parseFloat(amount),
+          date: new Date(),
         });
       }
       

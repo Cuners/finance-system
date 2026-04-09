@@ -14,25 +14,22 @@ namespace NotificationService.Infrastructure.Services
     public class EmailSender : IEmailSender
     {
         private readonly EmailSettings _settings;
-        private readonly IUserEmailService _emailService;
         private readonly ILogger<EmailSender> _logger;
 
         public EmailSender(
             IOptions<EmailSettings> settings,
-            IUserEmailService emailService,
             ILogger<EmailSender> logger)
         {
             _settings = settings.Value;
-            _emailService = emailService;
             _logger = logger;
         }
 
         public async Task SendTransactionNotificationAsync(int userId,
+                                                           string email,
                                                            string accountName,
                                                            decimal balance,
                                                            decimal spentAmount, CancellationToken ct = default)
         {
-            var email = await _emailService.GetUserEmailAsync(userId, ct);
             if (string.IsNullOrEmpty(email))
             {
                 _logger.LogWarning($"Email not found for user {userId}");
@@ -51,9 +48,12 @@ namespace NotificationService.Infrastructure.Services
             await SendEmailAsync(message, ct);
         }
 
-        public async Task SendBudgetExceededNotificationAsync(int userId, string categoryName, decimal percentSpent, CancellationToken ct = default)
+        public async Task SendBudgetExceededNotificationAsync(int userId, 
+                                                              string email, 
+                                                              string categoryName, 
+                                                              decimal percentSpent, 
+                                                              CancellationToken ct = default)
         {
-            var email = await _emailService.GetUserEmailAsync(userId, ct);
             if (string.IsNullOrEmpty(email))
             {
                 _logger.LogWarning($"Email not found for user {userId}");
@@ -72,9 +72,11 @@ namespace NotificationService.Infrastructure.Services
             await SendEmailAsync(message, ct);
         }
 
-        public async Task SendWelcomeEmailAsync(int userId, string login, CancellationToken ct = default)
+        public async Task SendWelcomeEmailAsync(int userId, 
+                                                string email, 
+                                                string login, 
+                                                CancellationToken ct = default)
         {
-            var email = await _emailService.GetUserEmailAsync(userId, ct);
             if (string.IsNullOrEmpty(email))
             {
                 _logger.LogWarning($"Email not found for user {userId}");

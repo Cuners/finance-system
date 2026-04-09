@@ -63,7 +63,7 @@ namespace NotificationService.Application.Handlers
                     {
                         await _emailSender.SendTransactionNotificationAsync(
                             @event.UserId,
-                            @event.email,
+                            @event.Email,
                             @event.AccountName, 
                             @event.Balance, 
                             @event.SpentAmount,

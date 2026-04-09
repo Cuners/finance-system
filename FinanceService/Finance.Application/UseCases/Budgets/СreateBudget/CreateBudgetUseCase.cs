@@ -38,7 +38,7 @@ namespace Finance.Application.UseCases.Budgets.СreateBudget
                     UserId = userId,
                     Name = request.Name,
                     LimitAmount = request.LimitAmount,
-                    Date=DateOnly.FromDateTime(DateTime.UtcNow),
+                    Date= DateOnly.FromDateTime(DateTime.UtcNow),
                     CategoryId = request.CategoryId
                 };
                 await _budgetRepository.CreateBudget(budget);

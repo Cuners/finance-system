@@ -63,10 +63,7 @@ export const useNotifications = (): UseNotificationsReturn => {
   // Отметить все как прочитанные
   const markAllAsRead = useCallback(async () => {
     try {
-      await httpService.post<void>(
-        `${API_BASE}/api/notifications/mark-all-read`,
-        null
-      );
+      await httpService.post<void>(`${API_BASE}/api/notifications/mark-all-read`,null);
       
       setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
       setUnreadCount(0);

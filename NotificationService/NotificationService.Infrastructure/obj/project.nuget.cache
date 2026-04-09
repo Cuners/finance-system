@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M6d54H05tXc=",
+  "dgSpecHash": "m9ptuMQkC68=",
   "success": true,
   "projectFilePath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,8 @@
     "C:\\Users\\marat\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
     "C:\\Users\\marat\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\marat\\.nuget\\packages\\mailkit\\4.15.1\\mailkit.4.15.1.nupkg.sha512",
-    "C:\\Users\\marat\\.nuget\\packages\\masstransit\\9.0.1\\masstransit.9.0.1.nupkg.sha512",
-    "C:\\Users\\marat\\.nuget\\packages\\masstransit.abstractions\\9.0.1\\masstransit.abstractions.9.0.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\masstransit\\8.5.9\\masstransit.8.5.9.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\masstransit.abstractions\\8.5.9\\masstransit.abstractions.8.5.9.nupkg.sha512",
     "C:\\Users\\marat\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\marat\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.5\\microsoft.aspnetcore.authorization.10.0.5.nupkg.sha512",
     "C:\\Users\\marat\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.3.0\\microsoft.aspnetcore.authorization.policy.2.3.0.nupkg.sha512",

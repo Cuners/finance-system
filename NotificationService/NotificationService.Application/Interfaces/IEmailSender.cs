@@ -12,7 +12,14 @@ namespace NotificationService.Application.Interfaces
                                               decimal balance,
                                               decimal spentAmount, 
                                               CancellationToken ct = default);
-        Task SendBudgetExceededNotificationAsync(int userId, string categoryName, decimal percentSpent, CancellationToken ct = default);
-        Task SendWelcomeEmailAsync(int userId, string fullName, CancellationToken ct = default);
+        Task SendBudgetExceededNotificationAsync(int userId, 
+                                                 string email, 
+                                                 string categoryName, 
+                                                 decimal percentSpent, 
+                                                 CancellationToken ct = default);
+        Task SendWelcomeEmailAsync(int userId, 
+                                   string email, 
+                                   string fullName, 
+                                   CancellationToken ct = default);
     }
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTransactionDelete } from '../../../Hooks/useTransactionDelete';
 import './TransactionRow.css';
-
+import TransactionCreateUpdate from './TransactionCreateUpdate';
+import { useTransactionById } from '../../../Hooks/useTransactionById';
 interface Transaction {
-  id: string;
+  id: number;
   title: string;
   category: string;
   date: string;
@@ -43,7 +44,17 @@ const TransactionRow: React.FC<Transaction> = ({
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(amount);
+      const [showEditModal, setShowEditModal] = useState(false); 
+    const { data: transactionData, loading: transactionLoading, error } = useTransactionById(showEditModal ? id : null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const handleOpenModal = () => {
+        setShowEditModal(true); 
+        setShowDropdown(false);
+    };
 
+    const handleCloseModal = () => {
+        setShowEditModal(false);
+    };
   return (
     <tr className={`transaction-row ${type}`}>
       <td className="cell icon">
@@ -61,12 +72,29 @@ const TransactionRow: React.FC<Transaction> = ({
        {formattedAmount}
       </td>
       <td className="cell actions">
-        <button className="action-btn">✏️</button>
+        <button className="action-btn" onClick={handleOpenModal}>✏️</button>
         <button className="action-btn" onClick={handleDelete} disabled={loading}>
-          {loading ? '⏳' : '🗑️'}
+          {loading ? '...' : '🗑️'}
         </button>
       </td>
+      <TransactionCreateUpdate
+        isOpen={showEditModal && (!transactionLoading ||transactionData)}
+        onClose={handleCloseModal}
+        mode="edit"
+        transaction={transactionData ? {
+          transactionId: transactionData.transactionId,
+          accountId: transactionData.accountId,
+          accountName: transactionData.accountName,
+          categoryId: transactionData.categoryId,
+          categoryName: transactionData.categoryName,
+          amount: transactionData.amount,
+          date: transactionData.date,
+          note: transactionData.note,
+        } : undefined}
+        onSuccess={() => {}}
+      />
     </tr>
+    
   );
 };
 

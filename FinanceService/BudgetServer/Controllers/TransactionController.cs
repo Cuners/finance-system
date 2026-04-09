@@ -12,6 +12,8 @@ using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Reque
 using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
 using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
+using Finance.Application.UseCases.Transactions.UpdateTransaction.Request;
+using Finance.Application.UseCases.Transactions.UpdateTransaction.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +29,7 @@ namespace TransactionServer.Controllers
         private readonly IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> _getTransactionById;
         private readonly IUseCase<GetTransactionsRequest, GetTransactionsResponse> _getTransactions;
         private readonly IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> _getTransactionsSummary;
+        private readonly IUseCase<UpdateTransactionRequest, UpdateTransactionResponse> _updateTransaction;
         private readonly ICurrentUserService _currentUser;
         public TransactionController(IUseCase<CreateTransactionRequest, CreateTransactionResponse> createTransaction,
                                      IUseCase<DeleteTransactionRequest, DeleteTransactionResponse> deleteTransaction,
@@ -34,6 +37,7 @@ namespace TransactionServer.Controllers
                                      IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> getTransactionById,
                                      IUseCase<GetTransactionsRequest, GetTransactionsResponse> getTransactions,
                                      IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> getTransactionsSummary,
+                                     IUseCase<UpdateTransactionRequest, UpdateTransactionResponse> updateTransaction,
                                      ICurrentUserService currentUser)
         {
             _createTransaction = createTransaction;
@@ -43,6 +47,7 @@ namespace TransactionServer.Controllers
             _getTransactions = getTransactions;
             _getTransactionsSummary = getTransactionsSummary;
             _currentUser=currentUser;
+            _updateTransaction= updateTransaction;
         }
         [HttpGet("Accounts/{accountId}/Transactions")]
         [Authorize]
@@ -93,7 +98,14 @@ namespace TransactionServer.Controllers
             var response = await _getTransactionsSummary.ExecuteAsync(request,userId, ct);
             return Ok(response);
         }
-
+        [HttpPut("{transactionid}")]
+        [Authorize]
+        public async Task<ActionResult<UpdateTransactionResponse>> Update(UpdateTransactionRequest request, CancellationToken ct)
+        {
+            int userId = _currentUser.UserId;
+            var response = await _updateTransaction.ExecuteAsync(request, userId, ct);
+            return Ok(response);
+        }
         [HttpDelete("{transactionid}")]
         [Authorize]
         public async Task<ActionResult<DeleteTransactionResponse>> Delete(int transactionid, CancellationToken ct)

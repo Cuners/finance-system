@@ -8,6 +8,7 @@ import './TransactionCreateUpdate.css';
 interface TransactionFormProps {
   isOpen: boolean;
   onClose: () => void;
+  mode: 'create' | 'edit';
   transaction?: {
     transactionId: number;
     accountId: number;
@@ -24,11 +25,10 @@ interface TransactionFormProps {
 const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
   isOpen,
   onClose,
+  mode,
   transaction,
   onSuccess
 }) => {
-  const isEditing = !!transaction;
-
   const { createTransaction, updateTransaction, loading, error } = useTransactionAddUpdate();
   const { categories, loading: categoriesLoading } = useCategories();
   const { accounts, loading: accountsLoading } = useRecentAccounts();
@@ -44,7 +44,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
   });
 
   useEffect(() => {
-    if (isEditing && transaction) {
+    if (mode==='edit' && transaction) {
       setFormData({
         accountId: transaction.accountId,
         accountName: transaction.accountName,
@@ -65,7 +65,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
         note: ''
       });
     }
-  }, [isEditing, transaction]);
+  }, [mode, transaction]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -84,7 +84,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
         date: new Date(formData.date),
       };
       
-      if (isEditing && transaction) {
+      if (mode==='edit' && transaction) {
         await updateTransaction({
           ...transaction,
           ...transactionData,
@@ -109,7 +109,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">{isEditing ? 'Edit Transaction' : 'Create Transaction'}</h2>
+          <h2 className="modal-title">{mode==='edit' ? 'Редактировать транзакцию' : 'Создать транзакцию'}</h2>
           <button className="close-button" onClick={onClose}>&times;</button>
         </div>
         
@@ -215,7 +215,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
               disabled={loading || categoriesLoading || accountsLoading}
             >
               {loading ? <span className="loading-spinner"></span> : ''}
-              {isEditing ? 'Update' : 'Create'}
+              {mode==='edit' ? 'Редактировать' : 'Создать'}
             </button>
           </div>
         </form>

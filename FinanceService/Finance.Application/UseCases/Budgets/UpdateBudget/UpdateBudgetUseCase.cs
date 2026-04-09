@@ -31,6 +31,7 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget
             {
                 var Budget = await _Budget.GetBudgetById(request.BudgetId,ct);
                 Budget.Name = request.Name;
+                Budget.LimitAmount=request.LimitAmount;
                 Budget.CategoryId = request.CategoryId;
                 await _Budget.UpdateBudget(Budget);
                 await _unitOfWork.SaveChangesAsync(ct);
