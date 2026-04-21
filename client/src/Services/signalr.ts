@@ -1,7 +1,7 @@
 import * as signalR from '@microsoft/signalr';
 import { getCookie } from '../Utils/cookie';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002';
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost';
 
 export const createSignalRConnection = () => {
   const connection = new signalR.HubConnectionBuilder()
@@ -11,7 +11,7 @@ export const createSignalRConnection = () => {
       transport: signalR.HttpTransportType.WebSockets,
     })
     .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
-    .configureLogging(signalR.LogLevel.Information)
+    .configureLogging(signalR.LogLevel.Debug)
     .build();
 
   // Подписка после подключения

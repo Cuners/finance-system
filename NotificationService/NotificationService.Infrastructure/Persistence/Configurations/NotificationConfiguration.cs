@@ -16,7 +16,7 @@ namespace NotificationService.Infrastructure.Persistence.Configurations
                 .HasMaxLength(100);
 
             builder.HasOne(d => d.NotificationType).WithMany(p => p.Notifications)
-                .HasForeignKey(d => d.TypeId)
+                .HasForeignKey(d => d.NotificationTypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Notifications_NotificationTypes");
         }

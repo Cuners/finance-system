@@ -6,7 +6,7 @@ namespace NotificationService.Domain
 {
     public class NotificationType
     {
-        public int TypeId {  get; set; }
+        public int NotificationTypeId {  get; set; }
         public string Name { get; set; }
         public IEnumerable<Notification> Notifications { get; set; }=new List<Notification>();  
     }

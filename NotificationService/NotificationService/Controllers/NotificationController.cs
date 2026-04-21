@@ -40,7 +40,7 @@ namespace NotificationService.Controllers
             var dtos = notifications.Select(n => new NotificationDto(
                 n.NotificationId,
                 n.UserId,
-                n.TypeId,
+                n.NotificationTypeId,
                 n.Title,
                 n.Message,
                 n.IsRead,

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.SignalR;
+using System.Security.Claims;
 
 namespace NotificationService.Hubs
 {
@@ -11,22 +13,23 @@ namespace NotificationService.Hubs
             _logger = logger;
         }
 
-        public async Task Subscribe(int userId)
+        public async Task Subscribe()
         {
-            var currentUserId = Context.User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            if (currentUserId != userId.ToString())
+            var currentUserId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(currentUserId))
             {
-                _logger.LogWarning($"User {currentUserId} tried to subscribe to user {userId} notifications");
+                _logger.LogWarning($"Invalid User {currentUserId} tried subscribe to notifications");
                 throw new HubException("Unauthorized");
             }
-            await Groups.AddToGroupAsync(Context.ConnectionId, $"user-{userId}");
-            _logger.LogInformation($"User {userId} subscribed to notifications from {Context.ConnectionId}");
+            await Groups.AddToGroupAsync(Context.ConnectionId, $"user-{currentUserId}");
+            _logger.LogInformation($"User {currentUserId} subscribed to notifications from {Context.ConnectionId}");
         }
 
-        public async Task Unsubscribe(int userId)
+        public async Task Unsubscribe()
         {
-            await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user-{userId}");
-            _logger.LogInformation($"User {userId} unsubscribed from notifications");
+            var currentUserId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, $"user-{currentUserId}");
+            _logger.LogInformation($"User {currentUserId} unsubscribed from notifications");
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)

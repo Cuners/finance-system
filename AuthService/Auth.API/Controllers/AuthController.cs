@@ -89,8 +89,8 @@ namespace Auth.API.Controllers
                 {
                     Expires = DateTime.Now.AddDays(-1), 
                     HttpOnly = true,
-                    Secure = true, 
-                    SameSite = SameSiteMode.Strict
+                    Secure = false, 
+                    SameSite = SameSiteMode.Lax
                 };
                 Response.Cookies.Delete("access_token");
                 Response.Cookies.Delete("refresh_token");
@@ -125,16 +125,16 @@ namespace Auth.API.Controllers
             {
                 HttpOnly = true,
                 Expires = DateTime.UtcNow.AddMinutes(15),
-                SameSite = SameSiteMode.Strict,
-                Secure = true
+                SameSite = SameSiteMode.Lax,
+                Secure = false
             });
 
             Response.Cookies.Append("refresh_token", refresh, new CookieOptions
             {
                 HttpOnly = true,
                 Expires = DateTime.UtcNow.AddDays(7),
-                SameSite = SameSiteMode.Strict,
-                Secure = true
+                SameSite = SameSiteMode.Lax,
+                Secure = false
             });
         }
     }

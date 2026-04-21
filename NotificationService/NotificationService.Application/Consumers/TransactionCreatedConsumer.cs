@@ -41,7 +41,7 @@ namespace NotificationService.Application.Handlers
                 var notification = new Notification
                 {
                     UserId = @event.UserId,
-                    TypeId = 1,
+                    NotificationTypeId = 1,
                     Title = "Превышен бюджет кошелька",
                     Message = $"Кошелёк '{@event.AccountName}' ушёл в минус. Баланс: {@event.Balance:N2} ₽",
                     CreatedAt = DateTime.UtcNow,

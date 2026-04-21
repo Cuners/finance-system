@@ -94,3 +94,4 @@ C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService\ob
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService\obj\Debug\net10.0\NotificationService.pdb
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService\obj\Debug\net10.0\NotificationService.genruntimeconfig.cache
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService\obj\Debug\net10.0\ref\NotificationService.dll
+C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService\obj\Debug\net10.0\NotificationService.MvcApplicationPartsAssemblyInfo.cs

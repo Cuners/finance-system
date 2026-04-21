@@ -74,7 +74,7 @@ builder.Services.AddAuthentication(options =>
             {
                 context.Token = accessToken;
             }
-            else if (context.Request.Cookies.TryGetValue("accessToken", out var cookieToken))
+            else if (context.Request.Cookies.TryGetValue("access_token", out var cookieToken))
             {
                 context.Token = cookieToken;
             }
