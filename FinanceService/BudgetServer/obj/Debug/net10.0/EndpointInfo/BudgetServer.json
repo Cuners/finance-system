@@ -568,18 +568,6 @@
         }
       }
     },
-    "/api/budget/DebugAuth/check": {
-      "get": {
-        "tags": [
-          "DebugAuth"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/budget/Transaction/Accounts/{accountId}/Transactions": {
       "get": {
         "tags": [
@@ -653,6 +641,67 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetTransactionByIdResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Transaction"
+        ],
+        "parameters": [
+          {
+            "name": "transactionid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransactionRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransactionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransactionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransactionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTransactionResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTransactionResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTransactionResponse"
                 }
               }
             }
@@ -900,10 +949,6 @@
       "CreateAccountRequest": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -926,10 +971,6 @@
       "CreateBudgetRequest": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -1042,10 +1083,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -1080,18 +1117,52 @@
             "type": "number",
             "format": "double"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "categoryId": {
             "type": "integer",
             "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
           }
         },
         "additionalProperties": false
       },
       "UpdateBudgetResponse": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "UpdateTransactionRequest": {
+        "type": "object",
+        "properties": {
+          "transactionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTransactionResponse": {
         "type": "object",
         "additionalProperties": false
       }
@@ -1106,9 +1177,6 @@
     },
     {
       "name": "Category"
-    },
-    {
-      "name": "DebugAuth"
     },
     {
       "name": "Transaction"

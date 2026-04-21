@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -137,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -157,12 +157,11 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\UserEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T15:12:48.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T15:12:48.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationController.cs",
@@ -170,8 +169,7 @@
               "RelativeToolTip": "NotificationService\\Controllers\\NotificationController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwEIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T09:54:36.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T09:54:36.309Z"
             },
             {
               "$type": "Document",
@@ -183,12 +181,11 @@
               "RelativeToolTip": "NotificationService.Application\\Consumers\\TransactionCreatedConsumer.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowBAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:30.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:19:30.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "NotificationService\\Program.cs",
@@ -209,12 +206,11 @@
               "RelativeToolTip": "NotificationService\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-21T20:52:33.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:52:33.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "NotificationHub.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
               "RelativeDocumentMoniker": "NotificationService\\Hubs\\NotificationHub.cs",
@@ -227,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
               "RelativeDocumentMoniker": "NotificationService.Domain\\Notification.cs",
@@ -235,12 +231,11 @@
               "RelativeToolTip": "NotificationService.Domain\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T22:31:07.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T22:31:07.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NotificationType.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
               "RelativeDocumentMoniker": "NotificationService.Domain\\NotificationType.cs",
@@ -248,12 +243,11 @@
               "RelativeToolTip": "NotificationService.Domain\\NotificationType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T12:16:52.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T12:16:52.798Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
@@ -261,8 +255,7 @@
               "RelativeToolTip": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:49:05.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:49:05.058Z"
             },
             {
               "$type": "Document",
@@ -274,8 +267,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T18:54:59.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T18:54:59.21Z"
             },
             {
               "$type": "Document",
@@ -287,8 +279,7 @@
               "RelativeToolTip": "NotificationService.Application\\Consumers\\UserCreatedConsumer.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwCYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:41.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:19:41.835Z"
             },
             {
               "$type": "Document",
@@ -300,8 +291,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\WebSocketSender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:19:05.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:19:05.109Z"
             },
             {
               "$type": "Document",
@@ -313,8 +303,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\EmailSender.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwBYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:18:41.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:18:41.525Z"
             },
             {
               "$type": "Document",
@@ -326,8 +315,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:49:15.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:49:15.203Z"
             },
             {
               "$type": "Document",
@@ -339,8 +327,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Services\\Hubs\\NotificationHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T09:22:08.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T09:22:08.49Z"
             },
             {
               "$type": "Document",
@@ -352,8 +339,7 @@
               "RelativeToolTip": "NotificationService.Application\\Interfaces\\IEmailSender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:56:24.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:56:24.795Z"
             },
             {
               "$type": "Document",
@@ -365,8 +351,7 @@
               "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:59.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:55:59.524Z"
             },
             {
               "$type": "Document",
@@ -378,8 +363,7 @@
               "RelativeToolTip": "NotificationService.Domain\\Interfaces\\INotificationTypeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:32:34.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T09:32:34.881Z"
             },
             {
               "$type": "Document",
@@ -391,8 +375,7 @@
               "RelativeToolTip": "NotificationService\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-21T20:56:05.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:56:05.735Z"
             },
             {
               "$type": "Document",
@@ -404,8 +387,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.201\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
               "ViewState": "AgIAABwAAAAAAAAAAAAwwEEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-04-09T12:14:29.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-09T12:14:29.655Z"
             },
             {
               "$type": "Document",
@@ -417,8 +399,7 @@
               "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\TransactionCreatedEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:06.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:55:06.32Z"
             },
             {
               "$type": "Document",
@@ -430,8 +411,7 @@
               "RelativeToolTip": "NotificationService.Application\\DTO\\Events\\UserCreatedEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:18.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:55:18.441Z"
             },
             {
               "$type": "Document",
@@ -443,8 +423,7 @@
               "RelativeToolTip": "NotificationService.Application\\Interfaces\\IUserEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T15:34:52.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T15:34:52.539Z"
             },
             {
               "$type": "Document",
@@ -456,8 +435,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationTypeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:52:12.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:52:12.596Z"
             },
             {
               "$type": "Document",
@@ -469,8 +447,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationTypeConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:45:27.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:45:27.733Z"
             },
             {
               "$type": "Document",
@@ -482,8 +459,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Repositories\\NotificationRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAwwBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:18:25.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:18:25.533Z"
             },
             {
               "$type": "Document",
@@ -495,8 +471,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\NotificationDbContext.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAlwBQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:12:00.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:12:00.156Z"
             },
             {
               "$type": "Document",
@@ -508,8 +483,7 @@
               "RelativeToolTip": "NotificationService.Application\\Interfaces\\IWebSocketSender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:56:39.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:56:39.041Z"
             },
             {
               "$type": "Document",
@@ -521,8 +495,7 @@
               "RelativeToolTip": "NotificationService\\NotificationService.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-03-21T20:20:29.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:20:29.247Z"
             },
             {
               "$type": "Document",
@@ -534,8 +507,7 @@
               "RelativeToolTip": "NotificationService.Application\\DTO\\NotificationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T11:55:28.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T11:55:28.959Z"
             },
             {
               "$type": "Document",
@@ -547,8 +519,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\Persistence\\Configurations\\NotificationConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:21:10.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:21:10.466Z"
             },
             {
               "$type": "Document",
@@ -560,8 +531,7 @@
               "RelativeToolTip": "NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-24T15:38:01.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T15:38:01.378Z"
             }
           ]
         }

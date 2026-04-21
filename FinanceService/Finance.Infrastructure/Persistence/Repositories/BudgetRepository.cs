@@ -18,7 +18,6 @@ namespace Finance.Infrastructure.Persistence.Repositories
         public async Task<Budget?> GetBudgetById(int id, CancellationToken ct)
         {
             return await _context.Budgets
-                .AsNoTracking()
                 .Include(x => x.Category)
                 .FirstOrDefaultAsync(x => x.BudgetId == id,ct);
         }

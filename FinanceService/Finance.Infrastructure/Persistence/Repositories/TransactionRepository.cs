@@ -22,7 +22,6 @@ namespace Finance.Infrastructure.Persistence.Repositories
         public async Task<Transaction?> GetTransactionByTransactionId(int id, CancellationToken ct)
         {
             return await _context.Transactions
-                .AsNoTracking()
                 .Include(x => x.Account)
                 .Include(x => x.Category)
                 .FirstOrDefaultAsync(x => x.TransactionId == id, ct);
@@ -32,7 +31,6 @@ namespace Finance.Infrastructure.Persistence.Repositories
         public async Task<IEnumerable<Transaction>> GetTransactionsByAccountId(int id, CancellationToken ct)
         {
             return await _context.Transactions
-                .AsNoTracking()
                 .Where(x=>x.Account.UserId==id)
                 .Where(x=>x.AccountId==id)
                 .ToListAsync(ct);

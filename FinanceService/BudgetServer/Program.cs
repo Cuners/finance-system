@@ -63,19 +63,19 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     var config = ConfigurationOptions.Parse(redisConnectionString);
     return ConnectionMultiplexer.Connect(config);
 });
-var rabbitMQFactory = new ConnectionFactory
-{
-    HostName = builder.Configuration["RabbitMQ:Host"],
-    UserName = builder.Configuration["RabbitMQ:Username"],
-    Password = builder.Configuration["RabbitMQ:Password"],
-    AutomaticRecoveryEnabled = true,
-    NetworkRecoveryInterval = TimeSpan.FromSeconds(5),
-    RequestedConnectionTimeout = TimeSpan.FromSeconds(30),
-    SocketReadTimeout = TimeSpan.FromSeconds(30),
-    SocketWriteTimeout = TimeSpan.FromSeconds(30),
-};
-IConnection rabbitMQConnection = await rabbitMQFactory.CreateConnectionAsync();
-builder.Services.AddSingleton<IConnection>(rabbitMQConnection);
+//var rabbitMQFactory = new ConnectionFactory
+//{
+//    HostName = builder.Configuration["RabbitMQ:Host"],
+//    UserName = builder.Configuration["RabbitMQ:Username"],
+//    Password = builder.Configuration["RabbitMQ:Password"],
+//    AutomaticRecoveryEnabled = true,
+//    NetworkRecoveryInterval = TimeSpan.FromSeconds(5),
+//    RequestedConnectionTimeout = TimeSpan.FromSeconds(30),
+//    SocketReadTimeout = TimeSpan.FromSeconds(30),
+//    SocketWriteTimeout = TimeSpan.FromSeconds(30),
+//};
+//IConnection rabbitMQConnection = await rabbitMQFactory.CreateConnectionAsync();
+//builder.Services.AddSingleton<IConnection>(rabbitMQConnection);
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {

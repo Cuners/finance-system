@@ -12,9 +12,10 @@ namespace Finance.Application.UseCases.Budgets.UpdateBudget.Request
         public string Name { get; set; } = null!;
 
         public decimal LimitAmount { get; set; }
+        public int CategoryId { get; set; }
 
         public DateOnly Date { get; set; }
 
-        public int CategoryId { get; set; }
+        
     }
 }

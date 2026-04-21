@@ -18,6 +18,7 @@ export const useBudgetAddUpdate = () => {
       const budgetData = {
         Name: data.categoryName,
         LimitAmount: data.amount,
+        Date: new Date().toLocaleDateString('ru-RU'),
         CategoryId: data.categoryId,
       };
       
@@ -31,7 +32,13 @@ export const useBudgetAddUpdate = () => {
       setLoading(false);
     }
   };
-
+const getLocalDateString = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
   const updateBudget = async (data: {
     budgetId: number;
     categoryName: string;
@@ -47,6 +54,7 @@ export const useBudgetAddUpdate = () => {
         BudgetId: data.budgetId,
         Name: data.categoryName,
         LimitAmount: data.amount,
+        Date: getLocalDateString(),
         CategoryId: data.categoryId,
       };
       

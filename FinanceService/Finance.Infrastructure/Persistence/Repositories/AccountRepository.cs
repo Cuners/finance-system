@@ -16,7 +16,6 @@ namespace Finance.Infrastructure.Persistence.Repositories
         public async Task<Account?> GetAccountByAccountId(int id, CancellationToken ct)
         {
             return await _context.Accounts
-                .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.AccountId == id, ct);
         }
         public async Task<decimal> GetTotalValue(int userid,CancellationToken ct)

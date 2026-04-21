@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.UseCases.Accounts.AccountDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.DTO.AccountDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -338,16 +338,6 @@
     ]
   },
   {
-    "ContainingType": "BudgetServer.Controllers.DebugAuthController",
-    "Method": "CheckAuth",
-    "RelativePath": "api/budget/DebugAuth/check",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "TransactionServer.Controllers.TransactionController",
     "Method": "GetTransactions",
     "RelativePath": "api/budget/Transaction",
@@ -441,6 +431,37 @@
     "ReturnTypes": [
       {
         "Type": "Finance.Application.UseCases.Transactions.GetTransactionById.Response.GetTransactionByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TransactionServer.Controllers.TransactionController",
+    "Method": "Update",
+    "RelativePath": "api/budget/Transaction/{transactionid}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.Request.UpdateTransactionRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "transactionid",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.Response.UpdateTransactionResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

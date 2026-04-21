@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15F39EC8-63CF-4C73-C194-D86BDCE406AF}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58EF4E10-87BB-EB5F-3721-568E1AB41446}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\marat\\desktop\\finance-system\\notificationservice\\notificationservice.infrastructure\\services\\useremailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -161,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationController.cs",
@@ -185,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "NotificationService\\Program.cs",
@@ -193,24 +193,24 @@
               "RelativeToolTip": "NotificationService\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T22:28:26.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T22:28:26.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
               "RelativeDocumentMoniker": "NotificationService\\appsettings.json",
               "ToolTip": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\appsettings.json",
               "RelativeToolTip": "NotificationService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-21T20:52:33.726Z"
+              "WhenOpened": "2026-03-21T20:52:33.726Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NotificationHub.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService\\Hubs\\NotificationHub.cs",
               "RelativeDocumentMoniker": "NotificationService\\Hubs\\NotificationHub.cs",
@@ -223,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\Notification.cs",
               "RelativeDocumentMoniker": "NotificationService.Domain\\Notification.cs",
@@ -235,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "NotificationType.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Domain\\NotificationType.cs",
               "RelativeDocumentMoniker": "NotificationService.Domain\\NotificationType.cs",
@@ -247,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\marat\\Desktop\\finance-system\\NotificationService\\NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "NotificationService.Application\\DependencyInjection\\DependencyInjection.cs",
