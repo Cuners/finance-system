@@ -2,6 +2,7 @@ using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using NotificationService.Application.DependencyInjection;
+using NotificationService.Application.DTO.Events;
 using NotificationService.Application.Handlers;
 using NotificationService.Application.Interfaces;
 using NotificationService.Hubs;
@@ -33,8 +34,13 @@ builder.Services.AddMassTransit(x =>
             h.Username(builder.Configuration["RabbitMQ:Username"]);
             h.Password(builder.Configuration["RabbitMQ:Password"]);
         });
-
-        cfg.ConfigureEndpoints(context);
+        cfg.Message<TransactionCreatedEvent>(x => x.SetEntityName("TransactionCreated"));
+        cfg.ReceiveEndpoint("TransactionCreated", e =>
+        {
+            e.ConfigureConsumer<TransactionCreatedConsumer>(context);
+            e.ConfigureConsumeTopology = false;
+        });
+      //  cfg.ConfigureEndpoints(context);
     });
 });
 builder.Services.AddAuthentication(options =>

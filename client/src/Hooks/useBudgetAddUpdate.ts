@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { budgetService } from '../Services/FinanceService/budgetService';
-
+import { getLocalDateString } from '../Utils/formatUtils';
 export const useBudgetAddUpdate = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +18,7 @@ export const useBudgetAddUpdate = () => {
       const budgetData = {
         Name: data.categoryName,
         LimitAmount: data.amount,
-        Date: new Date().toLocaleDateString('ru-RU'),
+        Date: getLocalDateString(data.date),
         CategoryId: data.categoryId,
       };
       
@@ -32,13 +32,6 @@ export const useBudgetAddUpdate = () => {
       setLoading(false);
     }
   };
-const getLocalDateString = () => {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-};
   const updateBudget = async (data: {
     budgetId: number;
     categoryName: string;
@@ -54,7 +47,7 @@ const getLocalDateString = () => {
         BudgetId: data.budgetId,
         Name: data.categoryName,
         LimitAmount: data.amount,
-        Date: getLocalDateString(),
+        Date: getLocalDateString(data.date),
         CategoryId: data.categoryId,
       };
       

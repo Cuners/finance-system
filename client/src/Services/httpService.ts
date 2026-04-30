@@ -5,10 +5,10 @@ interface RequestConfig {
   headers?: HeadersInit;
   body?: BodyInit | null;
   credentials?: RequestCredentials;
-  skipAuthRetry?: boolean; // Флаг: пропустить обработку 401 (для предотвращения цикла)
+  skipAuthRetry?: boolean; // Флаг: пропустить обработку 401
 }
 
-// 🔹 Глобальное состояние для управления обновлением токена
+// Глобальное состояние для управления обновлением токена
 let isRefreshing = false;
 type QueuedCallback = (success: boolean) => void;
 let requestQueue: QueuedCallback[] = [];
@@ -32,7 +32,7 @@ const refreshAccessToken = async (): Promise<boolean> => {
       return true;
     }
 
-    // Если 401 — значит и refreshToken истёк
+    // refreshToken истёк
     if (response.status === 401) {
       console.warn('Refresh token expired, redirecting to login');
       window.location.href = '/login';
@@ -63,14 +63,13 @@ async function request<T>(
     method = 'GET', 
     headers = {}, 
     body = null,
-    credentials = 'include', // Куки отправляются автоматически
+    credentials = 'include', 
     skipAuthRetry = false    // По умолчанию обрабатываем 401
   } = config;
 
   const defaultHeaders: HeadersInit = {
     'Content-Type': 'application/json',
     ...headers
-    // НЕ добавляем Authorization — куки сделают это за нас
   };
 
   const response = await fetch(url, {
@@ -80,7 +79,7 @@ async function request<T>(
     credentials, 
   });
 
-  // Обработка 401: токен истёк → пробуем обновить
+  // Токен истёк
   if (response.status === 401 && !skipAuthRetry) {
     
     // Если обновление уже идёт — добавляем запрос в очередь
@@ -109,13 +108,13 @@ async function request<T>(
     isRefreshing = false;
 
     if (success) {
-      // Обновление успешно — выполняем очередь и повторяем запрос
+      // Обновление успешно
       console.log('Processing queued requests...');
       processQueue(true);
       
       return request<T>(url, { ...config, skipAuthRetry: true });
     } else {
-      // Обновление не удалось — отклоняем очередь и выбрасываем ошибку
+      // Обновление не удалось
       console.error('Token refresh failed, rejecting queued requests');
       processQueue(false);
       throw new Error('Authentication failed: please log in again');

@@ -67,6 +67,52 @@
           }
         }
       },
+      "MassTransit/8.5.9": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit.Abstractions": "8.5.9"
+        },
+        "compile": {
+          "lib/net10.0/MassTransit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MassTransit.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MassTransit.Abstractions/8.5.9": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MassTransit.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MassTransit.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MassTransit.RabbitMQ/8.5.9": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit": "8.5.9",
+          "RabbitMQ.Client": "7.2.1"
+        },
+        "compile": {
+          "lib/net10.0/MassTransit.RabbitMqTransport.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MassTransit.RabbitMqTransport.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.5": {
         "type": "package",
         "dependencies": {
@@ -827,6 +873,7 @@
         "dependencies": {
           "Finance.Application": "1.0.0",
           "Finance.Domain": "1.0.0",
+          "MassTransit.RabbitMQ": "8.5.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.5",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.5",
           "RabbitMQ.Client": "7.2.1"
@@ -909,6 +956,75 @@
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/net8.0/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "MassTransit/8.5.9": {
+      "sha512": "hhJyrU+7qReF1F+MBgH73E+KEx9oBcRFaCzEk90r8hOgI4HPhT2DYVfaHKGTHADE/P49H48xGgvO30Q9nWn7aA==",
+      "type": "package",
+      "path": "masstransit/8.5.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net10.0/MassTransit.dll",
+        "lib/net10.0/MassTransit.xml",
+        "lib/net472/MassTransit.dll",
+        "lib/net472/MassTransit.xml",
+        "lib/net8.0/MassTransit.dll",
+        "lib/net8.0/MassTransit.xml",
+        "lib/net9.0/MassTransit.dll",
+        "lib/net9.0/MassTransit.xml",
+        "lib/netstandard2.0/MassTransit.dll",
+        "lib/netstandard2.0/MassTransit.xml",
+        "masstransit.8.5.9.nupkg.sha512",
+        "masstransit.nuspec",
+        "mt-logo-small.png"
+      ]
+    },
+    "MassTransit.Abstractions/8.5.9": {
+      "sha512": "osNYcFMNzMbwPG6x5zc9u5l0t43+uvlbVqjS99hSIaop8uWnABps7NRgqAUgWX30Zd00wKhDv1nBFRtPV6CFSw==",
+      "type": "package",
+      "path": "masstransit.abstractions/8.5.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net10.0/MassTransit.Abstractions.dll",
+        "lib/net10.0/MassTransit.Abstractions.xml",
+        "lib/net472/MassTransit.Abstractions.dll",
+        "lib/net472/MassTransit.Abstractions.xml",
+        "lib/net8.0/MassTransit.Abstractions.dll",
+        "lib/net8.0/MassTransit.Abstractions.xml",
+        "lib/net9.0/MassTransit.Abstractions.dll",
+        "lib/net9.0/MassTransit.Abstractions.xml",
+        "lib/netstandard2.0/MassTransit.Abstractions.dll",
+        "lib/netstandard2.0/MassTransit.Abstractions.xml",
+        "masstransit.abstractions.8.5.9.nupkg.sha512",
+        "masstransit.abstractions.nuspec",
+        "mt-logo-small.png"
+      ]
+    },
+    "MassTransit.RabbitMQ/8.5.9": {
+      "sha512": "TikWOjyKxh9Lbk4BppOtF5PIAt5HwzSXIUgJ3bqI1waD94xR/9xhxQyl2xY/913vMhqu4DObXaQESLr9WNberA==",
+      "type": "package",
+      "path": "masstransit.rabbitmq/8.5.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net10.0/MassTransit.RabbitMqTransport.dll",
+        "lib/net10.0/MassTransit.RabbitMqTransport.xml",
+        "lib/net472/MassTransit.RabbitMqTransport.dll",
+        "lib/net472/MassTransit.RabbitMqTransport.xml",
+        "lib/net8.0/MassTransit.RabbitMqTransport.dll",
+        "lib/net8.0/MassTransit.RabbitMqTransport.xml",
+        "lib/net9.0/MassTransit.RabbitMqTransport.dll",
+        "lib/net9.0/MassTransit.RabbitMqTransport.xml",
+        "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll",
+        "lib/netstandard2.0/MassTransit.RabbitMqTransport.xml",
+        "masstransit.rabbitmq.8.5.9.nupkg.sha512",
+        "masstransit.rabbitmq.nuspec",
+        "mt-logo-small.png"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.5": {
@@ -2185,6 +2301,7 @@
       "Finance.Application >= 1.0.0",
       "Finance.Domain >= 1.0.0",
       "Finance.Infrastructure >= 1.0.0",
+      "MassTransit.RabbitMQ >= 8.5.9",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.5",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 10.0.5",
       "Microsoft.AspNetCore.OpenApi >= 10.0.5",
@@ -2223,6 +2340,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "C:\\Users\\marat\\Desktop\\finance-system\\FinanceService\\Finance.Application\\Finance.Application.csproj": {
@@ -2251,8 +2369,13 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "MassTransit.RabbitMQ": {
+            "target": "Package",
+            "version": "[8.5.9, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[10.0.5, )"
@@ -2297,7 +2420,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

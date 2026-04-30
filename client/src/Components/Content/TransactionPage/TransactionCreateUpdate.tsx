@@ -166,8 +166,7 @@ const TransactionCreateUpdate: React.FC<TransactionFormProps> = ({
                 value={formData.amount}
                 onChange={handleChange}
                 className="form-input"
-                min="0"
-                step="0.01"
+                step="1"
                 required
               />
             </div>

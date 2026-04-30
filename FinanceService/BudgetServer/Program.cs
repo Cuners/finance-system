@@ -1,8 +1,10 @@
 using Azure.Core;
 using Finance.Application.DependencyInjection;
+using Finance.Application.DTO;
 using Finance.Application.UseCases;
 using Finance.Infrastructure.DependencyInjection;
 using Finance.Infrastructure.Persistence;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using RabbitMQ.Client;
@@ -62,6 +64,19 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     }
     var config = ConfigurationOptions.Parse(redisConnectionString);
     return ConnectionMultiplexer.Connect(config);
+});
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(builder.Configuration["RabbitMQ:Host"], h =>
+        {
+            h.Username(builder.Configuration["RabbitMQ:Username"]);
+            h.Password(builder.Configuration["RabbitMQ:Password"]);
+        });
+        cfg.Message<TransactionCreatedEvent>(x => x.SetEntityName("TransactionCreated"));
+        cfg.ConfigureEndpoints(context);
+    });
 });
 //var rabbitMQFactory = new ConnectionFactory
 //{

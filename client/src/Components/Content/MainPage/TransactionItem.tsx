@@ -1,5 +1,6 @@
 import './TransactionItem.css';
 import { getCategoryColor } from '../../../Utils/CategoryIcons';
+import { formatCurrency } from '../../../Utils/formatUtils';
 interface Transaction {
   title?: string;
   category: string;
@@ -22,12 +23,10 @@ const TransactionItem = ({
     const displayAmount = variant === "expense-overview" 
     ? Math.abs(amount) 
     : amount;
-  const formattedAmount = new Intl.NumberFormat("ru-RU", {
-    style: "currency",
-    currency: "RUB",
+  const formattedAmount = formatCurrency(displayAmount, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(displayAmount);
+  });
   const displayTitle = title || category;
   const color = getCategoryColor(category);
   

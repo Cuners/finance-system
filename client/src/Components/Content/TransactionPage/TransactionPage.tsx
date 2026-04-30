@@ -54,9 +54,6 @@ const TransactionPage = () => {
     }));
   }, [data]); 
   const [isModalOpen, setIsModalOpen] = useState(false);
-    
-    const formatCurrency = (value: number) =>
-    new Intl.NumberFormat('ru-RU', {style: 'currency',currency: 'RUB'}).format(value);
 
     const handleOpenModal = () => {
         setIsModalOpen(true);

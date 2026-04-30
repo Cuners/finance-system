@@ -4,6 +4,7 @@ import { getCategoryIcon, getCategoryColor } from '../../../Utils/CategoryIcons'
 import { useBudgetDelete } from '../../../Hooks/useBudgetDelete';
 import AddBudgetModal from './BudgetAddUpdate';
 import { useBudgetById } from '../../../Hooks/useBudgetById'; 
+import { formatCurrency, formatPercent } from '../../../Utils/formatUtils';
 
 interface BudgetBarProps {
   id: number;
@@ -29,12 +30,7 @@ const BudgetBar = ({
   
     const { deleteBudget, loading } = useBudgetDelete();
   
-    const formatCurrency = (value: number) =>
-      new Intl.NumberFormat('ru-RU', {
-      style: 'currency',
-      currency: 'RUB'
-      }).format(value)
-     const formattedPercent = Math.min(100, usedPercent).toFixed(1);
+    const formattedPercent = formatPercent(usedPercent, 1);
        const icon = getCategoryIcon(categoryName);
       const color = getCategoryColor(categoryName);
       

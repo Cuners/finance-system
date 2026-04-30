@@ -3,6 +3,7 @@ import { useTransactionDelete } from '../../../Hooks/useTransactionDelete';
 import './TransactionRow.css';
 import TransactionCreateUpdate from './TransactionCreateUpdate';
 import { useTransactionById } from '../../../Hooks/useTransactionById';
+import { formatCurrency } from '../../../Utils/formatUtils';
 interface Transaction {
   id: number;
   title: string;
@@ -38,12 +39,10 @@ const TransactionRow: React.FC<Transaction> = ({
     }
   };
   
-  const formattedAmount = new Intl.NumberFormat('ru-RU', {
-    style: 'currency',
-    currency: 'RUB',
+  const formattedAmount = formatCurrency(amount, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(amount);
+  });
       const [showEditModal, setShowEditModal] = useState(false); 
     const { data: transactionData, loading: transactionLoading, error } = useTransactionById(showEditModal ? id : null);
     const [showDropdown, setShowDropdown] = useState(false);

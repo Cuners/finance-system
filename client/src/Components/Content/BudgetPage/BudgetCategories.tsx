@@ -8,8 +8,6 @@ const BudgetCategories = () => {
   const { budgets, loading, error } = useBudgetsStatus();
   const { deleteBudget } = useBudgetDelete();
   const [localBudgets, setLocalBudgets] = useState(budgets);
-
-  // Update local budgets when the API data changes
   useEffect(() => {
     setLocalBudgets(budgets);
   }, [budgets]);
@@ -17,7 +15,7 @@ const BudgetCategories = () => {
   const handleDelete = async (id: number) => {
     try {
       await deleteBudget(id);
-      // Remove the deleted budget from local state to update UI immediately
+
       setLocalBudgets(prev => prev.filter(budget => budget.budgetId !== id));
     } catch (error) {
       console.error('Error deleting budget:', error);

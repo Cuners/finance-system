@@ -5,13 +5,11 @@ import {useBudgetsSummary} from '../../../Hooks/useBudgetsSummary';
 import BudgetCategories from "./BudgetCategories";
 import TransactionsHeader from "../ContentHeader.tsx";
 import AddBudgetModal from "./BudgetAddUpdate";
+import { formatCurrency } from '../../../Utils/formatUtils';
 
 const BudgetPage = () => {
     const { budgets, loading, error } = useBudgetsSummary();
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
-    const formatCurrency = (value: number) =>
-    new Intl.NumberFormat('ru-RU', {style: 'currency',currency: 'RUB'}).format(value);
 
     const handleOpenModal = () => {
         setIsModalOpen(true);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { transactionService } from '../Services/FinanceService/transactionService';
-
+import { getLocalDateString } from '../Utils/formatUtils';
 export const useTransactionAddUpdate = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -24,7 +24,7 @@ export const useTransactionAddUpdate = () => {
         CategoryId: data.categoryId,
         CategoryName: data.categoryName,
         Amount: data.amount,
-        Date: data.date,
+        Date: getLocalDateString(data.date),
         Note: data.note,
       };
       
@@ -60,7 +60,7 @@ export const useTransactionAddUpdate = () => {
         CategoryId: data.categoryId,
         CategoryName: data.categoryName,
         Amount: data.amount,
-        Date: data.date,
+        Date: getLocalDateString(data.date),
         Note: data.note,
       };
       
