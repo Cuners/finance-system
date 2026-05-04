@@ -70,8 +70,8 @@ services:
 
   budgetserver:
     build:
-      context: ./FinanceService
-      dockerfile: BudgetServer/Dockerfile
+      context: .
+      dockerfile: FinanceService/BudgetServer/Dockerfile
     ports:
       - "5000:5000" 
     expose:
@@ -88,8 +88,8 @@ services:
 
   notificationservice:
     build:
-      context: ./NotificationService
-      dockerfile: NotificationService/Dockerfile
+      context: .
+      dockerfile: NotificationService/NotificationService/Dockerfile
     container_name: budget-notifications
     ports:
       - "5002:5002"

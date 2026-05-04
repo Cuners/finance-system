@@ -1,9 +1,7 @@
-﻿using Finance.Application.DTO;
-using Finance.Application.Services;
-using Finance.Domain;
+﻿using Finance.Application.Services;
+using Finance.Contracts;
 using MassTransit;
 using Microsoft.Extensions.Logging;
-using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Text;

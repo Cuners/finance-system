@@ -12,13 +12,14 @@ EXPOSE 5001
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["BudgetServer/BudgetServer.csproj", "BudgetServer/"]
-COPY ["Finance.Application/Finance.Application.csproj", "Finance.Application/"]
-COPY ["Finance.Domain/Finance.Domain.csproj", "Finance.Domain/"]
-COPY ["Finance.Infrastructure/Finance.Infrastructure.csproj", "Finance.Infrastructure/"]
-RUN dotnet restore "./BudgetServer/BudgetServer.csproj"
+COPY ["FinanceService/BudgetServer/BudgetServer.csproj", "FinanceService/BudgetServer/"]
+COPY ["FinanceService/Finance.Application/Finance.Application.csproj", "FinanceService/Finance.Application/"]
+COPY ["FinanceService/Finance.Domain/Finance.Domain.csproj", "FinanceService/Finance.Domain/"]
+COPY ["FinanceService/Finance.Infrastructure/Finance.Infrastructure.csproj", "FinanceService/Finance.Infrastructure/"]
+COPY ["Finance.Contracts/Finance.Contracts.csproj", "Finance.Contracts/"]
+RUN dotnet restore "./FinanceService/BudgetServer/BudgetServer.csproj"
 COPY . .
-WORKDIR "/src/BudgetServer"
+WORKDIR "/src/FinanceService/BudgetServer"
 RUN dotnet build "./BudgetServer.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Этот этап используется для публикации проекта службы, который будет скопирован на последний этап

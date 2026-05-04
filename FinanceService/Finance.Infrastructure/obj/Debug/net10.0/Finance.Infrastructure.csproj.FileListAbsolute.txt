@@ -34,3 +34,5 @@ C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\obj\
 C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\obj\Debug\net10.0\refint\Finance.Infrastructure.dll
 C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\obj\Debug\net10.0\Finance.Infrastructure.pdb
 C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\obj\Debug\net10.0\ref\Finance.Infrastructure.dll
+C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\bin\Debug\net10.0\Finance.Contracts.dll
+C:\Users\marat\Desktop\finance-system\FinanceService\Finance.Infrastructure\bin\Debug\net10.0\Finance.Contracts.pdb

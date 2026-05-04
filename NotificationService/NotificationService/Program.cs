@@ -1,3 +1,4 @@
+using Finance.Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -25,8 +26,8 @@ builder.Services.AddSignalR(options =>
 });
 builder.Services.AddMassTransit(x =>
 {
-    x.AddConsumers(typeof(TransactionCreatedConsumer).Assembly);
-
+    //x.AddConsumers(typeof(TransactionCreatedConsumer).Assembly);
+    x.AddConsumer<TransactionCreatedConsumer>();
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(builder.Configuration["RabbitMQ:Host"], h =>
@@ -37,10 +38,10 @@ builder.Services.AddMassTransit(x =>
         cfg.Message<TransactionCreatedEvent>(x => x.SetEntityName("TransactionCreated"));
         cfg.ReceiveEndpoint("TransactionCreated", e =>
         {
-            e.ConfigureConsumer<TransactionCreatedConsumer>(context);
             e.ConfigureConsumeTopology = false;
+            e.ConfigureConsumer<TransactionCreatedConsumer>(context);
         });
-      //  cfg.ConfigureEndpoints(context);
+        cfg.ConfigureEndpoints(context);
     });
 });
 builder.Services.AddAuthentication(options =>

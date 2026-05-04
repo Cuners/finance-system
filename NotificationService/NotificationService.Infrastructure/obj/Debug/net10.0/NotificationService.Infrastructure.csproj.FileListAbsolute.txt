@@ -16,3 +16,5 @@ C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.In
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.Infrastructure\obj\Debug\net10.0\refint\NotificationService.Infrastructure.dll
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.Infrastructure\obj\Debug\net10.0\NotificationService.Infrastructure.pdb
 C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.Infrastructure\obj\Debug\net10.0\ref\NotificationService.Infrastructure.dll
+C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.Infrastructure\bin\Debug\net10.0\Finance.Contracts.dll
+C:\Users\marat\Desktop\finance-system\NotificationService\NotificationService.Infrastructure\bin\Debug\net10.0\Finance.Contracts.pdb

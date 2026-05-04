@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../Finance.Contracts/Finance.Contracts.csproj" />
   <Project Path="NotificationService.Application/NotificationService.Application.csproj" />
   <Project Path="NotificationService.Domain/NotificationService.Domain.csproj" />
   <Project Path="NotificationService.Infrastructure/NotificationService.Infrastructure.csproj" />

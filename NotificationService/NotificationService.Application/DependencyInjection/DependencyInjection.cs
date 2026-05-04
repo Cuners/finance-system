@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using Finance.Contracts;
+using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using NotificationService.Application.Consumers;
 using NotificationService.Application.DTO.Events;

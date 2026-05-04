@@ -2,6 +2,7 @@ using Azure.Core;
 using Finance.Application.DependencyInjection;
 using Finance.Application.DTO;
 using Finance.Application.UseCases;
+using Finance.Contracts;
 using Finance.Infrastructure.DependencyInjection;
 using Finance.Infrastructure.Persistence;
 using MassTransit;
@@ -74,7 +75,11 @@ builder.Services.AddMassTransit(x =>
             h.Username(builder.Configuration["RabbitMQ:Username"]);
             h.Password(builder.Configuration["RabbitMQ:Password"]);
         });
-        cfg.Message<TransactionCreatedEvent>(x => x.SetEntityName("TransactionCreated"));
+
+        cfg.Message<TransactionCreatedEvent>(x =>
+        {
+            x.SetEntityName("TransactionCreated");
+        });
         cfg.ConfigureEndpoints(context);
     });
 });

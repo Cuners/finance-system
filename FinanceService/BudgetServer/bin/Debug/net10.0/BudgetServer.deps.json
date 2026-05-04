@@ -9,6 +9,7 @@
       "BudgetServer/1.0.0": {
         "dependencies": {
           "Finance.Application": "1.0.0",
+          "Finance.Contracts": "1.0.0",
           "Finance.Domain": "1.0.0",
           "Finance.Infrastructure": "1.0.0",
           "MassTransit.RabbitMQ": "8.5.9",
@@ -577,6 +578,14 @@
           }
         }
       },
+      "Finance.Contracts/1.0.0": {
+        "runtime": {
+          "Finance.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Finance.Domain/1.0.0": {
         "runtime": {
           "Finance.Domain.dll": {
@@ -588,6 +597,7 @@
       "Finance.Infrastructure/1.0.0": {
         "dependencies": {
           "Finance.Application": "1.0.0",
+          "Finance.Contracts": "1.0.0",
           "Finance.Domain": "1.0.0",
           "MassTransit.RabbitMQ": "8.5.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.5",
@@ -932,6 +942,11 @@
       "hashPath": "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
     },
     "Finance.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Finance.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

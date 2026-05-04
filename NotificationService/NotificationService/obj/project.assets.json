@@ -786,10 +786,21 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Finance.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Finance.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Finance.Contracts.dll": {}
+        }
+      },
       "NotificationService.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Finance.Contracts": "1.0.0",
           "MassTransit": "8.5.9",
           "NotificationService.Domain": "1.0.0"
         },
@@ -2197,6 +2208,11 @@
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Finance.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../../Finance.Contracts/Finance.Contracts.csproj",
+      "msbuildProject": "../../Finance.Contracts/Finance.Contracts.csproj"
     },
     "NotificationService.Application/1.0.0": {
       "type": "project",

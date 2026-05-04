@@ -1,6 +1,6 @@
-﻿using MassTransit;
+﻿using Finance.Contracts;
+using MassTransit;
 using Microsoft.Extensions.Logging;
-using NotificationService.Application.DTO.Events;
 using NotificationService.Application.Interfaces;
 using NotificationService.Domain;
 using NotificationService.Domain.Interfaces;
