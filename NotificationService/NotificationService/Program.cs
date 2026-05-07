@@ -6,9 +6,9 @@ using NotificationService.Application.DependencyInjection;
 using NotificationService.Application.DTO.Events;
 using NotificationService.Application.Handlers;
 using NotificationService.Application.Interfaces;
-using NotificationService.Hubs;
 using NotificationService.Infrastructure.DependencyInjection;
 using NotificationService.Infrastructure.Services;
+using NotificationService.Infrastructure.Services.Hubs;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

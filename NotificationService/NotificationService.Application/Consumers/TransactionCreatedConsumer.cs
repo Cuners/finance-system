@@ -57,26 +57,23 @@ namespace NotificationService.Application.Handlers
                     notificationId = notification.NotificationId,
                     data = new { @event.UserId, @event.AccountName, @event.Balance, @event.SpentAmount }
                 }, context.CancellationToken);
-                _ = Task.Run(async () =>
+                try
                 {
-                    try
-                    {
-                        await _emailSender.SendTransactionNotificationAsync(
-                            @event.UserId,
-                            @event.Email,
-                            @event.AccountName, 
-                            @event.Balance, 
-                            @event.SpentAmount,
-                            context.CancellationToken);
+                    await _emailSender.SendTransactionNotificationAsync(
+                        @event.UserId,
+                        @event.Email,
+                        @event.AccountName,
+                        @event.Balance,
+                        @event.SpentAmount,
+                        context.CancellationToken);
 
-                        notification.EmailSentAt = DateTime.UtcNow;
-                        await _repo.UpdateAsync(notification, context.CancellationToken);
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.LogError(ex, $"Failed to send email for transaction {@event.UserId}");
-                    }
-                }, context.CancellationToken);
+                    notification.EmailSentAt = DateTime.UtcNow;
+                    await _repo.UpdateAsync(notification, context.CancellationToken);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Failed to send email for notification {NotificationId}", notification.NotificationId);
+                }
 
                 _logger.LogInformation($"Transaction notification processed successfully for user {@event.UserId}");
             }

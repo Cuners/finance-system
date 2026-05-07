@@ -10,7 +10,7 @@ const Header = () => {
   // Простая логика обновления счётчика (в реальном проекте используйте useNotifications)
   const updateUnreadCount = () => {
     // Здесь можно вызвать API или использовать контекст
-    setUnreadCount(1); // Пример
+    setUnreadCount(1);
   };
 
   useEffect(() => {

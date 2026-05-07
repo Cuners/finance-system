@@ -5,6 +5,9 @@
   align-items: center;
   padding: 0 24px;
   border-bottom: 1px solid #333;
+  position: relative;
+  z-index: 100;
+  overflow: visible;
 }
 
 .header-left {
@@ -42,6 +45,12 @@
 
 .header-right {
   gap: 20px;
+}
+
+.notification-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .notification-btn {
