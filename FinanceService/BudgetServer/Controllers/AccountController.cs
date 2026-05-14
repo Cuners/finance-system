@@ -1,18 +1,12 @@
 ﻿using Finance.Application.DTO;
 using Finance.Application.Services;
 using Finance.Application.UseCases;
-using Finance.Application.UseCases.Accounts.CreateAccount.Request;
-using Finance.Application.UseCases.Accounts.CreateAccount.Response;
-using Finance.Application.UseCases.Accounts.DeleteAccount.Request;
-using Finance.Application.UseCases.Accounts.DeleteAccount.Response;
-using Finance.Application.UseCases.Accounts.GetAccountById.Request;
-using Finance.Application.UseCases.Accounts.GetAccountById.Response;
-using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Request;
-using Finance.Application.UseCases.Accounts.GetAccountsByUserId.Response;
-using Finance.Application.UseCases.Accounts.GetValueAccounts.Request;
-using Finance.Application.UseCases.Accounts.GetValueAccounts.Response;
-using Finance.Application.UseCases.Accounts.UpdateAccount.Request;
-using Finance.Application.UseCases.Accounts.UpdateAccount.Response;
+using Finance.Application.UseCases.Accounts.CreateAccount;
+using Finance.Application.UseCases.Accounts.DeleteAccount;
+using Finance.Application.UseCases.Accounts.GetAccountById;
+using Finance.Application.UseCases.Accounts.GetAccountsByUserId;
+using Finance.Application.UseCases.Accounts.GetValueAccounts;
+using Finance.Application.UseCases.Accounts.UpdateAccount;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -25,19 +19,19 @@ namespace BudgetServer.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IUseCase<CreateAccountRequest, CreateAccountResponse> _createAccount;
-        private readonly IUseCase<GetAccountsByUserIdRequest, GetAccountsByUserIdResponse> _getAccounts;
-        private readonly IUseCase<GetValueAccountsRequest, GetValueAccountsResponse> _getAccountsValue;
-        private readonly IUseCase<DeleteAccountRequest, DeleteAccountResponse> _deleteAccount;
-        private readonly IUseCase<GetAccountByIdRequest, GetAccountByIdResponse> _getAccountById;
-        private readonly IUseCase<UpdateAccountRequest, UpdateAccountResponse> _updateAccount;
+        private readonly ICreateAccountUseCase _createAccount;
+        private readonly IGetAccountsByUserIdUseCase _getAccounts;
+        private readonly IGetValueAccountsUseCase _getAccountsValue;
+        private readonly IDeleteAccountUseCase _deleteAccount;
+        private readonly IGetAccountByIdUseCase _getAccountById;
+        private readonly IUpdateAccountUseCase _updateAccount;
         private readonly ICurrentUserService _currentUser;
-        public AccountController(IUseCase<CreateAccountRequest, CreateAccountResponse> createAccount,
-                                 IUseCase<GetAccountsByUserIdRequest, GetAccountsByUserIdResponse> getAccounts,
-                                 IUseCase<DeleteAccountRequest, DeleteAccountResponse> deleteAccount,
-                                 IUseCase<GetAccountByIdRequest, GetAccountByIdResponse> getAccountById,
-                                 IUseCase<UpdateAccountRequest, UpdateAccountResponse> updateAccount,
-                                 IUseCase<GetValueAccountsRequest, GetValueAccountsResponse> getAccountsValue,
+        public AccountController(ICreateAccountUseCase createAccount,
+                                 IGetAccountsByUserIdUseCase getAccounts,
+                                 IDeleteAccountUseCase deleteAccount,
+                                 IGetAccountByIdUseCase getAccountById,
+                                 IUpdateAccountUseCase updateAccount,
+                                 IGetValueAccountsUseCase getAccountsValue,
                                  ICurrentUserService currentUser)
         {
             _createAccount = createAccount;
@@ -50,55 +44,96 @@ namespace BudgetServer.Controllers
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<AccountDto>>> GetUserAccounts(CancellationToken ct)
+        public async Task<ActionResult<IReadOnlyList<AccountSummaryDto>>> GetUserAccounts(CancellationToken ct)
         {
             int userId = _currentUser.UserId;
-            var response = await _getAccounts.ExecuteAsync(new GetAccountsByUserIdRequest(),userId,ct);
-
-            return Ok(response);
+            var result = await _getAccounts.ExecuteAsync(
+                new GetAccountsByUserIdQuery(), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
         [HttpGet("balance")]
         [Authorize]
-        public async Task<ActionResult<GetValueAccountsResponse>> GetValueAccounts(CancellationToken ct)
+        public async Task<ActionResult<decimal>> GetValueAccounts(CancellationToken ct)
         {
             int userId = _currentUser.UserId;
-            var response = await _getAccountsValue.ExecuteAsync(new GetValueAccountsRequest(),userId, ct);
-            return Ok(response);
+            var result = await _getAccountsValue.ExecuteAsync(
+                new GetValueAccountsQuery(), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+
+            return Ok(result.Value);
         }
         [HttpGet("{accountid}")]
         [Authorize]
-        public async Task<ActionResult<GetAccountByIdResponse>> GetAccountById(int accountid, CancellationToken ct)
+        public async Task<ActionResult<AccountDto>> GetAccountById(
+            int accountid, 
+            CancellationToken ct)
         {
             var userId = _currentUser.UserId;
-            var request = new GetAccountByIdRequest { AccountId = accountid};
-            var response = await _getAccountById.ExecuteAsync(request,userId,ct);
-
-            return Ok(response);
+            var result = await _getAccountById.ExecuteAsync(
+                new GetAccountByIdQuery(accountid), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<CreateAccountResponse>> Create(CreateAccountRequest request, CancellationToken ct)
+        public async Task<ActionResult<CreateAccountResult>> Create(
+            CreateAccountCommand command, 
+            CancellationToken ct)
         {
             var userId = _currentUser.UserId;
-            var response = await _createAccount.ExecuteAsync(request,userId,ct);
-            return Ok(response);
+            var result = await _createAccount.ExecuteAsync(command,userId,ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
         [HttpPut("{accountid}")]
         [Authorize]
-        public async Task<ActionResult<UpdateAccountResponse>> Update(UpdateAccountRequest request, CancellationToken ct)
+        public async Task<ActionResult<UpdateAccountResult>> Update( 
+            UpdateAccountCommand command, 
+            CancellationToken ct)
         {
             var userId = _currentUser.UserId;
-            var response = await _updateAccount.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var result = await _updateAccount.ExecuteAsync(command, userId, ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
         [HttpDelete("{accountid}")]
         [Authorize]
-        public async Task<ActionResult<DeleteAccountResponse>> Delete(int accountid, CancellationToken ct)
+        public async Task<ActionResult<DeleteAccountResult>> Delete(
+            int accountid, 
+            CancellationToken ct)
         {
             var userId = _currentUser.UserId;
-            var request = new DeleteAccountRequest{ AccountId = accountid };
-            var response = await _deleteAccount.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var result = await _deleteAccount.ExecuteAsync(
+                new DeleteAccountCommand(accountid), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
     }
 }

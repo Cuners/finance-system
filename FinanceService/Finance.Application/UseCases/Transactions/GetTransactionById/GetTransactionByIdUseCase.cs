@@ -1,53 +1,68 @@
-﻿using Finance.Application.DTO;
-using Finance.Application.UseCases.Transactions.GetTransactionById.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionById.Response;
+using Finance.Application.Common;
+using Finance.Application.DTO;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.UseCases.Transactions.GetTransactionById
 {
-    public class GetTransactionByIdUseCase : IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse>
+    public class GetTransactionByIdUseCase : IGetTransactionByIdUseCase
     {
-        private readonly ITransactionRepository _TransactionRepository;
+        private readonly ITransactionRepository _transactions;
         private readonly ILogger<GetTransactionByIdUseCase> _logger;
-        public GetTransactionByIdUseCase(ITransactionRepository TransactionRepository, ILogger<GetTransactionByIdUseCase> logger)
+
+        public GetTransactionByIdUseCase(
+            ITransactionRepository transactions,
+            ILogger<GetTransactionByIdUseCase> logger)
         {
-            _TransactionRepository = TransactionRepository;
+            _transactions = transactions;
             _logger = logger;
         }
-        public async Task<GetTransactionByIdResponse> ExecuteAsync(GetTransactionByIdRequest request,int userId, CancellationToken ct)
+
+        public async Task<Result<GetTransactionByIdResult>> ExecuteAsync(
+            GetTransactionByIdQuery query,
+            int userId,
+            CancellationToken ct)
         {
+            if (query.TransactionId <= 0)
+            {
+                return Result<GetTransactionByIdResult>.Failure(
+                    "INVALID_TRANSACTION_ID",
+                    "Invalid transaction id");
+            }
+
             try
             {
-                if (request.TransactionId <= 0)
+                var transaction = await _transactions.GetTransactionByTransactionId(query.TransactionId, ct);
+                if (transaction == null)
                 {
-                    _logger.LogWarning("GetTransactionRequest is null");
-                    return new GetTransactionByIdErrorResponse("Invalid transactions id", "INVALID_USER_ID");
+                    return Result<GetTransactionByIdResult>.Failure(
+                        "TRANSACTION_NOT_FOUND",
+                        "No transaction found");
                 }
-                var transactions = await _TransactionRepository.GetTransactionByTransactionId(request.TransactionId,ct);
-                if (transactions == null)
-                {
-                    _logger.LogWarning("GetTransactionRequest is null");
-                    return new GetTransactionByIdErrorResponse("No transactions found", "Transaction_NOT_FOUND");
-                }
-                var result= new TransactionDto(transactions.TransactionId,
-                    transactions.AccountId, 
-                    transactions.Account.Name, 
-                    transactions.CategoryId, 
-                    transactions.Category.Name, 
-                    transactions.Amount, 
-                    transactions.Date, 
-                    transactions.Note);
-                return new GetTransactionByIdSuccessResponse(result);
+
+                var dto = ToDto(transaction);
+                return Result<GetTransactionByIdResult>.Success(new GetTransactionByIdResult(dto));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetTransactionByIdErrorResponse("Unable to get transactions at this time", "INVALID_GET");
+                _logger.LogError(ex, "Failed to get transaction {TransactionId} for user {UserId}", query.TransactionId, userId);
+                return Result<GetTransactionByIdResult>.Failure(
+                    "TRANSACTION_GET_FAILED",
+                    "Unable to get transaction at this time");
             }
+        }
+
+        private static TransactionDto ToDto(Domain.Transaction transaction)
+        {
+            return new TransactionDto(
+                transaction.TransactionId,
+                transaction.AccountId,
+                transaction.Account.Name,
+                transaction.CategoryId,
+                transaction.Category.Name,
+                transaction.Amount,
+                transaction.Date,
+                transaction.Note);
         }
     }
 }

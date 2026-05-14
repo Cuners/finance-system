@@ -1,46 +1,55 @@
-﻿using Finance.Application.DTO;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
+using Finance.Application.Common;
+using Finance.Application.DTO;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.UseCases.Transactions.GetTransactionsByAccountId
 {
-    public class GetTransactionsByAccountIdUseCase : IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse>
+    public class GetTransactionsByAccountIdUseCase : IGetTransactionsByAccountIdUseCase
     {
-        private readonly ITransactionRepository _Transaction;
+        private readonly ITransactionRepository _transactions;
         private readonly ILogger<GetTransactionsByAccountIdUseCase> _logger;
-        public GetTransactionsByAccountIdUseCase(ITransactionRepository Transaction, ILogger<GetTransactionsByAccountIdUseCase> logger)
+
+        public GetTransactionsByAccountIdUseCase(
+            ITransactionRepository transactions,
+            ILogger<GetTransactionsByAccountIdUseCase> logger)
         {
-            _Transaction = Transaction;
+            _transactions = transactions;
             _logger = logger;
         }
-        public async Task<GetTransactionsByAccountIdResponse> ExecuteAsync(GetTransactionsByAccountIdRequest request, int userId, CancellationToken ct)
+
+        public async Task<Result<GetTransactionsByAccountIdResult>> ExecuteAsync(
+            GetTransactionsByAccountIdQuery query,
+            int userId,
+            CancellationToken ct)
         {
             try
             {
-                var Transactions = await _Transaction.GetTransactionsByAccountId(request.AccountId,ct);
-                var result = Transactions.Select(x => new TransactionDto
-                (
-                    x.TransactionId,
-                    x.AccountId,
-                    x.Account.Name,
-                    x.CategoryId,
-                    x.Category.Name,
-                    x.Amount,
-                    x.Date,
-                    x.Note
-                )).ToList();
-                return new GetTransactionsByAccountIdSuccessResponse(result);
+                var transactions = await _transactions.GetTransactionsByAccountId(query.AccountId, ct);
+                var result = transactions.Select(ToDto).ToList();
+                return Result<GetTransactionsByAccountIdResult>.Success(
+                    new GetTransactionsByAccountIdResult(result));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetTransactionsByAccountIdErrorResponse("Unable to get Transactions at this time", "INVALID_UPDATE");
+                _logger.LogError(ex, "Failed to get transactions for account {AccountId} and user {UserId}", query.AccountId, userId);
+                return Result<GetTransactionsByAccountIdResult>.Failure(
+                    "TRANSACTIONS_BY_ACCOUNT_GET_FAILED",
+                    "Unable to get transactions at this time");
             }
+        }
+
+        private static TransactionDto ToDto(Domain.Transaction transaction)
+        {
+            return new TransactionDto(
+                transaction.TransactionId,
+                transaction.AccountId,
+                transaction.Account.Name,
+                transaction.CategoryId,
+                transaction.Category.Name,
+                transaction.Amount,
+                transaction.Date,
+                transaction.Note);
         }
     }
 }

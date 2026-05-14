@@ -1,57 +1,62 @@
-﻿
+using Finance.Application.Common;
 using Finance.Application.DTO;
-using Finance.Application.UseCases.Budgets.GetBudgetById.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetById.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetById
 {
-    public class GetBudgetByIdUseCase : IUseCase<GetBudgetByIdRequest, GetBudgetByIdResponse>
+    public class GetBudgetByIdUseCase : IGetBudgetByIdUseCase
     {
-        private readonly IBudgetRepository _BudgetRepository;
+        private readonly IBudgetRepository _budgets;
         private readonly ILogger<GetBudgetByIdUseCase> _logger;
-        public GetBudgetByIdUseCase(IBudgetRepository BudgetRepository, ILogger<GetBudgetByIdUseCase> logger)
+
+        public GetBudgetByIdUseCase(
+            IBudgetRepository budgets,
+            ILogger<GetBudgetByIdUseCase> logger)
         {
-            _BudgetRepository = BudgetRepository;
+            _budgets = budgets;
             _logger = logger;
         }
-        public async Task<GetBudgetByIdResponse> ExecuteAsync(GetBudgetByIdRequest request, int userId, CancellationToken ct)
+
+        public async Task<Result<GetBudgetByIdResult>> ExecuteAsync(
+            GetBudgetByIdQuery query,
+            int userId,
+            CancellationToken ct)
         {
-            if (request.BudgetId <= 0)
+            if (query.BudgetId <= 0)
             {
-                _logger.LogWarning("GetBudgetRequest is null");
-                return new GetBudgetByIdErrorResponse("Invalid Budget id", "INVALID_USER_ID");
+                return Result<GetBudgetByIdResult>.Failure("INVALID_BUDGET_ID", "Invalid budget id");
             }
+
             try
             {
-                var budgets = await _BudgetRepository.GetBudgetById(request.BudgetId, ct);
-
-                if (budgets is null || budgets.UserId != userId)
+                var budget = await _budgets.GetBudgetById(query.BudgetId, ct);
+                if (budget == null || budget.UserId != userId)
                 {
-                    _logger.LogWarning("GetBudgetRequest is null or access denied");
-                    return new GetBudgetByIdErrorResponse("No Budget found or access denied", "BUDGET_ACCESS_DENIED");
+                    return Result<GetBudgetByIdResult>.Failure(
+                        "BUDGET_ACCESS_DENIED",
+                        "No budget found or access denied");
                 }
-                var result = new BudgetDto
+
+                var dto = new BudgetDto
                 {
-                    BudgetId = budgets.BudgetId,
-                    Name = budgets.Name,
-                    LimitAmount = budgets.LimitAmount,
-                    Date = budgets.Date,
-                    CategoryId = budgets.CategoryId,
-                    CategoryName=budgets.Category.Name
+                    BudgetId = budget.BudgetId,
+                    Name = budget.Name,
+                    LimitAmount = budget.LimitAmount,
+                    Date = budget.Date,
+                    CategoryId = budget.CategoryId,
+                    CategoryName = budget.Category.Name
                 };
-                return new GetBudgetByIdSuccessResponse(result);
+
+                return Result<GetBudgetByIdResult>.Success(new GetBudgetByIdResult(dto));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetBudgetByIdErrorResponse("Unable to get Budget at this time", "INVALID_GET");
+                _logger.LogError(ex, "Failed to get budget {BudgetId} for user {UserId}", query.BudgetId, userId);
+                return Result<GetBudgetByIdResult>.Failure(
+                    "BUDGET_GET_FAILED",
+                    "Unable to get budget at this time");
             }
         }
-    }    
+    }
 }
-

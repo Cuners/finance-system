@@ -1,60 +1,70 @@
-﻿using Finance.Application.Services;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
+using Finance.Application.Common;
+using Finance.Application.Services;
+using Finance.Domain;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetsStatus
 {
-    public class GetBudgetsStatusUseCase : IUseCase<GetBudgetsStatusRequest, GetBudgetsStatusResponse>
+    public class GetBudgetsStatusUseCase : IGetBudgetsStatusUseCase
     {
-        private readonly IBudgetRepository _BudgetRepository;
+        private readonly IBudgetRepository _budgets;
         private readonly ILogger<GetBudgetsStatusUseCase> _logger;
         private readonly ICacheService _cache;
-        public GetBudgetsStatusUseCase(IBudgetRepository BudgetRepository, ILogger<GetBudgetsStatusUseCase> logger, ICacheService cache)
+
+        public GetBudgetsStatusUseCase(
+            IBudgetRepository budgets,
+            ILogger<GetBudgetsStatusUseCase> logger,
+            ICacheService cache)
         {
-            _BudgetRepository = BudgetRepository;
+            _budgets = budgets;
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetBudgetsStatusResponse> ExecuteAsync(GetBudgetsStatusRequest request, int userId, CancellationToken ct)
+
+        public async Task<Result<GetBudgetsStatusResult>> ExecuteAsync(
+            GetBudgetsStatusQuery query,
+            int userId,
+            CancellationToken ct)
         {
             if (userId <= 0)
             {
-                _logger.LogWarning("GetBudgetRequest is null");
-                return new GetBudgetsStatusErrorResponse("Invalid User id", "INVALID_USER_ID");
+                return Result<GetBudgetsStatusResult>.Failure("INVALID_USER_ID", "Invalid user id");
             }
-            var cacheKey = $"dashboard:user:{userId}:" + "budgetsStatus";
+
+            var cacheKey = $"dashboard:user:{userId}:budgetsStatus";
+
             try
             {
-                var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
+                var statuses = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var summary = await _BudgetRepository.GetBudgetStatusAsync(userId,ct);
-                    return summary;
+                    return await BuildBudgetStatusesAsync(userId, token);
                 });
-               
 
-                if (budgets is null)
-                {
-                    _logger.LogWarning("Status of budgets is null");
-                    return new GetBudgetsStatusErrorResponse("No Budget found", "Budget_NOT_FOUND");
-                }
-                return new GetBudgetsStatusSuccessResponse(budgets);
+                return Result<GetBudgetsStatusResult>.Success(
+                    new GetBudgetsStatusResult(statuses ?? []));
             }
             catch (TimeoutException ex)
             {
-                _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var summary = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
-                return new GetBudgetsStatusSuccessResponse(summary);
+                _logger.LogWarning(ex, "Cache timeout while getting budget statuses for user {UserId}", userId);
+                var statuses = await BuildBudgetStatusesAsync(userId, ct);
+                return Result<GetBudgetsStatusResult>.Success(new GetBudgetsStatusResult(statuses));
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Ошибка при получении статуса бюджетов для пользователя {userId}");
-                return new GetBudgetsStatusErrorResponse("Unable to get Budget at this time", "INVALID_GET");
+                _logger.LogError(ex, "Failed to get budget statuses for user {UserId}", userId);
+                return Result<GetBudgetsStatusResult>.Failure(
+                    "BUDGET_STATUSES_GET_FAILED",
+                    "Unable to get budget statuses at this time");
             }
+        }
+
+        private async Task<IReadOnlyList<BudgetStatus>> BuildBudgetStatusesAsync(
+            int userId,
+            CancellationToken ct)
+        {
+            var statuses = await _budgets.GetBudgetStatusAsync(userId, ct);
+            return statuses.ToList();
         }
     }
 }

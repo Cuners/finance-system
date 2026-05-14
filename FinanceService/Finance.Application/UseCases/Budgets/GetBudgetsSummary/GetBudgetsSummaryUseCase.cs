@@ -1,77 +1,74 @@
-﻿using Finance.Application.DTO;
+using Finance.Application.Common;
+using Finance.Application.DTO;
 using Finance.Application.Services;
-using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Text;
 
 namespace Finance.Application.UseCases.Budgets.GetBudgetsSummary
 {
-    public class GetBudgetsSummaryUseCase : IUseCase<GetBudgetsSummaryRequest, GetBudgetsSummaryResponse>
+    public class GetBudgetsSummaryUseCase : IGetBudgetsSummaryUseCase
     {
-        private readonly IBudgetRepository _BudgetRepository;
+        private readonly IBudgetRepository _budgets;
         private readonly ILogger<GetBudgetsSummaryUseCase> _logger;
         private readonly ICacheService _cache;
-        public GetBudgetsSummaryUseCase(IBudgetRepository BudgetRepository, ILogger<GetBudgetsSummaryUseCase> logger, ICacheService cache)
+
+        public GetBudgetsSummaryUseCase(
+            IBudgetRepository budgets,
+            ILogger<GetBudgetsSummaryUseCase> logger,
+            ICacheService cache)
         {
-            _BudgetRepository = BudgetRepository;
+            _budgets = budgets;
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetBudgetsSummaryResponse> ExecuteAsync(GetBudgetsSummaryRequest request,int userId, CancellationToken ct)
+
+        public async Task<Result<GetBudgetsSummaryResult>> ExecuteAsync(
+            GetBudgetsSummaryQuery query,
+            int userId,
+            CancellationToken ct)
         {
-            //if (request.UserId <= 0)
-            //{
-            //    _logger.LogWarning("GetBudgetRequest is null");
-            //    return new GetBudgetsSummaryErrorResponse("Invalid User id", "INVALID_USER_ID");
-            //}
-            var cacheKey = $"dashboard:user:{userId}:" + "budgetsSummary";
+            var cacheKey = $"dashboard:user:{userId}:budgetsSummary";
+
             try
             {
-                var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
+                var summary = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var budgets = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
-                    var totalBudget = budgets.Sum(b => b.LimitAmount);
-                    var totalSpent = budgets.Sum(b => b.TotalSpent);
-                    var remaining = totalBudget - totalSpent;
-                    var procentSpent = Math.Round(totalSpent / (totalBudget / 100));
-                    var sumBudget = new BudgetSummaryDto(TotalBudget: totalBudget,
-                                                         TotalSpent: totalSpent,
-                                                         ProcentSpent: procentSpent,
-                                                         Remaining: remaining);
-                    return sumBudget;
+                    return await BuildBudgetSummaryAsync(userId, token);
                 });
-                if (budgets is null)
-                {
-                    _logger.LogWarning("Summary of budgets is null");
-                    return new GetBudgetsSummaryErrorResponse("No Budget found", "Budget_NOT_FOUND");
-                }
-                return new GetBudgetsSummarySuccessResponse(budgets);
+
+                return Result<GetBudgetsSummaryResult>.Success(
+                    new GetBudgetsSummaryResult(summary ?? new BudgetSummaryDto(0, 0, 0, 0)));
             }
             catch (TimeoutException ex)
             {
-                _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var budgets = await _BudgetRepository.GetBudgetStatusAsync(userId, ct);
-                var totalBudget = budgets.Sum(b => b.LimitAmount);
-                var totalSpent = budgets.Sum(b => b.TotalSpent);
-                var remaining = totalBudget - totalSpent;
-                var procentSpent = Math.Round(totalSpent / (totalBudget / 100));
-                var sumBudget = new BudgetSummaryDto(TotalBudget: totalBudget,
-                                                     TotalSpent: totalSpent,
-                                                     ProcentSpent: procentSpent,
-                                                     Remaining: remaining);
-                return new GetBudgetsSummarySuccessResponse(sumBudget);
+                _logger.LogWarning(ex, "Cache timeout while getting budget summary for user {UserId}", userId);
+                var summary = await BuildBudgetSummaryAsync(userId, ct);
+                return Result<GetBudgetsSummaryResult>.Success(new GetBudgetsSummaryResult(summary));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetBudgetsSummaryErrorResponse("Unable to get Budget at this time", "INVALID_GET");
+                _logger.LogError(ex, "Failed to get budget summary for user {UserId}", userId);
+                return Result<GetBudgetsSummaryResult>.Failure(
+                    "BUDGET_SUMMARY_GET_FAILED",
+                    "Unable to get budget summary at this time");
             }
-           
+        }
+
+        private async Task<BudgetSummaryDto> BuildBudgetSummaryAsync(
+            int userId,
+            CancellationToken ct)
+        {
+            var budgets = await _budgets.GetBudgetStatusAsync(userId, ct);
+            var totalBudget = budgets.Sum(b => b.LimitAmount);
+            var totalSpent = budgets.Sum(b => b.TotalSpent);
+            var remaining = totalBudget - totalSpent;
+            var procentSpent = totalBudget == 0 ? 0 : Math.Round(totalSpent / (totalBudget / 100));
+
+            return new BudgetSummaryDto(
+                TotalBudget: totalBudget,
+                TotalSpent: totalSpent,
+                ProcentSpent: procentSpent,
+                Remaining: remaining);
         }
     }
 }

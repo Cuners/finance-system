@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Finance.Application.DTO.AccountDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[Finance.Application.DTO.AccountSummaryDto, Finance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,14 +28,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Accounts.CreateAccount.Request.CreateAccountRequest",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Accounts.CreateAccount.CreateAccountCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.CreateAccount.Response.CreateAccountResponse",
+        "Type": "Finance.Application.UseCases.Accounts.CreateAccount.CreateAccountResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.GetAccountById.Response.GetAccountByIdResponse",
+        "Type": "Finance.Application.DTO.AccountDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -80,19 +80,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Accounts.UpdateAccount.Request.UpdateAccountRequest",
+        "Name": "accountid",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "accountid",
-        "Type": "",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Accounts.UpdateAccount.UpdateAccountCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.UpdateAccount.Response.UpdateAccountResponse",
+        "Type": "Finance.Application.UseCases.Accounts.UpdateAccount.UpdateAccountResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -118,7 +118,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.DeleteAccount.Response.DeleteAccountResponse",
+        "Type": "Finance.Application.UseCases.Accounts.DeleteAccount.DeleteAccountResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -138,7 +138,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Accounts.GetValueAccounts.Response.GetValueAccountsResponse",
+        "Type": "System.Decimal",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -158,7 +158,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Response.GetBudgetsByUserIdResponse",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsByUserId.GetBudgetsByUserIdResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -177,14 +177,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Budgets.\u0421reateBudget.Request.CreateBudgetRequest",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Budgets.\u0421reateBudget.CreateBudgetCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.\u0421reateBudget.Response.CreateBudgetResponse",
+        "Type": "Finance.Application.UseCases.Budgets.\u0421reateBudget.CreateBudgetResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -210,7 +210,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.GetBudgetById.Response.GetBudgetByIdResponse",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetById.GetBudgetByIdResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -229,19 +229,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Budgets.UpdateBudget.Request.UpdateBudgetRequest",
+        "Name": "budgetid",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "budgetid",
-        "Type": "",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Budgets.UpdateBudget.UpdateBudgetCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.UpdateBudget.Response.UpdateBudgetResponse",
+        "Type": "Finance.Application.UseCases.Budgets.UpdateBudget.UpdateBudgetResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -267,7 +267,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.DeleteBudget.Response.DeleteBudgetResponse",
+        "Type": "Finance.Application.UseCases.Budgets.DeleteBudget.DeleteBudgetResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -287,7 +287,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response.GetBudgetsStatusResponse",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsStatus.GetBudgetsStatusResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -307,7 +307,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response.GetBudgetsSummaryResponse",
+        "Type": "Finance.Application.UseCases.Budgets.GetBudgetsSummary.GetBudgetsSummaryResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -327,7 +327,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Categories.GetCategories.Response.GetCategoriesResponse",
+        "Type": "Finance.Application.UseCases.Categories.GetCategories.GetCategoriesResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -378,7 +378,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.GetTransactions.Response.GetTransactionsResponse",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactions.GetTransactionsResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -397,14 +397,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Transactions.CreateTransaction.Request.CreateTransactionRequest",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Transactions.CreateTransaction.CreateTransactionCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.CreateTransaction.Response.CreateTransactionResponse",
+        "Type": "Finance.Application.UseCases.Transactions.CreateTransaction.CreateTransactionResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -430,7 +430,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.GetTransactionById.Response.GetTransactionByIdResponse",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionById.GetTransactionByIdResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -449,19 +449,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.Request.UpdateTransactionRequest",
+        "Name": "transactionid",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "transactionid",
-        "Type": "",
+        "Name": "command",
+        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.UpdateTransactionCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.Response.UpdateTransactionResponse",
+        "Type": "Finance.Application.UseCases.Transactions.UpdateTransaction.UpdateTransactionResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -487,7 +487,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.DeleteTransaction.Response.DeleteTransactionResponse",
+        "Type": "Finance.Application.UseCases.Transactions.DeleteTransaction.DeleteTransactionResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -513,7 +513,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response.GetTransactionsByAccountIdResponse",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.GetTransactionsByAccountIdResult",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -544,7 +544,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response.GetTransactionSummaryResponse",
+        "Type": "Finance.Application.UseCases.Transactions.GetTransactionsSummary.GetTransactionsSummaryResult",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -1,13 +1,9 @@
-﻿using Finance.Application.UseCases.Transactions.CreateTransaction.Request;
-using Finance.Application.UseCases.Transactions.UpdateTransaction.Request;
+using Finance.Application.UseCases.Transactions.UpdateTransaction;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.Validators
 {
-    public class UpdateTransactionRequestValidator : AbstractValidator<UpdateTransactionRequest>
+    public class UpdateTransactionRequestValidator : AbstractValidator<UpdateTransactionCommand>
     {
         public UpdateTransactionRequestValidator()
         {

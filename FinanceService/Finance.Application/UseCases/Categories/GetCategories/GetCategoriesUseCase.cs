@@ -1,76 +1,72 @@
-﻿using Finance.Application.DTO;
+using Finance.Application.Common;
+using Finance.Application.DTO;
 using Finance.Application.Services;
-using Finance.Application.UseCases.Categories.GetCategories.Request;
-using Finance.Application.UseCases.Categories.GetCategories.Response;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Transactions;
 
 namespace Finance.Application.UseCases.Categories.GetCategories
 {
-    public class GetCategoriesUseCase : IUseCase<GetCategoriesRequest, GetCategoriesResponse>
+    public class GetCategoriesUseCase : IGetCategoriesUseCase
     {
         private readonly ICategoryRepository _categories;
         private readonly ILogger<GetCategoriesUseCase> _logger;
         private readonly ICacheService _cache;
-        public GetCategoriesUseCase(ICategoryRepository categories, ILogger<GetCategoriesUseCase> logger, ICacheService cache)
+
+        public GetCategoriesUseCase(
+            ICategoryRepository categories,
+            ILogger<GetCategoriesUseCase> logger,
+            ICacheService cache)
         {
             _categories = categories;
             _logger = logger;
             _cache = cache;
         }
-        public async Task<GetCategoriesResponse> ExecuteAsync(GetCategoriesRequest request,int userId,CancellationToken ct)
+
+        public async Task<Result<GetCategoriesResult>> ExecuteAsync(
+            GetCategoriesQuery query,
+            int userId,
+            CancellationToken ct)
         {
-            var cacheKey = $"categories";
+            const string cacheKey = "categories";
+
             try
             {
-                var categories = await _categories.GetAllCategories(ct);
-                if (!categories.Any() || categories == null)
+                var categories = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    _logger.LogError("Categories is null");
-                    return new GetCategoriesErrorResponse("Invalid Categories", "Invalid Category");
-                }
-                var budgets = await _cache.GetOrCreateAsync(cacheKey, async token =>
-                {
-                    var categories = await _categories.GetAllCategories(ct);
-                    var result = categories.Select(x => new CategoryDto
-                    {
-                        CategoryId = x.CategoryId,
-                        Name = x.Name
-                    });
-                    return result;
+                    return await BuildCategoryDtosAsync(token);
                 });
-                if (budgets is null)
-                {
-                    _logger.LogError("Categories is null");
-                    return new GetCategoriesErrorResponse("Invalid Categories", "Invalid Category");
-                }
-                return new GetCategoriesSuccessResponse(budgets);
+
+                return Result<GetCategoriesResult>.Success(
+                    new GetCategoriesResult(categories ?? []));
             }
             catch (TimeoutException ex)
             {
-                var categories = await _categories.GetAllCategories(ct);
-                if (!categories.Any() || categories == null)
-                {
-                    _logger.LogError("Categories is null");
-                    return new GetCategoriesErrorResponse("Invalid Categories", "Invalid Category");
-                }
-                var result = categories.Select(x => new CategoryDto
-                {
-                    CategoryId = x.CategoryId,
-                    Name = x.Name
-                });
-                return new GetCategoriesSuccessResponse(result);
+                _logger.LogWarning(ex, "Cache timeout while getting categories");
+                var categories = await BuildCategoryDtosAsync(ct);
+                return Result<GetCategoriesResult>.Success(new GetCategoriesResult(categories));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetCategoriesErrorResponse("Unable to get Categories at this time", "INVALID_CATEGORIES");
+                _logger.LogError(ex, "Failed to get categories");
+                return Result<GetCategoriesResult>.Failure(
+                    "CATEGORIES_GET_FAILED",
+                    "Unable to get categories at this time");
             }
         }
 
+        private async Task<IReadOnlyList<CategoryDto>> BuildCategoryDtosAsync(CancellationToken ct)
+        {
+            var categories = await _categories.GetAllCategories(ct);
+            if (categories == null)
+            {
+                return [];
+            }
+
+            return categories.Select(x => new CategoryDto
+            {
+                CategoryId = x.CategoryId,
+                Name = x.Name
+            }).ToList();
+        }
     }
 }

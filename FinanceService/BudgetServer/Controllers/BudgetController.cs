@@ -1,19 +1,11 @@
-﻿using Finance.Application.Services;
-using Finance.Application.UseCases;
-using Finance.Application.UseCases.Budgets.DeleteBudget.Request;
-using Finance.Application.UseCases.Budgets.DeleteBudget.Response;
-using Finance.Application.UseCases.Budgets.GetBudgetById.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetById.Response;
-using Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsByUserId.Response;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsStatus.Response;
-using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Request;
-using Finance.Application.UseCases.Budgets.GetBudgetsSummary.Response;
-using Finance.Application.UseCases.Budgets.UpdateBudget.Request;
-using Finance.Application.UseCases.Budgets.UpdateBudget.Response;
-using Finance.Application.UseCases.Budgets.СreateBudget.Request;
-using Finance.Application.UseCases.Budgets.СreateBudget.Response;
+using Finance.Application.Services;
+using Finance.Application.UseCases.Budgets.DeleteBudget;
+using Finance.Application.UseCases.Budgets.GetBudgetById;
+using Finance.Application.UseCases.Budgets.GetBudgetsByUserId;
+using Finance.Application.UseCases.Budgets.GetBudgetsStatus;
+using Finance.Application.UseCases.Budgets.GetBudgetsSummary;
+using Finance.Application.UseCases.Budgets.UpdateBudget;
+using Finance.Application.UseCases.Budgets.СreateBudget;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,24 +13,26 @@ namespace BudgetServer.Controllers
 {
     [Route("api/budget/[controller]")]
     [ApiController]
-    public class BudgetController : Controller
+    public class BudgetController : ControllerBase
     {
-        private readonly IUseCase<CreateBudgetRequest, CreateBudgetResponse> _createBudget;
-        private readonly IUseCase<GetBudgetsByUserIdRequest, GetBudgetsByUserIdResponse> _getBudgets;
-        private readonly IUseCase<DeleteBudgetRequest, DeleteBudgetResponse> _deleteBudget;
-        private readonly IUseCase<GetBudgetByIdRequest, GetBudgetByIdResponse> _getBudgetById;
-        private readonly IUseCase<UpdateBudgetRequest, UpdateBudgetResponse> _updateBudget;
-        private readonly IUseCase<GetBudgetsSummaryRequest, GetBudgetsSummaryResponse> _getBudgetsSummary;
-        private readonly IUseCase<GetBudgetsStatusRequest, GetBudgetsStatusResponse> _getBudgetsStatus;
+        private readonly ICreateBudgetUseCase _createBudget;
+        private readonly IGetBudgetsByUserIdUseCase _getBudgets;
+        private readonly IDeleteBudgetUseCase _deleteBudget;
+        private readonly IGetBudgetByIdUseCase _getBudgetById;
+        private readonly IUpdateBudgetUseCase _updateBudget;
+        private readonly IGetBudgetsSummaryUseCase _getBudgetsSummary;
+        private readonly IGetBudgetsStatusUseCase _getBudgetsStatus;
         private readonly ICurrentUserService _currentUser;
-        public BudgetController(IUseCase<CreateBudgetRequest, CreateBudgetResponse> createBudget,
-                                IUseCase<GetBudgetsByUserIdRequest, GetBudgetsByUserIdResponse> getBudgets,
-                                IUseCase<DeleteBudgetRequest, DeleteBudgetResponse> deleteBudget,
-                                IUseCase<GetBudgetByIdRequest, GetBudgetByIdResponse> getBudgetById,
-                                IUseCase<UpdateBudgetRequest, UpdateBudgetResponse> updateBudget,
-                                IUseCase<GetBudgetsSummaryRequest, GetBudgetsSummaryResponse> getBudgetsSummary,
-                                IUseCase<GetBudgetsStatusRequest, GetBudgetsStatusResponse> getBudgetsStatus,
-                                ICurrentUserService currentUser)
+
+        public BudgetController(
+            ICreateBudgetUseCase createBudget,
+            IGetBudgetsByUserIdUseCase getBudgets,
+            IDeleteBudgetUseCase deleteBudget,
+            IGetBudgetByIdUseCase getBudgetById,
+            IUpdateBudgetUseCase updateBudget,
+            IGetBudgetsSummaryUseCase getBudgetsSummary,
+            IGetBudgetsStatusUseCase getBudgetsStatus,
+            ICurrentUserService currentUser)
         {
             _createBudget = createBudget;
             _getBudgets = getBudgets;
@@ -47,71 +41,121 @@ namespace BudgetServer.Controllers
             _deleteBudget = deleteBudget;
             _getBudgetsSummary = getBudgetsSummary;
             _getBudgetsStatus = getBudgetsStatus;
-            _currentUser=currentUser;
+            _currentUser = currentUser;
         }
+
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<GetBudgetsByUserIdResponse>> GetUserBudgets(CancellationToken ct)
+        public async Task<ActionResult<GetBudgetsByUserIdResult>> GetUserBudgets(CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response = await _getBudgets.ExecuteAsync(
-                new GetBudgetsByUserIdRequest(), userId,
-                ct
-            );
-
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getBudgets.ExecuteAsync(
+                new GetBudgetsByUserIdQuery(), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet("summary")]
         [Authorize]
-        public async Task<ActionResult<GetBudgetsSummaryResponse>> GetBudgetSummary(CancellationToken ct)
+        public async Task<ActionResult<GetBudgetsSummaryResult>> GetBudgetSummary(CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response = await _getBudgetsSummary.ExecuteAsync(new GetBudgetsSummaryRequest(), userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getBudgetsSummary.ExecuteAsync(
+                new GetBudgetsSummaryQuery(), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet("status")]
         [Authorize]
-        public async Task<ActionResult<GetBudgetsStatusResponse>> GetBudgetStatus(CancellationToken ct)
+        public async Task<ActionResult<GetBudgetsStatusResult>> GetBudgetStatus(CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response = await _getBudgetsStatus.ExecuteAsync(new GetBudgetsStatusRequest(), userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getBudgetsStatus.ExecuteAsync(
+                new GetBudgetsStatusQuery(), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet("{budgetid}")]
         [Authorize]
-        public async Task<ActionResult<GetBudgetByIdResponse>> GetBudgetById(int budgetid, CancellationToken ct)
+        public async Task<ActionResult<GetBudgetByIdResult>> GetBudgetById(
+            int budgetid, 
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var request = new GetBudgetByIdRequest { BudgetId = budgetid };
-            var response = await _getBudgetById.ExecuteAsync(request,userId, ct);
-
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getBudgetById.ExecuteAsync(
+                new GetBudgetByIdQuery(budgetid), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
-        
+
         [HttpPut("{budgetid}")]
         [Authorize]
-        public async Task<ActionResult<UpdateBudgetResponse>> Update(UpdateBudgetRequest request, CancellationToken ct)
+        public async Task<ActionResult<UpdateBudgetResult>> Update(
+            UpdateBudgetCommand command,
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response = await _updateBudget.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _updateBudget.ExecuteAsync(command, userId, ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpDelete("{budgetid}")]
         [Authorize]
-        public async Task<ActionResult<DeleteBudgetResponse>> Delete(int budgetid, CancellationToken ct)
+        public async Task<ActionResult<DeleteBudgetResult>> Delete(
+            int budgetid, 
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var request = new DeleteBudgetRequest { BudgetId = budgetid };
-            var response = await _deleteBudget.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _deleteBudget.ExecuteAsync(
+                new DeleteBudgetCommand(budgetid), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<CreateBudgetResponse>> Create(CreateBudgetRequest request, CancellationToken ct)
+        public async Task<ActionResult<CreateBudgetResult>> Create(
+            CreateBudgetCommand command,
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response= await _createBudget.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _createBudget.ExecuteAsync(command, userId, ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
     }
 }

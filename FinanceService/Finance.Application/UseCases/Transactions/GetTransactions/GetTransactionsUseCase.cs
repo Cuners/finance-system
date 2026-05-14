@@ -1,97 +1,92 @@
-﻿using Finance.Application.DTO;
+using Finance.Application.Common;
+using Finance.Application.DTO;
 using Finance.Application.Services;
-using Finance.Application.UseCases.Transactions.GetTransactions.Request;
-using Finance.Application.UseCases.Transactions.GetTransactions.Response;
 using Finance.Domain.Interfaces;
 using Finance.Domain.Queries;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.UseCases.Transactions.GetTransactions
 {
-    public class GetTransactionsUseCase : IUseCase<GetTransactionsRequest, GetTransactionsResponse>
+    public class GetTransactionsUseCase : IGetTransactionsUseCase
     {
-        private readonly ITransactionRepository _transaction;
+        private readonly ITransactionRepository _transactions;
         private readonly ILogger<GetTransactionsUseCase> _logger;
         private readonly ICacheService _cache;
-        public GetTransactionsUseCase(ITransactionRepository transaction, ILogger<GetTransactionsUseCase> logger, ICacheService cache)
+
+        public GetTransactionsUseCase(
+            ITransactionRepository transactions,
+            ILogger<GetTransactionsUseCase> logger,
+            ICacheService cache)
         {
-            _transaction = transaction;
+            _transactions = transactions;
             _logger = logger;
             _cache = cache;
         }
-        //Получать через request userid а в контроллере как раз и расшифровывать токен
-        public async Task<GetTransactionsResponse> ExecuteAsync(GetTransactionsRequest request, int userId, CancellationToken ct)
+
+        public async Task<Result<GetTransactionsResult>> ExecuteAsync(
+            GetTransactionsQuery query,
+            int userId,
+            CancellationToken ct)
         {
-            //if (request.UserId <= 0)
-            //{
-            //    _logger.LogWarning("GetBudgetRequest is null");
-            //    return new GetTransactionsErrorResponse("Invalid User id", "INVALID_USER_ID");
-            //}
-            var filter = new TransactionFilter
-            (
+            var filter = new TransactionFilter(
                 UserId: userId,
-                AccountId: request.AccountId,
-                Type: request.Type,
-                SortBy: request.SortBy,
-                SortOrder: request.SortOrder,
-                StartDate: request.StartDate,
-                EndDate: request.EndDate
-            );
+                AccountId: query.AccountId,
+                Type: query.Type,
+                SortBy: query.SortBy,
+                SortOrder: query.SortOrder,
+                StartDate: query.StartDate,
+                EndDate: query.EndDate);
+
             var cacheKey = $"transactions:user:{userId}:" +
-              $"from:{request.StartDate:yyyy-MM-dd}:" +
-              $"to:{request.EndDate:yyyy-MM-dd}:" +
-              $"type:{request.Type ?? "all"}:" +
-              $"sort:{request.SortBy ?? "date"}:{request.SortOrder ?? "desc"}";
+                           $"from:{query.StartDate:yyyy-MM-dd}:" +
+                           $"to:{query.EndDate:yyyy-MM-dd}:" +
+                           $"type:{query.Type ?? "all"}:" +
+                           $"sort:{query.SortBy ?? "date"}:{query.SortOrder ?? "desc"}";
+
             try
             {
                 var transactions = await _cache.GetOrCreateAsync(cacheKey, async token =>
                 {
-                    var transactions = await _transaction.GetTransactions(filter, ct);
-                    var result = transactions.Select(x => new TransactionDto
-                    (
-                        x.TransactionId,
-                        x.AccountId,
-                        x.Account.Name,
-                        x.CategoryId,
-                        x.Category.Name,
-                        x.Amount,
-                        x.Date,
-                        x.Note
-                    )).ToList();
-                    return result;
+                    return await BuildTransactionsAsync(filter, token);
                 });
-                
-                if (transactions is null)
-                {
-                    return new GetTransactionsErrorResponse("Unable to get Transactions at this time", "INVALID_GET");
-                }
-                return new GetTransactionsSuccessResponse(transactions);
+
+                return Result<GetTransactionsResult>.Success(
+                    new GetTransactionsResult(transactions ?? []));
             }
             catch (TimeoutException ex)
             {
-                _logger.LogWarning(ex, $"Cache lock timeout for key {cacheKey}");
-                var Transactions = await _transaction.GetTransactions(filter, ct);
-                var result = Transactions.Select(x => new TransactionDto
-                (
-                    x.TransactionId,
-                    x.AccountId,
-                    x.Account.Name,
-                    x.CategoryId,
-                    x.Category.Name,
-                    x.Amount,
-                    x.Date,
-                    x.Note
-                )).ToList();
-                return new GetTransactionsSuccessResponse(result);
+                _logger.LogWarning(ex, "Cache timeout while getting transactions for user {UserId}", userId);
+                var transactions = await BuildTransactionsAsync(filter, ct);
+                return Result<GetTransactionsResult>.Success(new GetTransactionsResult(transactions));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new GetTransactionsErrorResponse("Unable to get Transactions at this time", "INVALID_GET");
+                _logger.LogError(ex, "Failed to get transactions for user {UserId}", userId);
+                return Result<GetTransactionsResult>.Failure(
+                    "TRANSACTIONS_GET_FAILED",
+                    "Unable to get transactions at this time");
             }
+        }
+
+        private async Task<IReadOnlyList<TransactionDto>> BuildTransactionsAsync(
+            TransactionFilter filter,
+            CancellationToken ct)
+        {
+            var transactions = await _transactions.GetTransactions(filter, ct);
+            return transactions.Select(ToDto).ToList();
+        }
+
+        private static TransactionDto ToDto(Domain.Transaction transaction)
+        {
+            return new TransactionDto(
+                transaction.TransactionId,
+                transaction.AccountId,
+                transaction.Account.Name,
+                transaction.CategoryId,
+                transaction.Category.Name,
+                transaction.Amount,
+                transaction.Date,
+                transaction.Note);
         }
     }
 }

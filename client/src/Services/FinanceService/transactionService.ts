@@ -59,7 +59,7 @@ export const transactionService = {
   }, 
 
   update(data: any): Promise<TransactionDto> {
-    return httpService.put(`${API_BASE}/${data.BudgetId}`, data);
+    return httpService.put(`${API_BASE}/${data.transactionId}`, data);
   }, 
 
   // DELETE /api/transactions/123

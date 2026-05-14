@@ -1,19 +1,11 @@
-﻿using Finance.Application.Services;
-using Finance.Application.UseCases;
-using Finance.Application.UseCases.Transactions.CreateTransaction.Request;
-using Finance.Application.UseCases.Transactions.CreateTransaction.Response;
-using Finance.Application.UseCases.Transactions.DeleteTransaction.Request;
-using Finance.Application.UseCases.Transactions.DeleteTransaction.Response;
-using Finance.Application.UseCases.Transactions.GetTransactionById.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionById.Response;
-using Finance.Application.UseCases.Transactions.GetTransactions.Request;
-using Finance.Application.UseCases.Transactions.GetTransactions.Response;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId.Response;
-using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Request;
-using Finance.Application.UseCases.Transactions.GetTransactionsSummary.Response;
-using Finance.Application.UseCases.Transactions.UpdateTransaction.Request;
-using Finance.Application.UseCases.Transactions.UpdateTransaction.Response;
+using Finance.Application.Services;
+using Finance.Application.UseCases.Transactions.CreateTransaction;
+using Finance.Application.UseCases.Transactions.DeleteTransaction;
+using Finance.Application.UseCases.Transactions.GetTransactionById;
+using Finance.Application.UseCases.Transactions.GetTransactions;
+using Finance.Application.UseCases.Transactions.GetTransactionsByAccountId;
+using Finance.Application.UseCases.Transactions.GetTransactionsSummary;
+using Finance.Application.UseCases.Transactions.UpdateTransaction;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,108 +13,167 @@ namespace TransactionServer.Controllers
 {
     [Route("api/budget/[controller]")]
     [ApiController]
-    public class TransactionController : Controller
+    public class TransactionController : ControllerBase
     {
-        private readonly IUseCase<CreateTransactionRequest, CreateTransactionResponse> _createTransaction;
-        private readonly IUseCase<DeleteTransactionRequest, DeleteTransactionResponse> _deleteTransaction;
-        private readonly IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse> _getTransactionByAccountId;
-        private readonly IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> _getTransactionById;
-        private readonly IUseCase<GetTransactionsRequest, GetTransactionsResponse> _getTransactions;
-        private readonly IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> _getTransactionsSummary;
-        private readonly IUseCase<UpdateTransactionRequest, UpdateTransactionResponse> _updateTransaction;
+        private readonly ICreateTransactionUseCase _createTransaction;
+        private readonly IDeleteTransactionUseCase _deleteTransaction;
+        private readonly IGetTransactionsByAccountIdUseCase _getTransactionsByAccountId;
+        private readonly IGetTransactionByIdUseCase _getTransactionById;
+        private readonly IGetTransactionsUseCase _getTransactions;
+        private readonly IGetTransactionsSummaryUseCase _getTransactionsSummary;
+        private readonly IUpdateTransactionUseCase _updateTransaction;
         private readonly ICurrentUserService _currentUser;
-        public TransactionController(IUseCase<CreateTransactionRequest, CreateTransactionResponse> createTransaction,
-                                     IUseCase<DeleteTransactionRequest, DeleteTransactionResponse> deleteTransaction,
-                                     IUseCase<GetTransactionsByAccountIdRequest, GetTransactionsByAccountIdResponse> getTransactionByAccountId,
-                                     IUseCase<GetTransactionByIdRequest, GetTransactionByIdResponse> getTransactionById,
-                                     IUseCase<GetTransactionsRequest, GetTransactionsResponse> getTransactions,
-                                     IUseCase<GetTransactionsSummaryRequest, GetTransactionSummaryResponse> getTransactionsSummary,
-                                     IUseCase<UpdateTransactionRequest, UpdateTransactionResponse> updateTransaction,
-                                     ICurrentUserService currentUser)
+
+        public TransactionController(
+            ICreateTransactionUseCase createTransaction,
+            IDeleteTransactionUseCase deleteTransaction,
+            IGetTransactionsByAccountIdUseCase getTransactionsByAccountId,
+            IGetTransactionByIdUseCase getTransactionById,
+            IGetTransactionsUseCase getTransactions,
+            IGetTransactionsSummaryUseCase getTransactionsSummary,
+            IUpdateTransactionUseCase updateTransaction,
+            ICurrentUserService currentUser)
         {
             _createTransaction = createTransaction;
-            _getTransactionByAccountId = getTransactionByAccountId;
+            _getTransactionsByAccountId = getTransactionsByAccountId;
             _deleteTransaction = deleteTransaction;
             _getTransactionById = getTransactionById;
             _getTransactions = getTransactions;
             _getTransactionsSummary = getTransactionsSummary;
-            _currentUser=currentUser;
-            _updateTransaction= updateTransaction;
+            _currentUser = currentUser;
+            _updateTransaction = updateTransaction;
         }
+
         [HttpGet("Accounts/{accountId}/Transactions")]
         [Authorize]
-        public async Task<ActionResult<GetTransactionsByAccountIdResponse>> GetTransactionByAccountId(int accountId, CancellationToken ct)
+        public async Task<ActionResult<GetTransactionsByAccountIdResult>> GetTransactionByAccountId(
+            int accountId,
+            CancellationToken ct)
         {
-            int userId=_currentUser.UserId;
-            var request = new GetTransactionsByAccountIdRequest { AccountId = accountId };
-            var response = await _getTransactionByAccountId.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getTransactionsByAccountId.ExecuteAsync(
+                new GetTransactionsByAccountIdQuery(accountId),
+                userId,
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet("{transactionid}")]
         [Authorize]
-        public async Task<ActionResult<GetTransactionByIdResponse>> GetTransactionById(int transactionid, CancellationToken ct)
+        public async Task<ActionResult<GetTransactionByIdResult>> GetTransactionById(
+            int transactionid,
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var request = new GetTransactionByIdRequest { TransactionId = transactionid };
-            var response = await _getTransactionById.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getTransactionById.ExecuteAsync(
+                new GetTransactionByIdQuery(transactionid),
+                userId,
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<GetTransactionsResponse>> GetTransactions(string? type=null, 
-                                                                                 int? accountId=null,
-                                                                                     string? sortOrder=null, 
-                                                                                     string? sortBy=null, 
-                                                                                     DateOnly? startDate=null, 
-                                                                                     DateOnly? endDate=null, 
-                                                                                     CancellationToken ct=default)
+        public async Task<ActionResult<GetTransactionsResult>> GetTransactions(
+            string? type = null,
+            int? accountId = null,
+            string? sortOrder = null,
+            string? sortBy = null,
+            DateOnly? startDate = null,
+            DateOnly? endDate = null,
+            CancellationToken ct = default)
         {
-            int userId = _currentUser.UserId;
-            var request = new GetTransactionsRequest(
-                            AccountId:accountId,
-                            Type: type,
-                            SortOrder: sortOrder,
-                            SortBy:sortBy,
-                            StartDate: startDate,
-                            EndDate: endDate
-                        );
-            var response = await _getTransactions.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getTransactions.ExecuteAsync(
+                new GetTransactionsQuery(
+                    AccountId: accountId,
+                    Type: type,
+                    SortOrder: sortOrder,
+                    SortBy: sortBy,
+                    StartDate: startDate,
+                    EndDate: endDate),
+                userId,
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpGet("values")]
         [Authorize]
-        public async Task<ActionResult<GetTransactionSummaryResponse>> GetTransactionsSummary(int year,int month,CancellationToken ct)
+        public async Task<ActionResult<GetTransactionsSummaryResult>> GetTransactionsSummary(
+            int year,
+            int month,
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var request = new  GetTransactionsSummaryRequest { Year=year, Month=month };
-            var response = await _getTransactionsSummary.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _getTransactionsSummary.ExecuteAsync(
+                new GetTransactionsSummaryQuery(year, month),
+                userId,
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpPut("{transactionid}")]
         [Authorize]
-        public async Task<ActionResult<UpdateTransactionResponse>> Update(UpdateTransactionRequest request, CancellationToken ct)
+        public async Task<ActionResult<UpdateTransactionResult>> Update(
+            UpdateTransactionCommand command, 
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var response = await _updateTransaction.ExecuteAsync(request, userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _updateTransaction.ExecuteAsync(command, userId, ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpDelete("{transactionid}")]
         [Authorize]
-        public async Task<ActionResult<DeleteTransactionResponse>> Delete(int transactionid, CancellationToken ct)
+        public async Task<ActionResult<DeleteTransactionResult>> Delete(
+            int transactionid,
+            CancellationToken ct)
         {
-            int userId = _currentUser.UserId;
-            var request = new DeleteTransactionRequest { TransactionId = transactionid };
-            var response = await _deleteTransaction.ExecuteAsync(request,userId,ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _deleteTransaction.ExecuteAsync(
+                new DeleteTransactionCommand(transactionid), 
+                userId, 
+                ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
+
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<CreateTransactionResponse>> Create(CreateTransactionRequest request, CancellationToken ct)
+        public async Task<ActionResult<CreateTransactionResult>> Create(
+            CreateTransactionCommand command,
+            CancellationToken ct)
         {
-            int userId=_currentUser.UserId;
-            string email=_currentUser.Email;
-            var response = await _createTransaction.ExecuteAsync(request,userId, ct);
-            return Ok(response);
+            var userId = _currentUser.UserId;
+            var result = await _createTransaction.ExecuteAsync(command, userId, ct);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            return Ok(result.Value);
         }
     }
 }

@@ -1,53 +1,61 @@
-﻿using Finance.Application.Services;
-using Finance.Application.UseCases.Accounts.UpdateAccount.Request;
-using Finance.Application.UseCases.Accounts.UpdateAccount.Response;
+using Finance.Application.Common;
+using Finance.Application.Services;
 using Finance.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 namespace Finance.Application.UseCases.Accounts.UpdateAccount
 {
-    public class UpdateAccountUseCase : IUseCase<UpdateAccountRequest, UpdateAccountResponse>
+    public class UpdateAccountUseCase : IUpdateAccountUseCase
     {
         private readonly IAccountRepository _account;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<UpdateAccountUseCase> _logger;
         private readonly IAccountCacheInvalidator _cache;
-        public UpdateAccountUseCase(IAccountRepository account,
-                                    IUnitOfWork unitOfWork,
-                                    ILogger<UpdateAccountUseCase> logger,
-                                    IAccountCacheInvalidator cache)
+
+        public UpdateAccountUseCase(
+            IAccountRepository account,
+            IUnitOfWork unitOfWork,
+            ILogger<UpdateAccountUseCase> logger,
+            IAccountCacheInvalidator cache)
         {
             _account = account;
             _unitOfWork = unitOfWork;
             _logger = logger;
             _cache = cache;
         }
-        public async Task<UpdateAccountResponse> ExecuteAsync(UpdateAccountRequest request, int userId, CancellationToken ct)
+
+        public async Task<Result<UpdateAccountResult>> ExecuteAsync(
+            UpdateAccountCommand command,
+            int userId,
+            CancellationToken ct)
         {
             try
             {
-                var account = await _account.GetAccountByAccountId(request.AccountId,ct);
+                var account = await _account.GetAccountByAccountId(command.AccountId, ct);
                 if (account == null || account.UserId != userId)
                 {
-                    return new UpdateAccountErrorResponse("Account not found or access denied", "ACCOUNT_ACCESS_DENIED");
+                    return Result<UpdateAccountResult>.Failure(
+                        "ACCOUNT_ACCESS_DENIED",
+                        "Account not found or access denied");
                 }
-                
-                account.Balance = request.Balance;
-                account.Name = request.Name;
-                account.Note = request.Note;
+
+                account.Balance = command.Balance;
+                account.Name = command.Name;
+                account.Note = command.Note;
+
                 await _account.UpdateAccount(account);
                 await _unitOfWork.SaveChangesAsync(ct);
-                await _cache.InvalidateAsync(userId, request.AccountId, ct);
-                return new UpdateAccountSuccessResponse(account.AccountId);
+                await _cache.InvalidateAsync(userId, command.AccountId, ct);
+
+                return Result<UpdateAccountResult>.Success(new UpdateAccountResult(account.AccountId));
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, ex.Message);
-                return new UpdateAccountErrorResponse("Unable to update account at this time", "INVALID_UPDATE");
+                _logger.LogError(ex, "Failed to update account {AccountId} for user {UserId}", command.AccountId, userId);
+                return Result<UpdateAccountResult>.Failure(
+                    "ACCOUNT_UPDATE_FAILED",
+                    "Unable to update account at this time");
             }
         }
     }
-
 }

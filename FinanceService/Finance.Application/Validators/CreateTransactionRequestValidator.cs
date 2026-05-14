@@ -1,12 +1,9 @@
-﻿using Finance.Application.UseCases.Transactions.CreateTransaction.Request;
+using Finance.Application.UseCases.Transactions.CreateTransaction;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Finance.Application.Validators
 {
-    public class CreateTransactionRequestValidator : AbstractValidator<CreateTransactionRequest>
+    public class CreateTransactionRequestValidator : AbstractValidator<CreateTransactionCommand>
     {
         public CreateTransactionRequestValidator()
         {
@@ -18,7 +15,7 @@ namespace Finance.Application.Validators
 
             RuleFor(x => x.Amount)
                 .NotEqual(0).WithMessage("Transaction amount cannot be zero.")
-                .GreaterThan(-10_000_000).WithMessage("Expense amount is too large.") 
+                .GreaterThan(-10_000_000).WithMessage("Expense amount is too large.")
                 .LessThan(10_000_000).WithMessage("Income amount is too large.");
 
             RuleFor(x => x.Date)
